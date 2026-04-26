@@ -270,7 +270,7 @@ function initLeadForm() {
     // --- Dynamic Image Logic & Transition ---
     userTypeSelect.addEventListener('change', (e) => {
         const isRestaurant = e.target.value === 'restaurant';
-        const newSrc = isRestaurant ? "images/o.webp" : "images/n.webp";
+        const newSrc = isRestaurant ? "images/animated_pov_restaurant_using_yummizi.webp" : "images/animated_pov_diner_with_yummizi.webp";
 
         // 1. Smooth Fade Out
         gsap.to(formVisual, {
