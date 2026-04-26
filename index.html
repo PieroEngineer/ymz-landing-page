@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummizi | Zero Time Dining</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/glacial-indifference" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-[#f9f9fb]"> 
+    <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-[#ff751f] z-[110] w-0"></div>
+
+    <img id="y-logo" 
+        src="images/yummIzi_logo.webp" 
+        alt="Yummizi Logo" 
+        class="fixed z-[120] w-[160px] h-[160px] rounded-3xl object-cover opacity-0 pointer-events-none">
+
+    <div id="preloader" class="fixed inset-0 z-[100] flex items-center justify-center bg-white">
+        <div id="logo-center-target" class="w-[160px] h-[160px] relative">
+            <div id="preloader-rect" class="absolute left-1/2 top-0 h-full bg-[#ff751f] rounded-r-3xl origin-left scale-x-0 flex items-center">
+                <span id="rect-text" class="text-white font-bold text-7xl ml-[100px] opacity-0 whitespace-nowrap" style="font-family: 'Glacial Indifference', sans-serif;">ummizi</span>
+            </div>
+        </div>
+    </div>
+
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-10 h-24 bg-white/60 backdrop-blur-md opacity-0 shadow-sm">
+        <div class="flex-shrink-0 z-10">
+            <div id="nav-logo-anchor" class="w-[60px] h-[60px] relative">
+                <img src="images/yummIzi_logo.webp" alt="Yummizi" class="w-full h-full object-contain rounded-[15px]">
+            </div>
+        </div>
+
+        <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center space-x-12">
+            <!-- <a href="#" class="nav-link relative text-[#001560] font-bold py-2 text-xl">For restaurants</a> -->
+            <!-- <a href="#" class="nav-link relative text-[#001560] font-bold py-2 text-xl">For diners</a> -->
+            <a href="#" class="nav-link relative text-[#001560] font-bold py-2 text-xl">Q&A</a>
+        </div>
+
+        <div class="flex-shrink-0 z-10">
+            <button class="bg-[#ff751f] text-white px-8 py-3 rounded-xl font-bold text-xl hover:shadow-lg transition-all">A click away</button>
+        </div>
+    </nav>
+
+    <main id="main-content" class="min-h-[200vh] opacity-0">
+        <section id="hero-section" class="relative w-[80%] h-[60vh] mx-auto rounded-[40px] overflow-hidden opacity-0 shadow-2xl bg-white">
+    
+            <div id="hero-reel" class="absolute inset-0 z-0">
+                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/1.webp')"></div>
+                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/2.webp')"></div>
+                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/3.webp')"></div>
+                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/4.webp')"></div>
+                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/5.webp')"></div>
+                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/6.webp')"></div>
+                
+                <div class="absolute inset-0 bg-black/70 z-10"></div> 
+            </div>
+
+            <div id="hero-content" class="relative z-20 w-full h-full flex flex-col items-center justify-center text-white px-6">
+            
+                <div id="hero-content" class="relative z-20 w-full h-full flex flex-col items-center pt-32 px-6">
+                    <div class="title-block bg-[#ff751f] rounded-2xl px-8 py-3 shadow-xl mb-12">
+                        <h2 class="text-white text-3xl font-black headline-font tracking-tighter">Yummizi is</h2>
+                    </div>
+
+                    <div class="relative w-full flex-1">
+                        <div class="scene opacity-0 absolute inset-0 flex flex-col items-center justify-center" id="scene-1">
+                            <div class="curtain"><p class="desc-text">Breaking the classic combination of hunger and waiting</p></div>
+                            <img src="images/a.webp" alt="Hunger" class="scene-img">
+                            <div class="curtain"><p class="desc-text">Inside restaurants</p></div>
+                        </div>
+
+                        <div class="scene opacity-0 absolute inset-0 flex flex-col items-center justify-center" id="scene-2">
+                            <div class="curtain"><p class="desc-text">An opportunity for a restaurant</p></div>
+                            <img src="images/b.webp" alt="Opportunity" class="scene-img">
+                            <div class="curtain"><p class="desc-text">A tech opportunity</p></div>
+                        </div>
+
+                        <div class="scene opacity-0 absolute inset-0 flex flex-col items-center justify-center" id="scene-3">
+                            <div class="curtain"><p class="desc-text">A relief for diners</p></div>
+                            <img src="images/c.webp" alt="Relief" class="scene-img">
+                            <div class="curtain"><p class="desc-text">Even before arriving the restaurant</p></div>
+                        </div>
+
+                        <div class="scene opacity-0 absolute inset-0 flex flex-col items-center justify-center" id="scene-4">
+                            <div class="blue-box backdrop-blur-md rounded-[40px] p-12 text-center scale-90 opacity-0 border border-white/20">
+                                <div class="curtain"><p class="desc-text text-4xl font-bold">A quick, easy and delicious experience 😌</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+
+        <section id="comparison-section" class="bg-white py-24 relative overflow-hidden">
+            <div class="w-full h-[1px] bg-[#ff751f] opacity-30"></div>
+
+            <div class="max-w-7xl mx-auto px-6 py-20">
+                <h2 class="text-[#ff751f] text-5xl font-normal text-center mb-24 tracking-tight" style="font-family: 'Glacial Indifference', sans-serif;">
+                    Discover the Yummizi way
+                </h2>
+
+                <div class="space-y-32 md:space-y-48">
+                    
+                    <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center">
+                        <div class="comp-card before-card bg-[#f2f2f2] rounded-[30px] p-10 shadow-lg w-full md:w-1/2">
+                            <h3 class="text-zinc-400 text-xl font-bold mb-6">Before...</h3>
+                            <div class="img-placeholder bg-zinc-200 rounded-2xl h-64 mb-6 overflow-hidden">
+                                <img src="images/d.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-zinc-600 text-lg leading-relaxed" style="font-family: 'Glacial Indifference'">
+                                Diners used to hope that there would be available table at the restaurant they want
+                            </p>
+                        </div>
+                        <div class="comp-card after-card bg-[#ff751f] rounded-[30px] p-10 shadow-lg w-full md:w-1/2 relative">
+                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
+                            <h3 class="text-white/80 text-xl font-bold mb-6 text-right">With Yummizi...</h3>
+                            <div class="img-placeholder bg-white/20 rounded-2xl h-64 mb-6 overflow-hidden">
+                                <img src="images/e.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-white text-lg leading-relaxed" style="font-family: 'Glacial Indifference'">
+                                Diners can confirm their table and dishes even before arrive
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center">
+                        <div class="comp-card before-card bg-[#f2f2f2] rounded-[30px] p-10 shadow-lg w-full md:w-1/2">
+                            <h3 class="text-zinc-400 text-xl font-bold mb-6">Before...</h3>
+                            <div class="img-placeholder bg-zinc-200 rounded-2xl h-64 mb-6 overflow-hidden">
+                                <img src="images/f.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-zinc-600 text-lg leading-relaxed" style="font-family: 'Glacial Indifference'">
+                                Restaurants used to wait until diners arrive to start cooking
+                            </p>
+                        </div>
+                        <div class="comp-card after-card bg-[#ff751f] rounded-[30px] p-10 shadow-lg w-full md:w-1/2 relative">
+                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
+                            <h3 class="text-white/80 text-xl font-bold mb-6 text-right">With Yummizi...</h3>
+                            <div class="img-placeholder bg-white/20 rounded-2xl h-64 mb-6 overflow-hidden">
+                                <img src="images/g.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-white text-lg leading-relaxed" style="font-family: 'Glacial Indifference'">
+                                Restaurant can prepare the diner's food in a timely manner.<br />
+                                Keep quailty, increase people engage
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center">
+                        <div class="comp-card before-card bg-[#f2f2f2] rounded-[30px] p-10 shadow-lg w-full md:w-1/2">
+                            <h3 class="text-zinc-400 text-xl font-bold mb-6">Before...</h3>
+                            <div class="img-placeholder bg-zinc-200 rounded-2xl h-64 mb-6 overflow-hidden">
+                                <img src="images/i.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-zinc-600 text-lg leading-relaxed" style="font-family: 'Glacial Indifference'">
+                                Queues were unpredictible for diners
+                            </p>
+                        </div>
+                        <div class="comp-card after-card bg-[#ff751f] rounded-[30px] p-10 shadow-lg w-full md:w-1/2 relative">
+                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
+                            <h3 class="text-white/80 text-xl font-bold mb-6 text-right">With Yummizi...</h3>
+                            <div class="img-placeholder bg-white/20 rounded-2xl h-64 mb-6 overflow-hidden">
+                                <img src="images/h.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-white text-lg leading-relaxed" style="font-family: 'Glacial Indifference'">
+                                Diner can join virtual queues and restaurants can control them
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center">
+                        <div class="comp-card before-card bg-[#f2f2f2] rounded-[30px] p-10 shadow-lg w-full md:w-1/2">
+                            <h3 class="text-zinc-400 text-xl font-bold mb-6">Before...</h3>
+                            <div class="img-placeholder bg-zinc-200 rounded-2xl h-64 mb-6 overflow-hidden">
+                                <img src="images/j.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-zinc-600 text-lg leading-relaxed" style="font-family: 'Glacial Indifference'">
+                                Diners used to wait while they were hungry.<br /> 
+                                Normalized, wasn't it?
+                            </p>
+                        </div>
+                        <div class="comp-card after-card bg-[#ff751f] rounded-[30px] p-10 shadow-lg w-full md:w-1/2 relative">
+                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
+                            <h3 class="text-white/80 text-xl font-bold mb-6 text-right">With Yummizi...</h3>
+                            <div class="img-placeholder bg-white/20 rounded-2xl h-64 mb-6 overflow-hidden">
+                                <img src="images/k.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-white text-lg leading-relaxed" style="font-family: 'Glacial Indifference'">
+                                Diners wait much less time or simply don't wait for their food
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center">
+                        <div class="comp-card before-card bg-[#f2f2f2] rounded-[30px] p-10 shadow-lg w-full md:w-1/2">
+                            <h3 class="text-zinc-400 text-xl font-bold mb-6">Before...</h3>
+                            <div class="img-placeholder bg-zinc-200 rounded-2xl h-64 mb-6 overflow-hidden">
+                                <img src="images/l.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-zinc-600 text-lg leading-relaxed" style="font-family: 'Glacial Indifference'">
+                                Initial wasted time takes its toll on newcomers
+                            </p>
+                        </div>
+                        <div class="comp-card after-card bg-[#ff751f] rounded-[30px] p-10 shadow-lg w-full md:w-1/2 relative">
+                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
+                            <h3 class="text-white/80 text-xl font-bold mb-6 text-right">With Yummizi...</h3>
+                            <div class="img-placeholder bg-white/20 rounded-2xl h-64 mb-6 overflow-hidden">
+                                <img src="images/m.webp" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-white text-lg leading-relaxed" style="font-family: 'Glacial Indifference'">
+                                Diners don't have a hurry experience but an efficient one
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full h-[1px] bg-[#ff751f] opacity-30 mt-20"></div>
+        </section>
+
+        <section id="benefits-section" class="py-32 px-8 bg-[#f9f9fb]">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-24 text-center">
+                    <h2 class="text-6xl mb-6 text-[#001560]" style="font-family: 'League Spartan', sans-serif;">
+                        Discover Our Benefits
+                    </h2>
+                    <div class="w-32 h-1.5 bg-[#ff751f] mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <div class="flip-card h-[450px] w-full cursor-pointer">
+                        <div class="flip-card-inner relative w-full h-full">
+                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl">
+                                <img src="images/7.webp" alt="Resto" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4" style="font-family: 'League Spartan', sans-serif;">A more predictable flow of users</h3>
+                                <p class="text-[#ff751f] text-xs uppercase tracking-widest" style="font-family: 'Comfortaa', sans-serif;">Restaurant Benefit</p>
+                            </div>
+                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl">
+                                <img src="images/8.webp" alt="Diner" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4" style="font-family: 'League Spartan', sans-serif;">Diners can make more than one virtual queue simultaneously</h3>
+                                <p class="text-[#001560] text-xs uppercase tracking-widest" style="font-family: 'Comfortaa', sans-serif;">Diner Experience</p>
+                            </div>
+                        </div>
+
+                        <div class="floor-shadow"></div>
+                    </div>
+
+                    <div class="flip-card flip-start-back h-[450px] w-full cursor-pointer">
+                        <div class="flip-card-inner relative w-full h-full">
+                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl">
+                                <img src="images/9.webp" alt="Resto" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4" style="font-family: 'League Spartan', sans-serif;">The table turnover increases daily</h3>
+                                <p class="text-[#ff751f] text-xs uppercase tracking-widest" style="font-family: 'Comfortaa', sans-serif;">Restaurant Benefit</p>
+                            </div>
+                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl">
+                                <img src="images/10.webp" alt="Diner" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4" style="font-family: 'League Spartan', sans-serif;">Diners wait much less time for their food when arrive at the restaurant</h3>
+                                <p class="text-[#001560] text-xs uppercase tracking-widest" style="font-family: 'Comfortaa', sans-serif;">Diner Experience</p>
+                            </div>
+                        </div>
+
+                        <div class="floor-shadow"></div>
+                    </div>
+
+                    <div class="flip-card h-[450px] w-full cursor-pointer">
+                        <div class="flip-card-inner relative w-full h-full">
+                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl">
+                                <img src="images/11.webp" alt="Resto" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4" style="font-family: 'League Spartan', sans-serif;">An organized record of the service and visual data analysis</h3>
+                                <p class="text-[#ff751f] text-xs uppercase tracking-widest" style="font-family: 'Comfortaa', sans-serif;">Restaurant Benefit</p>
+                            </div>
+                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl">
+                                <img src="images/12.webp" alt="Diner" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4" style="font-family: 'League Spartan', sans-serif;">Diners can know dishes availability in real time</h3>
+                                <p class="text-[#001560] text-xs uppercase tracking-widest" style="font-family: 'Comfortaa', sans-serif;">Diner Experience</p>
+                            </div>
+                        </div>
+
+                        <div class="floor-shadow"></div>
+                    </div>
+
+                    <div class="flip-card flip-start-back h-[450px] w-full cursor-pointer">
+                        <div class="flip-card-inner relative w-full h-full">
+                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl">
+                                <img src="images/13.webp" alt="Resto" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4" style="font-family: 'League Spartan', sans-serif;">The likelhood that customers will return later increases</h3>
+                                <p class="text-[#ff751f] text-xs uppercase tracking-widest" style="font-family: 'Comfortaa', sans-serif;">Restaurant Benefit</p>
+                            </div>
+                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl">
+                                <img src="images/14.webp" alt="Diner" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4" style="font-family: 'League Spartan', sans-serif;">Diner can inform the restaurant about their specifications in advance</h3>
+                                <p class="text-[#001560] text-xs uppercase tracking-widest" style="font-family: 'Comfortaa', sans-serif;">Diner Experience</p>
+                            </div>
+                        </div>
+
+                        <div class="floor-shadow"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="form-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] opacity-0 pointer-events-none transition-opacity duration-500 flex items-center justify-center">
+        <div id="form-modal" class="relative w-[90%] max-w-5xl bg-white shadow-2xl flex overflow-hidden origin-bottom" 
+            style="min-height: 650px; border-radius: 40px; transform: skewX(5deg);"> 
+            
+            <div class="flex w-full h-full" style="transform: skewX(-5deg);">
+                
+                <button id="close-modal" class="absolute top-6 right-6 w-12 h-12 bg-white shadow-md flex items-center justify-center hover:bg-zinc-100 transition-all z-50 border border-zinc-200" style="transform: skewX(5deg); border-radius: 10px;">
+                    <span class="text-2xl text-black font-bold" style="transform: skewX(-5deg);">×</span>
+                </button>
+
+                <div class="w-full lg:w-3/5 p-12 lg:p-16 bg-white z-10">
+                    
+                    <div class="mb-2">
+                        <h2 class="text-5xl text-[#ff751f] leading-tight" style="font-family: 'Glacial Indifference', sans-serif;">
+                            Stay <span class="font-bold">launch</span>-ready
+                        </h2>
+                        <p class="text-[#001560] text-lg font-medium" style="font-family: 'Glacial Indifference', sans-serif;">
+                            Secure your spot
+                        </p>
+                    </div>
+                    
+                    <form id="waitlist-form" name="yummizi-waitlist" data-netlify="true" class="space-y-4">
+                        <div class="form-group ml-0">
+                            <input type="text" name="name" placeholder="Your Name *" required class="w-full p-4 bg-zinc-100 rounded-xl outline-none focus:ring-2 focus:ring-[#ff751f]">
+                        </div>
+
+                        <div class="form-group ml-4">
+                            <select id="user-type" name="type" required class="w-full p-4 bg-zinc-100 rounded-xl outline-none cursor-pointer focus:ring-2 focus:ring-[#ff751f]">
+                                <option value="" disabled selected>Who is this for? *</option>
+                                <option value="customer">I'm a Diner</option>
+                                <option value="restaurant">I'm a Restaurant</option>
+                            </select>
+                        </div>
+
+                        <div id="resto-field" class="form-group ml-8 hidden">
+                            <input type="text" name="restaurant_name" placeholder="Restaurant's Official Name *" class="w-full p-4 bg-white border-2 border-[#ff751f] rounded-xl outline-none">
+                        </div>
+
+                        <div class="form-group ml-12">
+                            <input type="email" name="email" placeholder="Email Address *" required class="w-full p-4 bg-zinc-100 rounded-xl outline-none focus:ring-2 focus:ring-[#ff751f]">
+                        </div>
+
+                        <div class="form-group ml-16">
+                            <input type="tel" name="phone" placeholder="Phone Number (Faster)" class="w-full p-4 bg-zinc-100 rounded-xl outline-none focus:ring-2 focus:ring-[#ff751f]">
+                        </div>
+
+                        <div class="form-group ml-20">
+                            <textarea name="question" placeholder="Any questions for us?" rows="2" class="w-full p-4 bg-zinc-100 rounded-xl outline-none focus:ring-2 focus:ring-[#ff751f]"></textarea>
+                        </div>
+
+                        <div class="form-group ml-24 pt-4">
+                            <button type="submit" class="w-full py-5 bg-[#ff751f] text-white font-bold text-xl rounded-xl hover:bg-[#e66a1c] transition-colors shadow-lg" style="font-family: 'League Spartan', sans-serif;">
+                                Notify me when Yummizi arrives!
+                            </button>
+                        </div>
+
+                        <div class="form-group ml-24 mt-6">
+                            <div class="flex items-start gap-3">
+                                <input type="checkbox" id="policy-check" class="mt-1 w-5 h-5 accent-[#ff751f] cursor-pointer">
+                                <label for="policy-check" class="text-sm text-zinc-600 leading-tight cursor-pointer">
+                                    I have read and agree to the <a href="#" class="text-[#ff751f] underline font-bold">Privacy Policy</a> and consent to being contacted regarding the waiting list.
+                                </label>
+                            </div>
+                            
+                            <p id="policy-error" class="text-red-500 text-xs font-bold mt-2 opacity-0 transition-opacity duration-300">
+                                The checkbox must be checked to continue
+                            </p>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="hidden lg:block w-2/5 bg-[#001560] relative overflow-hidden">
+                    <img id="form-visual" src="images/n.webp" alt="Yummizi" class="object-cover transition-opacity duration-500">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="relative w-full h-[60vh] bg-white overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 w-full h-full">
+            <img src="images/p.webp" 
+                class="w-full h-full object-cover opacity-60" 
+                style="filter: blur(4px);" 
+                alt="footer decor">
+        </div>
+
+        <div class="absolute right-10 top-1/2 -translate-y-1/2 rotate-90 origin-right">
+            <span class="text-[#001560]/20 text-7xl font-bold tracking-widest select-none" 
+                style="font-family: 'Glacial Indifference', sans-serif; white-space: nowrap;">
+                Yummi yummi
+            </span>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
