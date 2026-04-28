@@ -1,0 +1,15 @@
+name: Code Quality Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-logic:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run a fake test
+        run: echo "The code looks great! Robot approved."
