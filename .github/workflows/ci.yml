@@ -12,4 +12,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run a fake test
-        run: echo "The code looks great! Robot approved."
+        run: echo "Connecting to service with ${{ secrets.SUPER_SECRET_API_KEY }}"
