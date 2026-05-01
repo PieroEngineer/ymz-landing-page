@@ -137,11 +137,12 @@ function initHeroNarrative() {
         scrollTrigger: {
             trigger: "#hero-section",
             start: "top top",
-            end: "+=4000",
+            // REDUCED: From 4000 to 1000 for higher sensitivity
+            end: "+=1000", 
             pin: true,
-            scrub: 1,
+            // REDUCED: From 1 to 0.05 for snappier response
+            scrub: .05, 
             anticipatePin: 1,
-            // Refresh logic to ensure positions are correct
             onRefresh: self => {
                 if(self.progress === 0) {
                     gsap.set("#scene-1", { opacity: 1 });
