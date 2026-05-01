@@ -93,9 +93,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function initHeroSection() {
     const hero = document.querySelector("#hero-section");
+    const cornerImg = document.querySelector(".hero-corner-image");
     
-    gsap.to(hero, {
-        opacity: 1,
+    // Set initial state: Hidden and slightly lower
+    gsap.set(cornerImg, { opacity: 0, y: 20 });
+
+    const tl = gsap.timeline();
+
+    tl.to(hero, { 
+        opacity: 1, 
+        duration: 0.5 
+    })
+    .to(hero, {
         width: "100vw",
         height: "100vh",
         y: 0,
@@ -103,19 +112,22 @@ function initHeroSection() {
         duration: 1.5,
         ease: "expo.inOut",
         onComplete: () => {
-            // 1. Force Scene 1 to its visible state immediately
             gsap.set("#scene-1", { opacity: 1 });
             gsap.set("#scene-1 .desc-text", { y: "0%" });
-
             initHeroNarrative();
             initComparisonSection();
-            
-            // 2. Kill and restart ScrollTrigger to catch the new height
             ScrollTrigger.refresh();
         }
-    });
+    })
+    // Animate the icon: Fades in and slides UP (y:0)
+    .to(cornerImg, { 
+        opacity: 1, 
+        y: 0, 
+        duration: 0.8, 
+        ease: "power2.out" 
+    }, "-=0.8");
 
-    // REEL LOGIC
+    // REEL LOGIC (Keep this as you had it)
     const slides = document.querySelectorAll(".reel-slide");
     let currentSlide = 0;
     function nextSlide() {

@@ -135,6 +135,26 @@ h1, h2, h3 {
     margin-top: 0;
 }
 
+/* -------------------- HERO CORNER IMAGE -------------------- */
+.hero-corner-image {
+    /* Anchored to bottom left */
+    bottom: 2rem; 
+    left: 2rem;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .hero-corner-image {
+        bottom: 1.5rem;
+        left: 1.5rem;
+        width: 50px; /* Slightly larger for visibility on mobile */
+        height: 50px;
+    }
+}
+
 /* -------------------- NAVBAR LAYOUT AND CENTERING -------------------- */
 /* Centered Navbar Adjustment */
 #navbar {

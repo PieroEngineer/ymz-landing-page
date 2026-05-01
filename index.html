@@ -49,6 +49,11 @@
     <main id="main-content" class="min-h-[200vh] opacity-0">
         <section id="hero-section" class="relative w-[80%] h-[60vh] mx-auto rounded-[40px] overflow-hidden opacity-0 shadow-2xl bg-white">
     
+            <div class="hero-corner-image absolute bottom-8 left-8 z-50 w-16 h-16 md:w-24 md:h-24">
+                <img src="images/icon_mouse_scroll.webp" alt="Scroll Desktop" class="hidden md:block w-full h-full object-contain">
+                <img src="images/icon_tactil_scroll.webp" alt="Scroll Mobile" class="block md:hidden w-full h-full object-contain">
+            </div>
+
             <div id="hero-reel" class="absolute inset-0 z-0">
                 <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/coffeshop_with_yummizi.webp')"></div>
                 <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/friends_in_coffeshop_with_yummizi.webp')"></div>
@@ -56,46 +61,44 @@
                 <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/friends_in_formal_rest_with_yummizi.webp')"></div>
                 <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/informal_rest_with_yummizi.webp')"></div>
                 <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('images/friends_in_informal_rest_with_yummizi.webp')"></div>
-                
+
                 <div class="absolute inset-0 bg-black/70 z-10"></div> 
             </div>
 
-            <div id="hero-content" class="relative z-20 w-full h-full flex flex-col items-center justify-center text-white px-6">
-            
-                <div id="hero-content" class="relative z-20 w-full h-full flex flex-col items-center pt-32 px-6">
-                    <div class="title-block bg-[#ff751f] rounded-2xl px-8 py-3 shadow-xl mb-12">
-                        <h2 class="text-white text-3xl font-black headline-font tracking-tighter">Yummizi is</h2>
+            <div id="hero-content" class="relative z-20 w-full h-full flex flex-col items-center pt-32 px-6 text-white">
+                
+                <div class="title-block bg-[#ff751f] rounded-2xl px-8 py-3 shadow-xl mb-12">
+                    <h2 class="text-white text-3xl font-black headline-font tracking-tighter">Yummizi is</h2>
+                </div>
+
+                <div class="relative w-full flex-1">
+                    <div class="scene opacity-0 absolute inset-0 flex flex-col items-center justify-center text-center" id="scene-1">
+                        <div class="curtain"><p class="desc-text" style="font-family: 'Glacial Indifference', sans-serif;">Breaking the classic combination of hunger and waiting</p></div>
+                        <img src="images/icon_food_time.webp" alt="Hunger" class="scene-img">
+                        <div class="curtain"><p class="desc-text" style="font-family: 'Glacial Indifference', sans-serif;">Inside restaurants</p></div>
                     </div>
 
-                    <div class="relative w-full flex-1">
-                        <div class="scene opacity-0 absolute inset-0 flex flex-col items-center justify-center text-center" id="scene-1">
-                            <div class="curtain"><p class="desc-text" style="font-family: 'Glacial Indifference', sans-serif;">Breaking the classic combination of hunger and waiting</p></div>
-                            <img src="images/icon_food_time.webp" alt="Hunger" class="scene-img">
-                            <div class="curtain"><p class="desc-text" style="font-family: 'Glacial Indifference', sans-serif;">Inside restaurants</p></div>
-                        </div>
+                    <div class="scene opacity-0 absolute inset-0 flex flex-col items-center justify-center text-center" id="scene-2">
+                        <div class="curtain"><p class="desc-text" style="font-family: 'Glacial Indifference', sans-serif;">An opportunity for a restaurant</p></div>
+                        <img src="images/icon_food_in_phone.webp" alt="Opportunity" class="scene-img">
+                        <div class="curtain"><p class="desc-text" style="font-family: 'Glacial Indifference', sans-serif;">A tech opportunity</p></div>
+                    </div>
 
-                        <div class="scene opacity-0 absolute inset-0 flex flex-col items-center justify-center text-center" id="scene-2">
-                            <div class="curtain"><p class="desc-text" style="font-family: 'Glacial Indifference', sans-serif;">An opportunity for a restaurant</p></div>
-                            <img src="images/icon_food_in_phone.webp" alt="Opportunity" class="scene-img">
-                            <div class="curtain"><p class="desc-text" style="font-family: 'Glacial Indifference', sans-serif;">A tech opportunity</p></div>
-                        </div>
+                    <div class="scene opacity-0 absolute inset-0 flex flex-col items-center justify-center text-center" id="scene-3">
+                        <div class="curtain"><p class="desc-text" style="font-family: 'Glacial Indifference', sans-serif;">A relief for diners</p></div>
+                        <img src="images/icon_diners_relief.webp" alt="Relief" class="scene-img">
+                        <div class="curtain"><p class="desc-text" style="font-family: 'Glacial Indifference', sans-serif;">Even before arriving the restaurant</p></div>
+                    </div>
 
-                        <div class="scene opacity-0 absolute inset-0 flex flex-col items-center justify-center text-center" id="scene-3">
-                            <div class="curtain"><p class="desc-text" style="font-family: 'Glacial Indifference', sans-serif;">A relief for diners</p></div>
-                            <img src="images/icon_diners_relief.webp" alt="Relief" class="scene-img">
-                            <div class="curtain"><p class="desc-text" style="font-family: 'Glacial Indifference', sans-serif;">Even before arriving the restaurant</p></div>
-                        </div>
-
-                        <div class="scene opacity-0 absolute inset-0 flex flex-col items-center justify-center" id="scene-4">
-                            <div class="blue-box backdrop-blur-md rounded-[40px] p-12 text-center scale-90 opacity-0 border border-white/20">
-                                <div class="curtain"><p class="desc-text text-4xl font-bold">A quick, easy and delicious experience 😌</p></div>
-                            </div>
+                    <div class="scene opacity-0 absolute inset-0 flex flex-col items-center justify-center" id="scene-4">
+                        <div class="blue-box backdrop-blur-md rounded-[40px] p-12 text-center scale-90 opacity-0 border border-white/20">
+                            <div class="curtain"><p class="desc-text text-4xl font-bold">A quick, easy and delicious experience 😌</p></div>
                         </div>
                     </div>
                 </div>
-            
             </div>
         </section>
+
 
         <section id="comparison-section" class="bg-white py-24 relative overflow-hidden">
             <div class="w-full h-[1px] bg-[#ff751f] opacity-30"></div>
