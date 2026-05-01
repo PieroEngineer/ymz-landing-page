@@ -304,22 +304,49 @@ h1, h2, h3 {
 }
 
 /* -------------------- WAITLIST FORM MODAL -------------------- */
+/* --- Vertical Padding for Inputs --- */
+#waitlist-form input, 
+#waitlist-form select, 
+#waitlist-form textarea {
+    /* Change 0.8rem to adjust the height of the input boxes */
+    padding-top: 0.8rem !important; 
+    padding-bottom: 0.8rem !important;
+    font-family: 'Glacial Indifference', sans-serif;
+    border: 1px solid transparent;
+}
 
-/* Prevent the form from feeling cramped on mobile */
+/* --- Responsive Layout: Image below form on mobile --- */
 @media (max-width: 1024px) {
+    #form-modal {
+        flex-direction: column; /* Stacks the children vertically */
+        transform: skewX(0deg) !important; /* Removes skew for better mobile alignment */
+    }
+
+    #form-modal > div {
+        transform: skewX(0deg) !important; /* Resets internal content skew */
+    }
+
+    /* Form container takes full width */
+    .w-full.lg\:w-3\/5 {
+        order: 1; /* Ensures form stays on top */
+    }
+
+    /* Image container moves below and gets a defined height */
+    .hidden.lg\:block.w-2\/5.bg-\[#001560\] {
+        display: block !important; /* Show on mobile */
+        width: 100% !important;
+        height: 250px; /* Adjust this value to change image height on mobile */
+        order: 2; /* Moves image below form */
+    }
+
+    #form-visual {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Reset staggered margins for mobile screens */
     .form-group {
         margin-left: 0 !important;
-    }
-    #form-modal {
-        transform: skewX(0deg) !important; /* Remove skew on mobile for better fit */
-        flex-direction: column;
-    }
-    #form-modal > div {
-        transform: skewX(0deg) !important;
-    }
-    .lg\:w-3\/5 {
-        width: 100% !important;
-        padding: 2rem !important;
     }
 }
 
