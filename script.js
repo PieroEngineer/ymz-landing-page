@@ -246,18 +246,18 @@ function initLeadForm() {
     const formVisual = document.querySelector("#form-visual");
     const waitlistBtn = document.querySelector("nav button");
 
+    // Inside function initLeadForm() -> const openModal = () => {
     const openModal = () => {
-        // Prevent background scroll
         document.body.style.overflow = 'hidden';
         overlay.classList.remove('pointer-events-none');
         
         const tl = gsap.timeline();
         tl.to(overlay, { opacity: 1, duration: 0.4 })
-          .fromTo(modal, 
-            { y: 1000, opacity: 0, scale: 0.9 }, 
-            { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.2)" }, 
+        .fromTo(modal, 
+            { y: "100%", opacity: 0, scale: 0.9 }, // Changed 1000 to "100%"
+            { y: "0%", opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.2)" }, 
             "-=0.2"
-          );
+        );
     };
 
     const closeModal = () => {

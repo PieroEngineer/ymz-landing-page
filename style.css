@@ -304,20 +304,29 @@ h1, h2, h3 {
 }
 
 /* -------------------- WAITLIST FORM MODAL -------------------- */
-/* FORM MODAL STYLES */
-#form-modal {
-    /* Remove translate from here to let GSAP handle vertical positioning */
-    transform: skewX(5deg); 
-    display: flex;
-    background-color: white;
+
+/* Prevent the form from feeling cramped on mobile */
+@media (max-width: 1024px) {
+    .form-group {
+        margin-left: 0 !important;
+    }
+    #form-modal {
+        transform: skewX(0deg) !important; /* Remove skew on mobile for better fit */
+        flex-direction: column;
+    }
+    #form-modal > div {
+        transform: skewX(0deg) !important;
+    }
+    .lg\:w-3\/5 {
+        width: 100% !important;
+        padding: 2rem !important;
+    }
 }
+
+/* FORM MODAL STYLES */
 
 #form-modal p {
     margin-bottom: 2.5rem; /* Creates separation between 'Secure your spot' and inputs */
-}
-
-.form-group {
-    transition: margin 0.4s ease-in-out;
 }
 
 #waitlist-form input, 
@@ -338,17 +347,18 @@ h1, h2, h3 {
 #form-visual {
     position: absolute;
     height: 100%;
-    width: 140%; /* Excess width to cover the skew angle */
+    width: 140%; 
     right: 0;
     left: auto;
     object-fit: cover;
-    opacity: 1; /* Initial state */
-    transition: none; /* We will let GSAP handle the transition for better control */
+    opacity: 1;
 }
 
+/* Ensure the image panel scales correctly with the flexible modal height */
 .lg\:block.w-2\/5.bg-\[#001560\] {
     position: relative;
     overflow: hidden;
+    min-height: 100%; /* Ensures the blue side stays full height */
 }
 
 .hidden.lg\:block.w-2\/5.bg-\[#001560\] {
