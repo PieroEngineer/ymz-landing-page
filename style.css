@@ -41,10 +41,30 @@ html::-webkit-scrollbar {
     margin-bottom: 5rem; /* Added margin to compensate for scale */
 }
 
-/* 3. Increase descriptive words (2x) */
+/* 3. Descriptive words: Center align and responsive sizing */
 .desc-text {
-    font-size: 2.5rem !important; /* Doubled from 2.5rem */
+    /* Change this to adjust base desktop size */
+    font-size: 2.5rem !important; 
     font-weight: 700;
+    font-family: 'Glacial Indifference', sans-serif !important;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    line-height: 1.2;
+}
+
+/* Mobile font size reduction */
+@media (max-width: 768px) {
+    .desc-text {
+        /* Change this number to make mobile text smaller/larger */
+        font-size: 1.5rem !important; 
+        padding: 0 10%; /* Prevents text from hitting screen edges */
+    }
+    
+    .title-block {
+        transform: scale(1.4); /* Smaller scale for "Yummizi is" on phones */
+    }
 }
 
 /* 4. Decrease image size (Half) */
@@ -160,11 +180,15 @@ h1, h2, h3 {
 /* -------------------- SCENE VISIBILITY AND TEXT CURTAIN HELPERS -------------------- */
 /* Fix for scene visibility */
 .scene {
-    z-index: 50; 
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 100%;
     height: 100%;
-    /* Ensure child items are visible even if parent is opacity 0 initially */
-    visibility: inherit; 
+    left: 0;
+    top: 0;
 }
 
 /* Ensure the curtain doesn't cut off letters like 'g' or 'y' */
