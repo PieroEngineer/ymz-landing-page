@@ -1,8 +1,11 @@
+/* -------------------- GLOBAL DESIGN TOKENS -------------------- */
+/* Main reusable brand colors for the whole page. */
 :root {
     --primary: #ff751f;
     --navy: #001560;
 }
 
+/* -------------------- GLOBAL PAGE BEHAVIOR -------------------- */
 /* 1. Hide Scrollbar while keeping functionality */
 html, body {
     scrollbar-width: none; /* Firefox */
@@ -12,6 +15,8 @@ html::-webkit-scrollbar {
     display: none; /* Chrome/Safari/Webkit */
 }
 
+/* -------------------- PRELOADER RECTANGLE ANIMATION -------------------- */
+/* Orange rectangle that expands from the preloader logo area. */
 #preloader-rect {
     z-index: -1;
     position: absolute;
@@ -27,6 +32,8 @@ html::-webkit-scrollbar {
     white-space: nowrap;
 }
 
+/* -------------------- HERO / INTRO TEXT SIZE ADJUSTMENTS -------------------- */
+/* These rules resize the main animated intro title, description, image, and blue box. */
 /* 2. Increase "Yummizi is" block size (3x) and reduce padding */
 .title-block {
     transform: scale(2);
@@ -53,16 +60,19 @@ html::-webkit-scrollbar {
     padding: 1.5rem 2.5rem !important; /* Reduced padding */
 }
 
+/* -------------------- GLOBAL TYPOGRAPHY -------------------- */
 /* Headings */
 h1, h2, h3 {
     font-family: 'League Spartan', sans-serif;
 }
 
+/* -------------------- TEXT REVEAL HELPERS -------------------- */
 /* Smooth hidden mask for the text reveal */
 .overflow-hidden span {
     display: inline-block;
 }
 
+/* -------------------- NAVIGATION HOVER UNDERLINE -------------------- */
 /* Navigation Link Hover Effect */
 .nav-link::after {
     content: '';
@@ -79,6 +89,7 @@ h1, h2, h3 {
     width: 100%;
 }
 
+/* -------------------- PRELOADER LOGO POSITIONING -------------------- */
 /* Ensure the logo container in the preloader is absolute for the transition */
 #logo-container {
     position: absolute;
@@ -93,6 +104,8 @@ h1, h2, h3 {
     object-fit: contain;
 }
 
+/* -------------------- HERO SECTION CONTAINER -------------------- */
+/* Main hero container animation hints and spacing. */
 #hero-section {
     transform-origin: center bottom;
     will-change: transform, width, height, border-radius;
@@ -102,6 +115,7 @@ h1, h2, h3 {
     margin-top: 0;
 }
 
+/* -------------------- NAVBAR LAYOUT AND CENTERING -------------------- */
 /* Centered Navbar Adjustment */
 #navbar {
     display: flex;
@@ -123,6 +137,8 @@ h1, h2, h3 {
     transform: translateX(-50%);
 }
 
+/* -------------------- BACKGROUND REEL / HERO SLIDES -------------------- */
+/* Full-cover background slides used behind the main hero experience. */
 .reel-slide {
     position: absolute;
     inset: 0;
@@ -132,6 +148,7 @@ h1, h2, h3 {
     will-change: filter, opacity;
 }
 
+/* -------------------- MAIN SCROLL NARRATIVE AREA -------------------- */
 /* Ensure the main content has enough height for the 4000px scroll narrative */
 #main-content {
     width: 100%;
@@ -140,6 +157,7 @@ h1, h2, h3 {
     position: relative;
 }
 
+/* -------------------- SCENE VISIBILITY AND TEXT CURTAIN HELPERS -------------------- */
 /* Fix for scene visibility */
 .scene {
     z-index: 50; 
@@ -162,6 +180,8 @@ h1, h2, h3 {
     letter-spacing: -2px;
 }
 
+/* -------------------- COMPARISON / FEATURE CARDS -------------------- */
+/* Card sizing, focus shadow, centered copy, and hover image zoom. */
 .comp-card {
     transition: box-shadow 0.5s ease;
     will-change: transform, box-shadow;
@@ -195,6 +215,7 @@ h1, h2, h3 {
     transform: scale(1.05);
 }
 
+/* -------------------- BENEFITS SECTION FLIP CARDS -------------------- */
 /* --- BENEFITS SECTION: FLIP & DYNAMIC SHADOW (FIXED REVERSION) --- */
 
 /* 1. Core Card Structure */
@@ -282,6 +303,7 @@ h1, h2, h3 {
     font-family: 'Comfortaa', sans-serif;
 }
 
+/* -------------------- WAITLIST FORM MODAL -------------------- */
 /* FORM MODAL STYLES */
 #form-modal {
     /* Remove translate from here to let GSAP handle vertical positioning */
@@ -310,6 +332,7 @@ h1, h2, h3 {
     color: #94a3b8;
 }
 
+/* -------------------- FORM MODAL VISUAL IMAGE PANEL -------------------- */
 /* Background image switch transition */
 
 #form-visual {
@@ -334,11 +357,13 @@ h1, h2, h3 {
     background-color: #001560;
 }
 
+/* -------------------- BODY LOCK WHILE MODAL IS OPEN -------------------- */
 /* Preventing scroll when modal is open */
 .no-scroll {
     overflow: hidden !important;
 }
 
+/* -------------------- CUSTOM USER TYPE SELECT DROPDOWN -------------------- */
 /* --- Improved Select Styling --- */
 #user-type {
     appearance: none; /* Removes default browser arrow */
@@ -368,6 +393,8 @@ h1, h2, h3 {
     box-shadow: 0 0 0 4px rgba(255, 117, 31, 0.1);
 }
 
+/* -------------------- POSSIBLE CROSSED / DUPLICATED SECTION -------------------- */
+/* This repeats #user-type option styling from above. I left it here unchanged so you can decide whether to move or merge it later. */
 /* Ensure the text inside the dropdown is clean */
 #user-type option {
     color: #001560;
@@ -375,6 +402,7 @@ h1, h2, h3 {
     background: white;
 }
 
+/* -------------------- POLICY CHECKBOX AND ERROR STATE -------------------- */
 /* --- Policy Checkbox Styling --- */
 #policy-check {
     border: 2px solid #001560;
