@@ -229,17 +229,37 @@ h1, h2, h3 {
 .comp-card {
     transition: box-shadow 0.5s ease;
     will-change: transform, box-shadow;
-    min-height: 500px;
+    /* Remove or decrease min-height for mobile to avoid empty space */
+    min-height: 520px; 
     display: flex;
     flex-direction: column;
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+    .comp-card {
+        min-height: auto; /* Allows card to shrink to fit content on phone */
+        padding: 1.5rem !important; /* Slightly smaller padding for small screens */
+    }
+
+    .img-placeholder {
+        /* This ensures the horizontal image is fully visible without cropping */
+        height: auto !important; 
+        aspect-ratio: 16 / 9; 
+    }
+
+    .img-placeholder img {
+        /* 'contain' ensures the whole image fits, 'cover' ensures no white space.
+           Since your images are horizontal, 'cover' with aspect-video is usually best. */
+        object-fit: cover; 
+    }
 }
 
 /* Centers the description text specifically */
 .comp-card p {
     text-align: center;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: auto; /* Pushes text to bottom if card height varies */
 }
 
 .after-card p {
