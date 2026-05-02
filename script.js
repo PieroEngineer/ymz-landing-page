@@ -14,7 +14,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const centerTarget = document.querySelector("#logo-center-target");
     const preloaderRect = document.querySelector("#preloader-rect");
     const rectText = document.querySelector("#rect-text");
-    
+    const isMobilePreloader = window.matchMedia("(max-width: 640px)").matches;
+    const rectExpandedPadding = isMobilePreloader ? "8px" : "60px";
+    const navLogoScale = isMobilePreloader ? anchor.offsetWidth / logo.offsetWidth : 0.35;
+
     const centerRect = centerTarget.getBoundingClientRect();
     
     // Initial States
@@ -35,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // 2. RECTANGLE SLIDE OUT
     .to(preloaderRect, {
         scaleX: 1,
-        paddingRight: "60px",
+        paddingRight: rectExpandedPadding,
         duration: 1,
         ease: "expo.inOut"
     }, "-=0.2")
@@ -61,10 +64,10 @@ window.addEventListener('DOMContentLoaded', () => {
     .to(logo, {
         top: () => anchor.getBoundingClientRect().top + (anchor.offsetHeight / 2),
         left: () => anchor.getBoundingClientRect().left + (anchor.offsetWidth / 2),
-        xPercent: -50, 
-        yPercent: -50, 
-        scale: 0.35, 
-        duration: 1.2, 
+        xPercent: -50,
+        yPercent: -50,
+        scale: navLogoScale,
+        duration: 1.2,
         ease: "expo.inOut"
     })
     

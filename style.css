@@ -32,6 +32,35 @@ html::-webkit-scrollbar {
     white-space: nowrap;
 }
 
+#logo-center-target {
+    width: var(--preloader-logo-size, 160px) !important;
+    height: var(--preloader-logo-size, 160px) !important;
+}
+
+#rect-text {
+    margin-left: var(--preloader-text-offset, 100px) !important;
+    font-size: var(--preloader-text-size, 4.5rem) !important;
+    line-height: 1;
+}
+
+@media (max-width: 640px) {
+    :root {
+        --preloader-logo-size: min(30vw, 128px);
+        --preloader-text-offset: clamp(52px, 16vw, 72px);
+        --preloader-text-size: clamp(1.85rem, 9vw, 2.75rem);
+    }
+
+    #preloader {
+        overflow: hidden;
+    }
+
+    #preloader-rect {
+        border-radius: 0 18px 18px 0;
+        max-width: calc(50vw - 8px);
+        overflow: hidden;
+    }
+}
+
 /* -------------------- HERO / INTRO TEXT SIZE ADJUSTMENTS -------------------- */
 /* These rules resize the main animated intro title, description, image, and blue box. */
 /* 2. Increase "Yummizi is" block size (3x) and reduce padding */
@@ -125,6 +154,8 @@ h1, h2, h3 {
 }
 
 #y-logo {
+    width: var(--preloader-logo-size, 160px) !important;
+    height: var(--preloader-logo-size, 160px) !important;
     border-radius: 40px !important; /* Adjust this value to match your actual image rounding */
     overflow: hidden;
     object-fit: contain;
