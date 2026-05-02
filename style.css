@@ -64,6 +64,12 @@ html::-webkit-scrollbar {
     
     .title-block {
         transform: scale(1.4); /* Smaller scale for "Yummizi is" on phones */
+        margin-bottom: 1rem !important; /* Pulls the hero content closer to "Yummizi is" on mobile */
+    }
+
+    .scene {
+        justify-content: flex-start !important; /* Stops mobile hero content from sitting too low */
+        padding-top: 1rem;
     }
 }
 
@@ -148,8 +154,9 @@ h1, h2, h3 {
 
 @media (max-width: 768px) {
     .hero-corner-image {
-        bottom: 1.5rem;
-        left: 1.5rem;
+        top: 39rem !important; /* Mobile: place the icon closer to the current scene instead of anchoring it near the hero bottom */
+        bottom: auto !important;
+        left: 1.5rem !important;
         width: 50px; /* Slightly larger for visibility on mobile */
         height: 50px;
     }
@@ -237,6 +244,22 @@ h1, h2, h3 {
 
 /* Mobile specific fixes */
 @media (max-width: 768px) {
+    #comparison-section {
+        padding-top: 2rem !important;
+    }
+
+    #comparison-section > .max-w-7xl {
+        padding-top: 2rem !important;
+    }
+
+    #comparison-section h2 {
+        margin-bottom: 3rem !important;
+    }
+
+    .comparison-row {
+        margin-top: -1.5rem;
+    }
+
     .comp-card {
         min-height: auto; /* Allows card to shrink to fit content on phone */
         padding: 1.5rem !important; /* Slightly smaller padding for small screens */
