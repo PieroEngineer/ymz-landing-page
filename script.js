@@ -252,6 +252,53 @@ function initComparisonSection() {
     });
 }
 
+function initBenefitFlipCards() {
+    const mobileFlipQuery = window.matchMedia("(hover: none), (pointer: coarse)");
+    const cards = document.querySelectorAll("#benefits-section .flip-card");
+
+    cards.forEach((card) => {
+        card.setAttribute("role", "button");
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("aria-pressed", "false");
+        let hasUsedTouchHover = false;
+        let ignoreNextClick = false;
+
+        const toggleCard = () => {
+            card.classList.toggle("is-flipped");
+            card.setAttribute("aria-pressed", card.classList.contains("is-flipped") ? "true" : "false");
+        };
+
+        card.addEventListener("pointerenter", (event) => {
+            if (!mobileFlipQuery.matches || event.pointerType === "mouse") return;
+            if (hasUsedTouchHover) return;
+
+            hasUsedTouchHover = true;
+            ignoreNextClick = true;
+            window.setTimeout(() => {
+                ignoreNextClick = false;
+            }, 500);
+            toggleCard();
+        });
+
+        card.addEventListener("click", () => {
+            if (!mobileFlipQuery.matches) return;
+
+            if (ignoreNextClick) {
+                ignoreNextClick = false;
+                return;
+            }
+
+            toggleCard();
+        });
+
+        card.addEventListener("keydown", (event) => {
+            if (event.key !== "Enter" && event.key !== " ") return;
+            event.preventDefault();
+            toggleCard();
+        });
+    });
+}
+
 function initLeadForm() {
     const overlay = document.querySelector("#form-overlay");
     const modal = document.querySelector("#form-modal");
@@ -370,4 +417,5 @@ function initLeadForm() {
 }
 
 // Call this at the end of your script
+initBenefitFlipCards();
 initLeadForm();

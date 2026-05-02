@@ -373,6 +373,28 @@ h1, h2, h3 {
     margin-top: -15px;
 }
 
+@media (hover: none), (pointer: coarse) {
+    .flip-card:not(.flip-start-back):hover .flip-card-inner {
+        transform: none;
+        margin-top: 0;
+    }
+
+    .flip-start-back:hover .flip-card-inner {
+        transform: rotateY(180deg);
+        margin-top: 0;
+    }
+
+    .flip-card:not(.flip-start-back).is-flipped .flip-card-inner {
+        transform: rotateY(180deg);
+        margin-top: -15px;
+    }
+
+    .flip-start-back.is-flipped .flip-card-inner {
+        transform: rotateY(0deg);
+        margin-top: -15px;
+    }
+}
+
 /* 4. The Floor Shadow Base & "Mouse Leave" Animation */
 .floor-shadow {
     position: absolute;
@@ -410,6 +432,17 @@ h1, h2, h3 {
 .flip-card:not(.flip-start-back):hover .floor-shadow,
 .flip-start-back:hover .floor-shadow {
     background: rgba(0, 0, 0, 0.7);
+}
+
+@media (hover: none), (pointer: coarse) {
+    .flip-card:hover .floor-shadow {
+        animation: shadowPulseOut 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .flip-card.is-flipped .floor-shadow {
+        animation: shadowPulseIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        background: rgba(0, 0, 0, 0.7);
+    }
 }
 
 /* 8. Typography */
