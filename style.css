@@ -605,3 +605,101 @@ h1, h2, h3 {
 #policy-error {
     pointer-events: none;
 }
+
+/* -------------------- PRIVACY POLICY PANEL -------------------- */
+.privacy-policy-panel {
+    position: absolute;
+    inset: 1.5rem;
+    z-index: 80;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+    opacity: 0;
+    pointer-events: none;
+    transform: skewX(-5deg) translateY(18px) scale(0.98);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.privacy-policy-panel.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: skewX(-5deg) translateY(0) scale(1);
+}
+
+.privacy-policy-back {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    padding: 0.7rem 1rem;
+    color: #001560;
+    background: #f4f4f5;
+    border: 1px solid #e4e4e7;
+    border-radius: 10px;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.privacy-policy-back:hover,
+.privacy-policy-back:focus-visible {
+    color: #ffffff;
+    background: #ff751f;
+    outline: none;
+}
+
+.privacy-policy-content {
+    padding: 4.5rem clamp(1.5rem, 4vw, 3.5rem) 2.5rem;
+    overflow-y: auto;
+    color: #3f3f46;
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
+.privacy-policy-content h2 {
+    margin-bottom: 1rem;
+    color: #ff751f;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 0.95;
+}
+
+.privacy-policy-content h3 {
+    margin: 1.8rem 0 0.6rem;
+    color: #001560;
+    font-size: 1.35rem;
+}
+
+#form-modal .privacy-policy-content p {
+    max-width: 68ch;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+    .privacy-policy-panel {
+        transform: translateY(18px) scale(0.98);
+    }
+
+    .privacy-policy-panel.is-visible {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 640px) {
+    .privacy-policy-panel {
+        inset: 0.75rem;
+        border-radius: 22px;
+    }
+
+    .privacy-policy-back {
+        top: 0.75rem;
+        right: 0.75rem;
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}

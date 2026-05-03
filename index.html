@@ -367,7 +367,7 @@
                             <div class="flex items-start gap-3">
                                 <input type="checkbox" id="policy-check" class="mt-1 w-5 h-5 accent-[#ff751f] cursor-pointer">
                                 <label for="policy-check" class="text-sm text-zinc-600 leading-tight cursor-pointer">
-                                    I have read and agree to the <a href="#" class="text-[#ff751f] underline font-bold">Privacy Policy</a> and consent to being contacted regarding the waiting list.
+                                    I have read and agree to the <a href="#" id="privacy-policy-link" class="text-[#ff751f] underline font-bold">Privacy Policy</a> and consent to being contacted regarding the waiting list.
                                 </label>
                             </div>
                             
@@ -381,6 +381,50 @@
 
                 <div class="hidden lg:block w-2/5 bg-[#001560] relative overflow-hidden">
                     <img id="form-visual" src="images/animated_pov_diner_with_yummizi.webp" alt="Yummizi" class="object-cover transition-opacity duration-500">
+                </div>
+            </div>
+
+            <div id="privacy-policy-panel" class="privacy-policy-panel" role="dialog" aria-labelledby="privacy-policy-title" aria-hidden="true">
+                <button id="privacy-policy-back" class="privacy-policy-back" type="button">go back</button>
+
+                <div class="privacy-policy-content">
+                    <h2 id="privacy-policy-title">Yummizi Privacy Policy</h2>
+
+                    <h3>Data Controller Identity</h3>
+                    <p>
+                        The party responsible for processing your personal data is Piero Stephano Olivas Tuesta, acting on behalf of the Yummizi (under incorporation) project, with its current headquarters in Lima, Peru.
+                    </p>
+
+                    <h3>Purpose of Data Collection</h3>
+                    <p>
+                        The personal data requested through our contact form (Name, Email Address, and Restaurant Name) will be processed for the following purposes:
+
+                        - To register your interest in the official launch of the Yummizi platform.
+
+                        - To send you technical updates and news commercial offers directly related to our services.
+
+                        - To contact you for market research or early-access beta testing.
+                    </p>
+
+                    <h3>Data Storage and Retention Period</h3>
+                    <p>
+                        Your data will be stored in a digital database named "Yummizi LP" owned by Yummizi. We will retain this information for a period of 2 years or until you formally revoke your consent, whichever occurs first.
+                    </p>
+
+                    <h3>International Data Transfers (Cross-Border Flow)</h3>
+                    <p>
+                        To ensure the functionality of this website, we utilize third-party infrastructure (netlify and supabase). Your data may be transferred to and stored on servers located outside of Peru (primarily in the United States). By submitting your data, you acknowledge and consent to this international transfer under adequate security standards.
+                    </p>
+
+                    <h3>Your Rights (ARCO Rights)</h3>
+                    <p>
+                        In accordance with international privacy standards and Peruvian Law No. 29733, you have the right to Access, Rectify, Cancel, or Oppose (ARCO) the processing of your data at any time. To exercise these rights, please contact us at: yummizi.mkt@gmail.com with the subject line "Privacy Rights Request."
+                    </p>
+
+                    <h3>Mandatory Nature of Information</h3>
+                    <p>
+                        Providing the requested data is mandatory to join our waiting list. Failure to provide this information will prevent us from contacting you or providing updates regarding the launch.
+                    </p>
                 </div>
             </div>
         </div>

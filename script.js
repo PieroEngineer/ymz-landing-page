@@ -307,6 +307,9 @@ function initLeadForm() {
     const restoField = document.querySelector("#resto-field");
     const formVisual = document.querySelector("#form-visual");
     const waitlistBtn = document.querySelector("nav button");
+    const privacyPolicyLink = document.querySelector("#privacy-policy-link");
+    const privacyPolicyPanel = document.querySelector("#privacy-policy-panel");
+    const privacyPolicyBack = document.querySelector("#privacy-policy-back");
 
     // Inside function initLeadForm() -> const openModal = () => {
     const openModal = () => {
@@ -322,7 +325,22 @@ function initLeadForm() {
         );
     };
 
+    const openPrivacyPolicy = () => {
+        privacyPolicyPanel.classList.add("is-visible");
+        privacyPolicyPanel.setAttribute("aria-hidden", "false");
+        privacyPolicyBack.focus();
+    };
+
+    const closePrivacyPolicy = () => {
+        privacyPolicyPanel.classList.remove("is-visible");
+        privacyPolicyPanel.setAttribute("aria-hidden", "true");
+        privacyPolicyLink.focus();
+    };
+
     const closeModal = () => {
+        privacyPolicyPanel.classList.remove("is-visible");
+        privacyPolicyPanel.setAttribute("aria-hidden", "true");
+
         gsap.to(modal, { y: 1000, opacity: 0, duration: 0.5, ease: "power2.in", onComplete: () => {
             overlay.classList.add('pointer-events-none');
             overlay.style.opacity = "0";
@@ -362,6 +380,16 @@ function initLeadForm() {
     waitlistBtn.addEventListener('click', openModal);
     closeBtn.addEventListener('click', closeModal);
     overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+    privacyPolicyLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        openPrivacyPolicy();
+    });
+    privacyPolicyBack.addEventListener('click', closePrivacyPolicy);
+    document.addEventListener('keydown', (e) => {
+        if (e.key !== "Escape" || !privacyPolicyPanel.classList.contains("is-visible")) return;
+        closePrivacyPolicy();
+    });
 
     // Scroll to bottom trigger
     window.addEventListener('scroll', () => {
