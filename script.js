@@ -300,6 +300,10 @@ function initBenefitFlipCards() {
 }
 
 function initLeadForm() {
+    const SUPABASE_URL = "https://giyjehsmcnrfkzaxzpmz.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdpeWplaHNtY25yZmt6YXh6cG16Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3NjU3MzIsImV4cCI6MjA5MzM0MTczMn0.kKLcrRlaIq95a7XGmguSln-DaEkPxKLf9n6WEABD-MI";
+    const CONTACT_LEADS_TABLE = "contact_leads";
+
     const overlay = document.querySelector("#form-overlay");
     const modal = document.querySelector("#form-modal");
     const closeBtn = document.querySelector("#close-modal");
@@ -406,14 +410,15 @@ function initLeadForm() {
     const waitlistForm = document.querySelector("#waitlist-form");
     const policyCheck = document.querySelector("#policy-check");
     const policyError = document.querySelector("#policy-error");
+    const submitBtn = waitlistForm.querySelector('button[type="submit"]');
+    const defaultSubmitText = submitBtn.textContent;
+    const supabaseClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    document.querySelector("#waitlist-form").addEventListener("submit", (e) => {
+    waitlistForm.addEventListener("submit", async (e) => {
         e.preventDefault();
-        
+
         const userType = userTypeSelect.value;
         const restoNameInput = document.querySelector('input[name="restaurant_name"]');
-        const policyCheck = document.querySelector("#policy-check");
-        const policyError = document.querySelector("#policy-error");
 
         // 1. Policy Checkbox Validation
         if (!policyCheck.checked) {
@@ -430,9 +435,45 @@ function initLeadForm() {
             return;
         }
 
+        if (!supabaseClient || SUPABASE_URL.includes("your-project-id") || SUPABASE_ANON_KEY.includes("your-anon-public-key")) {
+            alert("Supabase is not configured yet. Please add your project URL and anon public key in script.js.");
+            return;
+        }
+
+        const formData = new FormData(waitlistForm);
+        const leadData = {
+            full_name: formData.get("name").trim(),
+            email: formData.get("email").trim(),
+            restaurant_name: userType === "restaurant" ? formData.get("restaurant_name").trim() : "",
+            message: formData.get("question").trim()
+        };
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+
+        try {
+            const { error } = await supabaseClient
+                .from(CONTACT_LEADS_TABLE)
+                .insert([leadData]);
+
+            if (error) {
+                alert("Error saving data: " + error.message);
+                return;
+            }
+        } catch (error) {
+            alert("Error saving data. Please try again in a moment.");
+            return;
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = defaultSubmitText;
+        }
+
         // 3. Success
         policyError.style.opacity = "0";
-        alert("Thanks! We'll notify you soon.");
+        alert("Success! We will contact you soon.");
+        waitlistForm.reset();
+        restoField.classList.add("hidden");
+        formVisual.src = "images/animated_pov_diner_with_yummizi.webp";
         closeModal();
     });
 
