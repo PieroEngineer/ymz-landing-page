@@ -1,0 +1,6 @@
+/* src/input.css */
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #0f172a; /* Custom slate blue color */
+}
