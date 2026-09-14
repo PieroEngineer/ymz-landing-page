@@ -310,7 +310,7 @@ function initLeadForm() {
     const userTypeSelect = document.querySelector("#user-type");
     const restoField = document.querySelector("#resto-field");
     const formVisual = document.querySelector("#form-visual");
-    const waitlistBtn = document.querySelector("nav button");
+    const waitlistBtns = document.querySelectorAll(".waitlist-trigger-btn, [data-open-waitlist]");
     const privacyPolicyLink = document.querySelector("#privacy-policy-link");
     const privacyPolicyPanel = document.querySelector("#privacy-policy-panel");
     const privacyPolicyBack = document.querySelector("#privacy-policy-back");
@@ -381,7 +381,7 @@ function initLeadForm() {
         });
     });
 
-    waitlistBtn.addEventListener('click', openModal);
+    waitlistBtns.forEach(btn => btn.addEventListener('click', openModal));
     closeBtn.addEventListener('click', closeModal);
     overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
     privacyPolicyLink.addEventListener('click', (e) => {

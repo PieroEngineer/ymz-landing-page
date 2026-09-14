@@ -2,5 +2,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-primary: #0f172a; /* Custom slate blue color */
+  --color-primary: #ff751f;
+  --color-white: #ffffff;
+  --color-navy: #001560;
+  --color-orange-dark: #ff6105;
+  --color-accent: #ff6105;
+  --font-spartan: 'League Spartan', sans-serif;
+  --font-glacial: 'Glacial Indifference', sans-serif;
+  --font-comfortaa: 'Comfortaa', sans-serif;
 }
