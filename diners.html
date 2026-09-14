@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es" class="[scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="diner_page_title">Yummizi para Comensales | Cero tiempo de espera para comer delicioso</title>
+    <meta name="description" content="Pide tus platillos y confirma tu mesa antes de llegar al restaurante. Dile adiós a las filas con Yummizi.">
+    <meta name="keywords" content="comensales, comida sin espera, pedir por adelantado, colas virtuales, restaurantes, gastronomía, Yummizi">
+    <meta name="author" content="Yummizi">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ff751f">
+    <link rel="canonical" href="https://yummizi.com/diners.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yummizi">
+    <meta property="og:url" content="https://yummizi.com/diners.html">
+    <meta property="og:title" content="Yummizi para Comensales | Cero tiempo de espera">
+    <meta property="og:description" content="Pide tus platillos y confirma tu mesa antes de llegar al restaurante. Dile adiós a las filas con Yummizi.">
+    <meta property="og:image" content="https://yummizi.com/images/yummIzi_logo.webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yummizi para Comensales | Zero Time Dining">
+    <meta name="twitter:description" content="Tu comida lista en el momento exacto en que te sientas. Sin colas ni esperas.">
+    <meta name="twitter:image" content="https://yummizi.com/images/yummIzi_logo.webp">
+
+    <link rel="icon" type="image/webp" href="images/yummIzi_logo.webp">
+    <link rel="stylesheet" href="dist/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/glacial-indifference" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#f9f9fb] text-zinc-800 antialiased font-['Glacial_Indifference',sans-serif] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden" data-page-title-key="diner_page_title" data-page-desc-key="diner_page_desc">
+
+    <!-- Top Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 sm:px-8 md:px-10 h-24 bg-white/80 backdrop-blur-md shadow-sm border-b border-[#001560]/5 transition-all duration-300">
+        <!-- Logo linking to index.html -->
+        <div class="flex-shrink-0 z-10">
+            <a href="index.html" id="nav-logo-anchor" class="w-[52px] h-[52px] sm:w-[60px] sm:h-[60px] relative block cursor-pointer transition-transform duration-200 hover:scale-105" aria-label="Yummizi Home" data-i18n-aria="nav_home">
+                <img src="images/yummIzi_logo.webp" alt="Yummizi Logo" data-i18n-alt="nav_logo_alt" class="w-full h-full object-contain rounded-[15px]">
+            </a>
+        </div>
+
+        <!-- Center Language Switch -->
+        <div class="flex items-center justify-center z-10 mx-2">
+            <div class="relative flex items-center bg-white/90 border border-[#001560]/15 rounded-full p-1 shadow-inner backdrop-blur-xs select-none">
+                <button id="lang-toggle-btn" type="button" class="relative flex items-center w-[72px] h-[32px] cursor-pointer rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ff751f]" aria-label="Cambiar idioma (Español / Inglés)" data-i18n-aria="nav_lang_toggle_aria">
+                    <span id="lang-toggle-pill" class="absolute left-0.5 top-0.5 w-[32px] h-[28px] bg-gradient-to-r from-[#ff751f] to-[#ff6105] rounded-full shadow-sm transition-transform duration-300 ease-out pointer-events-none"></span>
+                    <span id="lang-label-es" class="relative z-10 w-1/2 text-center text-xs font-bold text-white transition-colors duration-200">ES</span>
+                    <span id="lang-label-en" class="relative z-10 w-1/2 text-center text-xs font-bold text-[#001560]/70 transition-colors duration-200">EN</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Buttons: For Restaurants & For Diners (Active) -->
+        <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0 z-10">
+            <a href="restaurants.html" 
+               class="inline-flex items-center justify-center px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold font-['League_Spartan',sans-serif] text-xs sm:text-sm md:text-base text-[#001560] bg-white border border-[#001560]/20 hover:border-[#ff751f] hover:text-[#ff751f] hover:shadow-md transition-all duration-200 shadow-xs"
+               data-i18n="nav_for_restaurants">
+                Para Restaurantes
+            </a>
+            <a href="diners.html" 
+               class="inline-flex items-center justify-center px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold font-['League_Spartan',sans-serif] text-xs sm:text-sm md:text-base text-white bg-gradient-to-r from-[#ff751f] to-[#ff6105] ring-2 ring-[#ff751f] shadow-md shadow-[#ff751f]/25"
+               data-i18n="nav_for_diners">
+                Para Comensales
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="pt-32 pb-24 overflow-hidden">
+        
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-6 py-12 lg:py-20 text-center relative">
+            <!-- Background Glow Decor -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-[#ff751f]/15 via-[#001560]/5 to-transparent rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+            <!-- Diner Experience Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#ff751f]/10 border border-[#ff751f]/20 mb-6 shadow-xs animate-pulse">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#ff751f]"></span>
+                <span class="text-[#ff6105] text-xs sm:text-sm font-bold tracking-wider uppercase font-['League_Spartan',sans-serif]" data-i18n="diner_hero_badge">Experiencia Comensal</span>
+            </div>
+
+            <!-- Main Phrase -->
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black text-[#001560] font-['League_Spartan',sans-serif] tracking-tight max-w-5xl mx-auto leading-[1.08] mb-8" data-i18n="diner_hero_phrase">
+                Llega, siéntate y disfruta: Tu comida lista en el momento exacto.
+            </h1>
+
+            <!-- Descriptive Text -->
+            <p class="text-lg sm:text-xl lg:text-2xl text-zinc-600 max-w-3xl mx-auto leading-relaxed mb-12 font-medium" data-i18n="diner_hero_sub">
+                Nunca más mires el reloj mientras tienes hambre. Con Yummizi eliges tus platos favoritos antes de salir y tu mesa te espera lista para disfrutar.
+            </p>
+
+            <!-- External CTA Button (Opens in new tab) -->
+            <div class="flex flex-col items-center justify-center gap-3">
+                <a href="https://placeholder-link-diners.yummizi.com" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="group relative inline-flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-[#ff751f] via-[#ff6105] to-[#ff751f] bg-[length:200%_auto] hover:bg-[right_center] text-white font-extrabold text-lg sm:text-xl font-['League_Spartan',sans-serif] shadow-xl shadow-[#ff751f]/30 hover:shadow-2xl hover:shadow-[#ff751f]/40 hover:-translate-y-1 transition-all duration-300">
+                    <span data-i18n="diner_cta_button">Descargar Yummizi para Comensales</span>
+                    <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+                <span class="text-xs sm:text-sm text-zinc-500 font-['Glacial_Indifference',sans-serif]" data-i18n="diner_cta_note">
+                    Disponible próximamente para iOS y Android. Abre en nueva pestaña.
+                </span>
+            </div>
+        </section>
+
+        <!-- Section: 1 Main Image -->
+        <section class="max-w-6xl mx-auto px-6 py-12 lg:py-16">
+            <div class="relative rounded-[36px] overflow-hidden shadow-2xl border-4 border-white group">
+                <div class="aspect-[16/9] sm:aspect-[21/9] w-full bg-zinc-200 overflow-hidden relative">
+                    <img src="images/mock_diner_hero.webp" 
+                         alt="Experiencia Gastronómica sin esperas" 
+                         loading="lazy" 
+                         decoding="async" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    
+                    <!-- Overlay Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#001560]/85 via-black/20 to-transparent flex flex-col justify-end p-6 sm:p-12">
+                        <span class="text-[#ff751f] text-xs sm:text-sm font-bold uppercase tracking-widest font-['Comfortaa',sans-serif] mb-2" data-i18n="diner_main_img_badge">
+                            Experiencia sin esperas
+                        </span>
+                        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black text-white font-['League_Spartan',sans-serif] mb-2" data-i18n="diner_main_img_title">
+                            La libertad de comer sin pausas ni esperas
+                        </h2>
+                        <p class="text-white/80 text-sm sm:text-lg max-w-2xl font-medium" data-i18n="diner_main_img_desc">
+                            Vive la experiencia gastronómica que siempre mereciste en tus restaurantes predilectos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: 3 Vertical Images Grouped -->
+        <section class="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+            <div class="text-center mb-16">
+                <span class="text-[#ff751f] text-sm font-extrabold uppercase tracking-widest font-['Comfortaa',sans-serif]" data-i18n="diner_app_badge">App Móvil Diners</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#001560] font-['League_Spartan',sans-serif] mt-2 mb-4" data-i18n="diner_app_title">
+                    Tu restaurante predilecto, ahora a un toque de distancia
+                </h2>
+                <p class="text-zinc-600 text-lg max-w-2xl mx-auto" data-i18n="diner_app_desc">
+                    Diseñada para que descubras, reserves y comas sin fricciones ni pérdidas de tiempo.
+                </p>
+            </div>
+
+            <!-- 3 Vertical Images Grouped Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
+                
+                <!-- Vertical Card 1: Virtual Queues -->
+                <div class="group bg-white rounded-3xl p-6 shadow-xl border border-[#001560]/10 hover:border-[#ff751f]/50 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- Vertical Mockup Phone Frame -->
+                        <div class="relative aspect-[9/16] w-full max-w-[280px] mx-auto rounded-[32px] overflow-hidden bg-zinc-100 border-4 border-[#001560]/15 mb-6 group-hover:shadow-2xl transition-all duration-300">
+                            <img src="images/mock_diner_queue.webp" 
+                                 alt="Colas Virtuales en App Móvil" 
+                                 loading="lazy" 
+                                 decoding="async" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <!-- Step Badge Overlay -->
+                            <div class="absolute top-4 left-4 bg-gradient-to-r from-[#ff751f] to-[#ff6105] text-white text-xs px-3 py-1 rounded-full font-bold font-['League_Spartan',sans-serif] shadow-md" data-i18n="diner_img_1_badge">
+                                Paso 1
+                            </div>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-black text-[#001560] font-['League_Spartan',sans-serif] mb-2 text-center" data-i18n="diner_img_1_title">
+                            1. Colas Virtuales Simultáneas
+                        </h3>
+                    </div>
+                    <p class="text-zinc-600 text-base leading-relaxed text-center" data-i18n="diner_img_1_desc">
+                        Pide tu turno en varios locales cercanos y decide sobre la marcha con tiempos de espera reales.
+                    </p>
+                </div>
+
+                <!-- Vertical Card 2: Interactive Menu -->
+                <div class="group bg-white rounded-3xl p-6 shadow-xl border border-[#001560]/10 hover:border-[#ff751f]/50 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- Vertical Mockup Phone Frame -->
+                        <div class="relative aspect-[9/16] w-full max-w-[280px] mx-auto rounded-[32px] overflow-hidden bg-zinc-100 border-4 border-[#001560]/15 mb-6 group-hover:shadow-2xl transition-all duration-300">
+                            <img src="images/mock_diner_menu.webp" 
+                                 alt="Menú Interactivo en App Móvil" 
+                                 loading="lazy" 
+                                 decoding="async" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <!-- Step Badge Overlay -->
+                            <div class="absolute top-4 left-4 bg-gradient-to-r from-[#ff751f] to-[#ff6105] text-white text-xs px-3 py-1 rounded-full font-bold font-['League_Spartan',sans-serif] shadow-md" data-i18n="diner_img_2_badge">
+                                Paso 2
+                            </div>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-black text-[#001560] font-['League_Spartan',sans-serif] mb-2 text-center" data-i18n="diner_img_2_title">
+                            2. Menú Interactivo en Vivo
+                        </h3>
+                    </div>
+                    <p class="text-zinc-600 text-base leading-relaxed text-center" data-i18n="diner_img_2_desc">
+                        Fotografías reales, disponibilidad al instante y especificaciones exactas para la cocina.
+                    </p>
+                </div>
+
+                <!-- Vertical Card 3: Confirmed Dining -->
+                <div class="group bg-white rounded-3xl p-6 shadow-xl border border-[#001560]/10 hover:border-[#ff751f]/50 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- Vertical Mockup Phone Frame -->
+                        <div class="relative aspect-[9/16] w-full max-w-[280px] mx-auto rounded-[32px] overflow-hidden bg-zinc-100 border-4 border-[#001560]/15 mb-6 group-hover:shadow-2xl transition-all duration-300">
+                            <img src="images/mock_diner_table.webp" 
+                                 alt="Mesa Confirmada en App Móvil" 
+                                 loading="lazy" 
+                                 decoding="async" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <!-- Step Badge Overlay -->
+                            <div class="absolute top-4 left-4 bg-gradient-to-r from-[#ff751f] to-[#ff6105] text-white text-xs px-3 py-1 rounded-full font-bold font-['League_Spartan',sans-serif] shadow-md" data-i18n="diner_img_3_badge">
+                                Paso 3
+                            </div>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-black text-[#001560] font-['League_Spartan',sans-serif] mb-2 text-center" data-i18n="diner_img_3_title">
+                            3. Mesa y Pedido Confirmados
+                        </h3>
+                    </div>
+                    <p class="text-zinc-600 text-base leading-relaxed text-center" data-i18n="diner_img_3_desc">
+                        Tu comida entra a preparación para coincidir exactamente con el minuto en que tomas asiento.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section: Lazy-loaded Video Embed (youtube-nocookie.com) -->
+        <section class="max-w-7xl mx-auto px-6 py-16 lg:py-24 text-center">
+            <div class="mb-12">
+                <span class="text-[#ff751f] text-sm font-extrabold uppercase tracking-widest font-['Comfortaa',sans-serif]" data-i18n="diner_video_badge">Cómo funciona</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#001560] font-['League_Spartan',sans-serif] mt-2 mb-4" data-i18n="diner_video_title">
+                    ¿Cómo funciona para ti?
+                </h2>
+                <p class="text-zinc-600 text-lg max-w-2xl mx-auto" data-i18n="diner_video_sub">
+                    Una demostración rápida de cómo tu próxima salida a comer será la más rápida, fresca y placentera.
+                </p>
+            </div>
+
+            <!-- Video Player Mock Container with youtube-nocookie.com lazy loading -->
+            <div class="relative max-w-4xl mx-auto aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#001560] group">
+                <iframe 
+                    class="w-full h-full object-cover" 
+                    src="https://www.youtube-nocookie.com/embed/PLACEHOLDER_DINER_VIDEO?rel=0&modestbranding=1" 
+                    title="Yummizi for Diners demo" 
+                    loading="lazy" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section class="max-w-5xl mx-auto px-6 py-12 text-center">
+            <div class="bg-white rounded-[32px] p-8 sm:p-12 shadow-xl border border-[#001560]/10 flex flex-col items-center">
+                <h3 class="text-2xl sm:text-4xl font-black text-[#001560] font-['League_Spartan',sans-serif] mb-4">
+                    Comer delicioso nunca fue tan rápido
+                </h3>
+                <p class="text-zinc-600 text-base sm:text-lg mb-8 max-w-xl">
+                    Descubre cómo disfrutar de tus restaurantes favoritos sin perder un solo minuto esperando.
+                </p>
+                <a href="https://placeholder-link-diners.yummizi.com" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-[#ff751f] to-[#ff6105] text-white font-extrabold text-lg font-['League_Spartan',sans-serif] shadow-lg shadow-[#ff751f]/30 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+                    <span data-i18n="diner_cta_button">Descargar Yummizi para Comensales</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="bg-white border-t border-[#001560]/10 py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="images/yummIzi_logo.webp" alt="Yummizi" class="w-10 h-10 object-contain rounded-xl">
+                    <span class="text-2xl font-black text-[#001560] font-['League_Spartan',sans-serif]">Yummizi</span>
+                </a>
+            </div>
+            <div class="text-center text-sm text-zinc-500 font-['Glacial_Indifference',sans-serif]">
+                © 2026 Yummizi. Zero Time Dining.
+            </div>
+            <div>
+                <span class="text-[#001560]/20 text-3xl font-bold font-['Glacial_Indifference',sans-serif] tracking-wider select-none" data-i18n="footer_text">
+                    Yummi yummi
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- i18n Translation Script -->
+    <script src="js/i18n.js"></script>
+</body>
+</html>

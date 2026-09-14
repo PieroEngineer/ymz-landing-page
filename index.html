@@ -1,18 +1,78 @@
 <!DOCTYPE html>
-<html lang="en" class="[scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+<html lang="es" class="[scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yummizi | Zero Time Dining</title>
-    <link rel="icon" type="image/webp" href="images/yummIzi_logo.webp">
+    <title data-i18n="seo_title">Yummizi | Zero Time Dining - Reserva de mesa y pedidos sin espera</title>
+    <meta name="description" content="Yummizi transforma la experiencia gastronómica: colas virtuales, confirmación de platos antes de llegar y cero esperas para comensales y restaurantes.">
+    <meta name="keywords" content="Yummizi, Zero Time Dining, foodtech, colas virtuales, reserva de mesa, restaurantes, comensales, pedidos anticipados, digital restaurant">
+    <meta name="author" content="Yummizi">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ff751f">
+    <link rel="canonical" href="https://yummizi.com/">
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yummizi">
+    <meta property="og:url" content="https://yummizi.com/">
+    <meta property="og:title" content="Yummizi | Zero Time Dining">
+    <meta property="og:description" content="Yummizi transforma la experiencia gastronómica: colas virtuales, confirmación de platos antes de llegar y cero esperas.">
+    <meta property="og:image" content="https://yummizi.com/images/yummIzi_logo.webp">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yummizi | Zero Time Dining">
+    <meta name="twitter:description" content="Cero esperas para comensales y restaurantes. Reserva y pide antes de llegar.">
+    <meta name="twitter:image" content="https://yummizi.com/images/yummIzi_logo.webp">
+
+    <link rel="icon" type="image/webp" href="images/yummIzi_logo.webp">
     <link rel="stylesheet" href="dist/output.css">
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/glacial-indifference" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://yummizi.com/#organization",
+          "name": "Yummizi",
+          "url": "https://yummizi.com/",
+          "logo": "https://yummizi.com/images/yummIzi_logo.webp",
+          "sameAs": []
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://yummizi.com/#website",
+          "url": "https://yummizi.com/",
+          "name": "Yummizi",
+          "description": "Zero Time Dining Platform",
+          "publisher": { "@id": "https://yummizi.com/#organization" },
+          "inLanguage": ["es", "en"]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Yummizi",
+          "operatingSystem": "iOS, Android, Web",
+          "applicationCategory": "LifestyleApplication, BusinessApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         @keyframes shadowPulseIn {
             0% { transform: scaleX(1); opacity: 1; filter: blur(12px); }
@@ -26,36 +86,57 @@
         }
     </style>
 </head>
-<body class="bg-[#f9f9fb] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"> 
-    <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-[#ff751f] z-[110] w-0"></div>
+<body class="bg-[#f9f9fb] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden" data-page-title-key="seo_title" data-page-desc-key="seo_description"> 
+    <h1 class="sr-only" data-i18n="seo_h1">Yummizi: Zero Time Dining - La revolución en reservas y pedidos anticipados</h1>
+
+    <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-[#ff751f] to-[#ff6105] z-[110] w-0"></div>
 
     <img id="y-logo" 
         src="images/yummIzi_logo.webp" 
         alt="Yummizi Logo" 
+        data-i18n-alt="nav_logo_alt"
+        fetchpriority="high"
         class="fixed z-[120] w-[min(30vw,128px)] sm:w-[160px] h-[min(30vw,128px)] sm:h-[160px] rounded-[40px] object-contain overflow-hidden opacity-0 pointer-events-none">
 
     <div id="preloader" class="fixed inset-0 z-[100] flex items-center justify-center bg-white overflow-hidden">
         <div id="logo-center-target" class="w-[min(30vw,128px)] sm:w-[160px] h-[min(30vw,128px)] sm:h-[160px] relative">
-            <div id="preloader-rect" class="absolute -z-1 left-1/2 top-1/2 -translate-y-1/2 h-full bg-[#ff751f] rounded-r-[18px] sm:rounded-r-3xl origin-[left_center] scale-x-0 flex items-center whitespace-nowrap max-sm:max-w-[calc(50vw-8px)] max-sm:overflow-hidden">
+            <div id="preloader-rect" class="absolute -z-1 left-1/2 top-1/2 -translate-y-1/2 h-full bg-gradient-to-r from-[#ff751f] to-[#ff6105] rounded-r-[18px] sm:rounded-r-3xl origin-[left_center] scale-x-0 flex items-center whitespace-nowrap max-sm:max-w-[calc(50vw-8px)] max-sm:overflow-hidden">
                 <span id="rect-text" class="text-white font-bold font-['Glacial_Indifference',sans-serif] text-[clamp(1.85rem,9vw,2.75rem)] sm:text-7xl ml-[clamp(52px,16vw,72px)] sm:ml-[100px] opacity-0 whitespace-nowrap tracking-[-2px] leading-none">ummizi</span>
             </div>
         </div>
     </div>
  
-    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-10 h-24 bg-white/60 backdrop-blur-md opacity-0 shadow-sm">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 sm:px-8 md:px-10 h-24 bg-white/75 backdrop-blur-md opacity-0 shadow-sm border-b border-[#001560]/5">
+        <!-- Logo linking to index.html -->
         <div class="flex-shrink-0 z-10">
-            <div id="nav-logo-anchor" class="w-[60px] h-[60px] relative">
-                <img src="images/yummIzi_logo.webp" alt="Yummizi" class="w-full h-full object-contain rounded-[15px]">
+            <a href="index.html" id="nav-logo-anchor" class="w-[52px] h-[52px] sm:w-[60px] sm:h-[60px] relative block cursor-pointer transition-transform duration-200 hover:scale-105" aria-label="Yummizi Home" data-i18n-aria="nav_home">
+                <img src="images/yummIzi_logo.webp" alt="Yummizi" data-i18n-alt="nav_logo_alt" class="w-full h-full object-contain rounded-[15px]">
+            </a>
+        </div>
+
+        <!-- Center Language Switch -->
+        <div class="flex items-center justify-center z-10 mx-2">
+            <div class="relative flex items-center bg-white/90 border border-[#001560]/15 rounded-full p-1 shadow-inner backdrop-blur-xs select-none">
+                <button id="lang-toggle-btn" type="button" class="relative flex items-center w-[72px] h-[32px] cursor-pointer rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ff751f]" aria-label="Cambiar idioma (Español / Inglés)" data-i18n-aria="nav_lang_toggle_aria">
+                    <span id="lang-toggle-pill" class="absolute left-0.5 top-0.5 w-[32px] h-[28px] bg-gradient-to-r from-[#ff751f] to-[#ff6105] rounded-full shadow-sm transition-transform duration-300 ease-out pointer-events-none"></span>
+                    <span id="lang-label-es" class="relative z-10 w-1/2 text-center text-xs font-bold text-white transition-colors duration-200">ES</span>
+                    <span id="lang-label-en" class="relative z-10 w-1/2 text-center text-xs font-bold text-[#001560]/70 transition-colors duration-200">EN</span>
+                </button>
             </div>
         </div>
-<!-- 
-        <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center space-x-12">
-            <a href="#" class="nav-link relative text-[#001560] font-bold py-2 text-xl">Q&A</a>
-        </div> 
--->
 
-        <div class="flex-shrink-0 z-10">
-            <button class="bg-[#ff751f] text-white px-8 py-3 rounded-xl font-bold text-xl hover:shadow-lg transition-all font-['League_Spartan',sans-serif]">A click away</button>
+        <!-- Right Buttons: For Restaurants & For Diners -->
+        <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0 z-10">
+            <a href="restaurants.html" 
+               class="inline-flex items-center justify-center px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold font-['League_Spartan',sans-serif] text-xs sm:text-sm md:text-base text-[#001560] bg-white border border-[#001560]/20 hover:border-[#ff751f] hover:text-[#ff751f] hover:shadow-md transition-all duration-200 shadow-xs"
+               data-i18n="nav_for_restaurants">
+                Para Restaurantes
+            </a>
+            <a href="diners.html" 
+               class="inline-flex items-center justify-center px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold font-['League_Spartan',sans-serif] text-xs sm:text-sm md:text-base text-white bg-gradient-to-r from-[#ff751f] to-[#ff6105] hover:from-[#ff6105] hover:to-[#ff751f] shadow-md shadow-[#ff751f]/25 hover:shadow-lg transition-all duration-200"
+               data-i18n="nav_for_diners">
+                Para Comensales
+            </a>
         </div>
     </nav>
 
@@ -81,31 +162,31 @@
             <div id="hero-content" class="relative z-20 w-full h-full flex flex-col items-center pt-32 px-6 text-white">
                 
                 <div class="title-block bg-[#ff751f] rounded-2xl px-[1.2rem] py-[0.2rem] shadow-xl mb-4 md:mb-20 scale-[1.4] md:scale-200">
-                    <h2 class="text-white text-3xl font-black headline-font font-['League_Spartan',sans-serif] tracking-tighter">Yummizi is</h2>
+                    <h2 class="text-white text-3xl font-black headline-font font-['League_Spartan',sans-serif] tracking-tighter" data-i18n="hero_title">Yummizi es</h2>
                 </div>
 
                 <div class="relative w-full flex-1">
                     <div class="scene opacity-0 absolute inset-0 w-full h-full flex flex-col items-center max-md:justify-start max-md:pt-4 md:justify-center text-center" id="scene-1">
-                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0">3<br />Breaking the classic combination of hunger and waiting</p></div>
-                        <img src="images/icon_food_time.webp" alt="Hunger" class="scene-img max-h-[20vh] my-5">
-                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0">Inside restaurants</p></div>
+                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_1_top">3<br />Rompiendo la clásica combinación de hambre y espera</p></div>
+                        <img src="images/icon_food_time.webp" alt="Hunger" class="scene-img max-h-[20vh] my-5" loading="lazy" decoding="async">
+                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_1_bottom">Dentro de los restaurantes</p></div>
                     </div>
 
                     <div class="scene opacity-0 absolute inset-0 w-full h-full flex flex-col items-center max-md:justify-start max-md:pt-4 md:justify-center text-center" id="scene-2">
-                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0">2<br />An opportunity for a restaurant</p></div>
-                        <img src="images/icon_food_in_phone.webp" alt="Opportunity" class="scene-img max-h-[20vh] my-5">
-                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0">A tech opportunity</p></div>
+                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_2_top">2<br />Una oportunidad para un restaurante</p></div>
+                        <img src="images/icon_food_in_phone.webp" alt="Opportunity" class="scene-img max-h-[20vh] my-5" loading="lazy" decoding="async">
+                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_2_bottom">Una oportunidad tecnológica</p></div>
                     </div>
 
                     <div class="scene opacity-0 absolute inset-0 w-full h-full flex flex-col items-center max-md:justify-start max-md:pt-4 md:justify-center text-center" id="scene-3">
-                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0">1<br />A relief for diners</p></div>
-                        <img src="images/icon_diners_relief.webp" alt="Relief" class="scene-img max-h-[20vh] my-5">
-                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0">Even before arriving the restaurant</p></div>
+                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_3_top">1<br />Un alivio para los comensales</p></div>
+                        <img src="images/icon_diners_relief.webp" alt="Relief" class="scene-img max-h-[20vh] my-5" loading="lazy" decoding="async">
+                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_3_bottom">Incluso antes de llegar al restaurante</p></div>
                     </div>
 
                     <div class="scene opacity-0 absolute inset-0 w-full h-full flex flex-col items-center max-md:justify-start max-md:pt-4 md:justify-center" id="scene-4">
                         <div class="blue-box bg-[#001560]/40 backdrop-blur-md rounded-[40px] px-10 py-6 text-center scale-90 opacity-0 border border-white/20">
-                            <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0">A quick, easy and delicious experience 😌</p></div>
+                            <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_4">Una experiencia rápida, fácil y deliciosa 😌</p></div>
                         </div>
                     </div>
                 </div>
@@ -114,154 +195,152 @@
 
 
         <section id="comparison-section" class="bg-white py-24 max-md:pt-8 relative overflow-hidden">
-            <div class="w-full h-[1px] bg-[#ff751f] opacity-30"></div>
+            <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff751f]/50 to-transparent"></div>
 
             <div class="max-w-7xl mx-auto px-6 py-20 max-md:pt-8">
-                <h2 class="text-[#ff751f] text-5xl font-normal text-center mb-24 max-md:mb-12 tracking-tight font-['Glacial_Indifference',sans-serif]">
-                    Discover the Yummizi way
+                <h2 class="text-[#ff751f] text-5xl font-normal text-center mb-24 max-md:mb-12 tracking-tight font-['Glacial_Indifference',sans-serif]" data-i18n="comparison_title">
+                    Descubre el camino Yummizi
                 </h2>
 
                 <div class="space-y-32 md:space-y-48">
                     
                     <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center max-md:-mt-6">
-                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
-                            <h3 class="text-zinc-400 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]">Before...</h3>
-                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
-                                <img src="images/animated_friends_with_phones_in_street.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)] border border-[#001560]/5">
+                            <h3 class="text-[#001560]/60 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]" data-i18n="comparison_before_badge">Before...</h3>
+                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_friends_with_phones_in_street.webp" alt="Before Yummizi" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
                             </div>
-                            <p class="text-zinc-600 text-lg leading-relaxed text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]">
+                            <p class="text-zinc-700 text-lg leading-relaxed text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_1_before">
                                 Diners used to hope that there would be available table at the restaurant they want
                             </p>
                         </div>
-                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
-                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
-                            <h3 class="text-white/80 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]">With Yummizi...</h3>
-                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
-                                <img src="images/animated_friends_with_phones_in_street_happy_with_food.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                        <div class="comp-card after-card group bg-gradient-to-br from-[#ff751f] to-[#ff6105] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.35)]">
+                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11" loading="lazy" decoding="async">
+                            <h3 class="text-white/90 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]" data-i18n="comparison_after_badge">With Yummizi...</h3>
+                            <div class="img-placeholder bg-white/20 backdrop-blur-xs rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_friends_with_phones_in_street_happy_with_food.webp" alt="With Yummizi" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
                             </div>
-                            <p class="text-white text-lg leading-relaxed font-medium text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]">
+                            <p class="text-white text-lg leading-relaxed font-medium text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_1_after">
                                 Diners can confirm their table and dishes even before arrive
                             </p>
                         </div>
                     </div>
 
                     <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center max-md:-mt-6">
-                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
-                            <h3 class="text-zinc-400 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]">Before...</h3>
-                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
-                                <img src="images/animated_chef_thinking_hard.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)] border border-[#001560]/5">
+                            <h3 class="text-[#001560]/60 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]" data-i18n="comparison_before_badge">Before...</h3>
+                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_chef_thinking_hard.webp" alt="Chef Waiting" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
                             </div>
-                            <p class="text-zinc-600 text-lg leading-relaxed text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]">
+                            <p class="text-zinc-700 text-lg leading-relaxed text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_2_before">
                                 Restaurants used to wait until diners arrive to start cooking
                             </p>
                         </div>
-                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
-                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
-                            <h3 class="text-white/80 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]">With Yummizi...</h3>
-                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
-                                <img src="images/animated_chef_thinking_happy.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                        <div class="comp-card after-card group bg-gradient-to-br from-[#ff751f] to-[#ff6105] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.35)]">
+                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11" loading="lazy" decoding="async">
+                            <h3 class="text-white/90 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]" data-i18n="comparison_after_badge">With Yummizi...</h3>
+                            <div class="img-placeholder bg-white/20 backdrop-blur-xs rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_chef_thinking_happy.webp" alt="Chef Prepared" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
                             </div>
-                            <p class="text-white text-lg leading-relaxed font-medium text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]">
-                                Restaurant can prepare the diner's food in a timely manner.<br />
-                                Keep quailty, increase people engage
+                            <p class="text-white text-lg leading-relaxed font-medium text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_2_after">
+                                Restaurant can prepare the diner's food in a timely manner: keep quality, increase engagement
                             </p>
                         </div>
                     </div>
 
                     <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center max-md:-mt-6">
-                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
-                            <h3 class="text-zinc-400 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]">Before...</h3>
-                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
-                                <img src="images/animated_diners_looking_for_restaurant.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)] border border-[#001560]/5">
+                            <h3 class="text-[#001560]/60 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]" data-i18n="comparison_before_badge">Before...</h3>
+                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_diners_looking_for_restaurant.webp" alt="Diners Looking" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
                             </div>
-                            <p class="text-zinc-600 text-lg leading-relaxed text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]">
-                                Queues were unpredictible for diners
+                            <p class="text-zinc-700 text-lg leading-relaxed text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_3_before">
+                                Queues were unpredictable for diners
                             </p>
                         </div>
-                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
-                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
-                            <h3 class="text-white/80 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]">With Yummizi...</h3>
-                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
-                                <img src="images/animated_friends_using_yummizi.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                        <div class="comp-card after-card group bg-gradient-to-br from-[#ff751f] to-[#ff6105] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.35)]">
+                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11" loading="lazy" decoding="async">
+                            <h3 class="text-white/90 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]" data-i18n="comparison_after_badge">With Yummizi...</h3>
+                            <div class="img-placeholder bg-white/20 backdrop-blur-xs rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_friends_using_yummizi.webp" alt="Friends Using Yummizi" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
                             </div>
-                            <p class="text-white text-lg leading-relaxed font-medium text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]">
-                                Diner can join virtual queues and restaurants can control them
+                            <p class="text-white text-lg leading-relaxed font-medium text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_3_after">
+                                Diners can join virtual queues and restaurants can control them with ease
                             </p>
                         </div>
                     </div>
 
                     <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center max-md:-mt-6">
-                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
-                            <h3 class="text-zinc-400 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]">Before...</h3>
-                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
-                                <img src="images/animated_difficult_waiting_for_diners.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)] border border-[#001560]/5">
+                            <h3 class="text-[#001560]/60 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]" data-i18n="comparison_before_badge">Before...</h3>
+                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_difficult_waiting_for_diners.webp" alt="Diners Waiting" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
                             </div>
-                            <p class="text-zinc-600 text-lg leading-relaxed text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]">
-                                Diners used to wait while they were hungry.<br /> 
-                                Normalized, wasn't it?
+                            <p class="text-zinc-700 text-lg leading-relaxed text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_4_before">
+                                Diners used to wait while they were hungry. Normalized, wasn't it?
                             </p>
                         </div>
-                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
-                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
-                            <h3 class="text-white/80 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]">With Yummizi...</h3>
-                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
-                                <img src="images/animated_friends_eat_fastly_thanks_to_yummizi.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                        <div class="comp-card after-card group bg-gradient-to-br from-[#ff751f] to-[#ff6105] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.35)]">
+                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11" loading="lazy" decoding="async">
+                            <h3 class="text-white/90 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]" data-i18n="comparison_after_badge">With Yummizi...</h3>
+                            <div class="img-placeholder bg-white/20 backdrop-blur-xs rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_friends_eat_fastly_thanks_to_yummizi.webp" alt="Fast Dining" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
                             </div>
-                            <p class="text-white text-lg leading-relaxed font-medium text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]">
+                            <p class="text-white text-lg leading-relaxed font-medium text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_4_after">
                                 Diners wait much less time or simply don't wait for their food
                             </p>
                         </div>
                     </div>
 
                     <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center max-md:-mt-6">
-                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
-                            <h3 class="text-zinc-400 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]">Before...</h3>
-                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
-                                <img src="images/animated_outcomers_increasing_queue.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)] border border-[#001560]/5">
+                            <h3 class="text-[#001560]/60 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]" data-i18n="comparison_before_badge">Before...</h3>
+                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_outcomers_increasing_queue.webp" alt="Long Queue" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
                             </div>
-                            <p class="text-zinc-600 text-lg leading-relaxed text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]">
+                            <p class="text-zinc-700 text-lg leading-relaxed text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_5_before">
                                 Initial wasted time takes its toll on newcomers
                             </p>
                         </div>
-                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
-                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
-                            <h3 class="text-white/80 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]">With Yummizi...</h3>
-                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
-                                <img src="images/animated_friends_leaving_restaurant.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                        <div class="comp-card after-card group bg-gradient-to-br from-[#ff751f] to-[#ff6105] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.35)]">
+                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11" loading="lazy" decoding="async">
+                            <h3 class="text-white/90 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]" data-i18n="comparison_after_badge">With Yummizi...</h3>
+                            <div class="img-placeholder bg-white/20 backdrop-blur-xs rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_friends_leaving_restaurant.webp" alt="Satisfied Diners" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
                             </div>
-                            <p class="text-white text-lg leading-relaxed font-medium text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]">
-                                Diners don't have a hurry experience but an efficient one
+                            <p class="text-white text-lg leading-relaxed font-medium text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_5_after">
+                                Diners don't have a hurried experience, but a truly efficient one
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="w-full h-[1px] bg-[#ff751f] opacity-30 mt-20"></div>
+            <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff751f]/50 to-transparent mt-20"></div>
         </section>
 
         <section id="benefits-section" class="py-32 px-8 bg-[#f9f9fb]">
             <div class="max-w-7xl mx-auto">
                 <div class="mb-24 text-center">
-                    <h2 class="text-6xl mb-6 text-[#001560] font-['League_Spartan',sans-serif] font-black">
-                        Discover Our Benefits
+                    <h2 class="text-6xl mb-6 text-[#001560] font-['League_Spartan',sans-serif] font-black" data-i18n="benefits_title">
+                        Descubre Nuestros Beneficios
                     </h2>
-                    <div class="w-32 h-1.5 bg-[#ff751f] mx-auto rounded-full"></div>
+                    <div class="w-32 h-1.5 bg-gradient-to-r from-[#ff751f] to-[#ff6105] mx-auto rounded-full"></div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     
                     <div class="flip-card group relative h-[450px] w-full cursor-pointer pb-10 [perspective:1000px]">
                         <div class="flip-card-inner relative w-full h-full [transform-style:preserve-3d] [will-change:transform] transition-[transform,margin-top] duration-800 [transition-timing-function:cubic-bezier(0.4,0,0.2,1),ease-out] group-hover:[@media(hover:hover)]:[transform:rotateY(180deg)] group-hover:[@media(hover:hover)]:-mt-[15px] group-[.is-flipped]:[transform:rotateY(180deg)] group-[.is-flipped]:-mt-[15px]">
-                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden]">
-                                <img src="images/icon_higher_diner_flow.webp" alt="Resto" class="w-20 h-20 mb-8 object-contain">
-                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">A more predictable flow of users</h3>
-                                <p class="text-[#ff751f] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Restaurant Benefit</p>
+                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] border border-white/10">
+                                <img src="images/icon_higher_diner_flow.webp" alt="Resto" loading="lazy" decoding="async" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]" data-i18n="card_1_resto_title">Un flujo de usuarios mucho más predecible</h3>
+                                <p class="text-[#ff751f] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]" data-i18n="card_1_resto_badge">Beneficio Restaurante</p>
                             </div>
-                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                                <img src="images/icon_simultaneous_queues.webp" alt="Diner" class="w-20 h-20 mb-8 object-contain">
-                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">Diners can make more than one virtual queue simultaneously</h3>
-                                <p class="text-[#001560] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Diner Experience</p>
+                            <div class="flip-card-back absolute inset-0 bg-gradient-to-br from-[#ff751f] to-[#ff6105] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)] border border-white/15">
+                                <img src="images/icon_simultaneous_queues.webp" alt="Diner" loading="lazy" decoding="async" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]" data-i18n="card_1_diner_title">Los comensales pueden hacer más de una fila virtual simultáneamente</h3>
+                                <p class="text-[#001560] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif] bg-white/90 px-3 py-1 rounded-full font-bold" data-i18n="card_1_diner_badge">Experiencia Comensal</p>
                             </div>
                         </div>
 
@@ -270,15 +349,15 @@
 
                     <div class="flip-card flip-start-back group relative h-[450px] w-full cursor-pointer pb-10 [perspective:1000px]">
                         <div class="flip-card-inner relative w-full h-full [transform-style:preserve-3d] [will-change:transform] [transform:rotateY(180deg)] transition-[transform,margin-top] duration-800 [transition-timing-function:cubic-bezier(0.4,0,0.2,1),ease-out] group-hover:[@media(hover:hover)]:[transform:rotateY(0deg)] group-hover:[@media(hover:hover)]:-mt-[15px] group-[.is-flipped]:[transform:rotateY(0deg)] group-[.is-flipped]:-mt-[15px]">
-                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden]">
-                                <img src="images/icon_higher_table_turnover.webp" alt="Resto" class="w-20 h-20 mb-8 object-contain">
-                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">The table turnover increases daily</h3>
-                                <p class="text-[#ff751f] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Restaurant Benefit</p>
+                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] border border-white/10">
+                                <img src="images/icon_higher_table_turnover.webp" alt="Resto" loading="lazy" decoding="async" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]" data-i18n="card_2_resto_title">La rotación de mesas se incrementa a diario</h3>
+                                <p class="text-[#ff751f] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]" data-i18n="card_2_resto_badge">Beneficio Restaurante</p>
                             </div>
-                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                                <img src="images/icon_happier_customers.webp" alt="Diner" class="w-20 h-20 mb-8 object-contain">
-                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">Diners wait much less time for their food when arrive at the restaurant</h3>
-                                <p class="text-[#001560] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Diner Experience</p>
+                            <div class="flip-card-back absolute inset-0 bg-gradient-to-br from-[#ff751f] to-[#ff6105] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)] border border-white/15">
+                                <img src="images/icon_happier_customers.webp" alt="Diner" loading="lazy" decoding="async" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]" data-i18n="card_2_diner_title">Los comensales esperan mucho menos por sus platos al llegar al restaurante</h3>
+                                <p class="text-[#001560] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif] bg-white/90 px-3 py-1 rounded-full font-bold" data-i18n="card_2_diner_badge">Experiencia Comensal</p>
                             </div>
                         </div>
 
@@ -287,15 +366,15 @@
 
                     <div class="flip-card group relative h-[450px] w-full cursor-pointer pb-10 [perspective:1000px]">
                         <div class="flip-card-inner relative w-full h-full [transform-style:preserve-3d] [will-change:transform] transition-[transform,margin-top] duration-800 [transition-timing-function:cubic-bezier(0.4,0,0.2,1),ease-out] group-hover:[@media(hover:hover)]:[transform:rotateY(180deg)] group-hover:[@media(hover:hover)]:-mt-[15px] group-[.is-flipped]:[transform:rotateY(180deg)] group-[.is-flipped]:-mt-[15px]">
-                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden]">
-                                <img src="images/icon_chef_analytics.webp" alt="Resto" class="w-20 h-20 mb-8 object-contain">
-                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">An organized record of the service and visual data analysis</h3>
-                                <p class="text-[#ff751f] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Restaurant Benefit</p>
+                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] border border-white/10">
+                                <img src="images/icon_chef_analytics.webp" alt="Resto" loading="lazy" decoding="async" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]" data-i18n="card_3_resto_title">Registro ordenado del servicio y análisis visual de datos</h3>
+                                <p class="text-[#ff751f] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]" data-i18n="card_3_resto_badge">Beneficio Restaurante</p>
                             </div>
-                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                                <img src="images/icon_menu_live.webp" alt="Diner" class="w-20 h-20 mb-8 object-contain">
-                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">Diners can know dishes availability in real time</h3>
-                                <p class="text-[#001560] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Diner Experience</p>
+                            <div class="flip-card-back absolute inset-0 bg-gradient-to-br from-[#ff751f] to-[#ff6105] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)] border border-white/15">
+                                <img src="images/icon_menu_live.webp" alt="Diner" loading="lazy" decoding="async" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]" data-i18n="card_3_diner_title">Disponibilidad de platillos consultable en tiempo real</h3>
+                                <p class="text-[#001560] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif] bg-white/90 px-3 py-1 rounded-full font-bold" data-i18n="card_3_diner_badge">Experiencia Comensal</p>
                             </div>
                         </div>
 
@@ -304,15 +383,15 @@
 
                     <div class="flip-card flip-start-back group relative h-[450px] w-full cursor-pointer pb-10 [perspective:1000px]">
                         <div class="flip-card-inner relative w-full h-full [transform-style:preserve-3d] [will-change:transform] [transform:rotateY(180deg)] transition-[transform,margin-top] duration-800 [transition-timing-function:cubic-bezier(0.4,0,0.2,1),ease-out] group-hover:[@media(hover:hover)]:[transform:rotateY(0deg)] group-hover:[@media(hover:hover)]:-mt-[15px] group-[.is-flipped]:[transform:rotateY(0deg)] group-[.is-flipped]:-mt-[15px]">
-                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden]">
-                                <img src="images/icon_diners_love_it.webp" alt="Resto" class="w-20 h-20 mb-8 object-contain">
-                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">The likelhood that customers will return later increases</h3>
-                                <p class="text-[#ff751f] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Restaurant Benefit</p>
+                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] border border-white/10">
+                                <img src="images/icon_diners_love_it.webp" alt="Resto" loading="lazy" decoding="async" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]" data-i18n="card_4_resto_title">Mayor probabilidad de que los clientes regresen con frecuencia</h3>
+                                <p class="text-[#ff751f] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]" data-i18n="card_4_resto_badge">Beneficio Restaurante</p>
                             </div>
-                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                                <img src="images/icon_advanced_preferences.webp" alt="Diner" class="w-20 h-20 mb-8 object-contain">
-                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">Diner can inform the restaurant about their specifications in advance</h3>
-                                <p class="text-[#001560] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Diner Experience</p>
+                            <div class="flip-card-back absolute inset-0 bg-gradient-to-br from-[#ff751f] to-[#ff6105] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)] border border-white/15">
+                                <img src="images/icon_advanced_preferences.webp" alt="Diner" loading="lazy" decoding="async" class="w-20 h-20 mb-8 object-contain">
+                                <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]" data-i18n="card_4_diner_title">Notificación anticipada de preferencias o especificaciones de cocina</h3>
+                                <p class="text-[#001560] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif] bg-white/90 px-3 py-1 rounded-full font-bold" data-i18n="card_4_diner_badge">Experiencia Comensal</p>
                             </div>
                         </div>
 
@@ -330,62 +409,62 @@
             
             <div class="flex flex-col lg:flex-row w-full h-full max-lg:skew-x-0 -skew-x-5">
                 
-                <button id="close-modal" class="absolute top-6 right-6 w-12 h-12 bg-white shadow-md flex items-center justify-center hover:bg-zinc-100 transition-all z-50 border border-zinc-200 rounded-[10px] max-lg:skew-x-0 skew-x-5" aria-label="Close modal">
+                <button id="close-modal" class="absolute top-6 right-6 w-12 h-12 bg-white shadow-md flex items-center justify-center hover:bg-zinc-100 transition-all z-50 border border-zinc-200 rounded-[10px] max-lg:skew-x-0 skew-x-5 cursor-pointer" aria-label="Close modal">
                     <span class="text-2xl text-black font-bold max-lg:skew-x-0 -skew-x-5">×</span>
                 </button>
 
                 <div class="w-full lg:w-3/5 p-6 lg:p-10 bg-white z-10 order-1">
                     
                     <div class="mb-2">
-                        <h2 class="text-5xl text-[#ff751f] leading-tight font-['Glacial_Indifference',sans-serif]">
-                            Stay <span class="font-bold">launch</span>-ready
+                        <h2 class="text-5xl text-[#ff751f] leading-tight font-['Glacial_Indifference',sans-serif]" data-i18n="modal_title">
+                            Mantente listo para el <span class="font-bold">lanzamiento</span>
                         </h2>
-                        <p class="text-[#001560] text-lg font-medium font-['Glacial_Indifference',sans-serif] mb-10">
-                            Secure your spot
+                        <p class="text-[#001560] text-lg font-medium font-['Glacial_Indifference',sans-serif] mb-10" data-i18n="modal_subtitle">
+                            Asegura tu lugar
                         </p>
                     </div>
                     
                     <form id="waitlist-form" name="yummizi-waitlist" data-netlify="true" class="space-y-4">
                         <div class="form-group max-lg:ml-0 lg:ml-0">
-                            <input type="text" name="name" placeholder="Your Name *" required class="w-full px-4 py-[0.8rem] bg-zinc-100 rounded-xl outline-none border border-transparent font-['Glacial_Indifference',sans-serif] placeholder:font-['Glacial_Indifference',sans-serif] placeholder:text-slate-400 focus:ring-2 focus:ring-[#ff751f]">
+                            <input type="text" name="name" placeholder="Tu Nombre *" data-i18n-placeholder="form_name_placeholder" required class="w-full px-4 py-[0.8rem] bg-zinc-100 rounded-xl outline-none border border-transparent font-['Glacial_Indifference',sans-serif] placeholder:font-['Glacial_Indifference',sans-serif] placeholder:text-slate-400 focus:ring-2 focus:ring-[#ff751f]">
                         </div>
 
                         <div class="form-group max-lg:ml-0 lg:ml-24 mt-2">
                             <select id="user-type" name="type" required class="w-full px-4 py-[0.8rem] pr-10 bg-zinc-100 rounded-xl outline-none cursor-pointer border border-transparent font-['Glacial_Indifference',sans-serif] transition-all duration-300 appearance-none bg-[url('data:image/svg+xml,%3Csvg_xmlns=\'http://www.w3.org/2000/svg\'_fill=\'none\'_viewBox=\'0_0_24_24\'_stroke=\'%23ff751f\'%3E%3Cpath_stroke-linecap=\'round\'_stroke-linejoin=\'round\'_stroke-width=\'2\'_d=\'M19_9l-7_7-7-7\'%3E%3C/path%3E%3C/svg%3E')] bg-no-repeat bg-[right_1.2rem_center] bg-[length:1.2rem] hover:bg-zinc-100 hover:border-[#ff751f] focus:bg-white focus:ring-4 focus:ring-[#ff751f]/10">
-                                <option value="" disabled selected class="text-[#001560] bg-white p-2.5">Who is this for? *</option>
-                                <option value="customer" class="text-[#001560] bg-white p-2.5">I'm a Diner</option>
-                                <option value="restaurant" class="text-[#001560] bg-white p-2.5">I'm a Restaurant</option>
+                                <option value="" disabled selected class="text-[#001560] bg-white p-2.5" data-i18n="form_type_default">¿Para quién es esto? *</option>
+                                <option value="customer" class="text-[#001560] bg-white p-2.5" data-i18n="form_type_diner">Soy un Comensal</option>
+                                <option value="restaurant" class="text-[#001560] bg-white p-2.5" data-i18n="form_type_resto">Soy un Restaurante</option>
                             </select>
                         </div>
 
                         <div id="resto-field" class="form-group max-lg:ml-0 lg:ml-8 hidden">
-                            <input type="text" name="restaurant_name" placeholder="Restaurant's Official Name *" class="w-full px-4 py-[0.8rem] bg-white border-2 border-[#ff751f] rounded-xl outline-none font-['Glacial_Indifference',sans-serif] placeholder:font-['Glacial_Indifference',sans-serif] placeholder:text-slate-400">
+                            <input type="text" name="restaurant_name" placeholder="Nombre Oficial del Restaurante *" data-i18n-placeholder="form_resto_placeholder" class="w-full px-4 py-[0.8rem] bg-white border-2 border-[#ff751f] rounded-xl outline-none font-['Glacial_Indifference',sans-serif] placeholder:font-['Glacial_Indifference',sans-serif] placeholder:text-slate-400">
                         </div>
 
                         <div class="form-group max-lg:ml-0 lg:ml-12">
-                            <input type="email" name="email" placeholder="Email Address *" required class="w-full px-4 py-[0.8rem] bg-zinc-100 rounded-xl outline-none border border-transparent font-['Glacial_Indifference',sans-serif] placeholder:font-['Glacial_Indifference',sans-serif] placeholder:text-slate-400 focus:ring-2 focus:ring-[#ff751f]">
+                            <input type="email" name="email" placeholder="Correo Electrónico *" data-i18n-placeholder="form_email_placeholder" required class="w-full px-4 py-[0.8rem] bg-zinc-100 rounded-xl outline-none border border-transparent font-['Glacial_Indifference',sans-serif] placeholder:font-['Glacial_Indifference',sans-serif] placeholder:text-slate-400 focus:ring-2 focus:ring-[#ff751f]">
                         </div>
 
                         <div class="form-group max-lg:ml-0 lg:ml-20">
-                            <textarea name="question" placeholder="Any questions for us?" rows="2" class="w-full px-4 py-[0.8rem] bg-zinc-100 rounded-xl outline-none border border-transparent font-['Glacial_Indifference',sans-serif] placeholder:font-['Glacial_Indifference',sans-serif] placeholder:text-slate-400 focus:ring-2 focus:ring-[#ff751f]"></textarea>
+                            <textarea name="question" placeholder="¿Alguna duda o pregunta para nosotros?" data-i18n-placeholder="form_question_placeholder" rows="2" class="w-full px-4 py-[0.8rem] bg-zinc-100 rounded-xl outline-none border border-transparent font-['Glacial_Indifference',sans-serif] placeholder:font-['Glacial_Indifference',sans-serif] placeholder:text-slate-400 focus:ring-2 focus:ring-[#ff751f]"></textarea>
                         </div>
 
                         <div class="form-group max-lg:ml-0 lg:ml-24 pt-4">
-                            <button type="submit" class="w-full py-5 bg-[#ff751f] text-white font-bold text-xl rounded-xl hover:bg-[#e66a1c] transition-colors shadow-lg font-['League_Spartan',sans-serif]">
-                                keep me up to date!
+                            <button type="submit" class="w-full py-5 bg-gradient-to-r from-[#ff751f] to-[#ff6105] text-white font-bold text-xl rounded-xl hover:from-[#ff6105] hover:to-[#ff751f] transition-all shadow-lg font-['League_Spartan',sans-serif] cursor-pointer" data-i18n="form_submit_btn">
+                                ¡MANTÉNGANME AL TANTO!
                             </button>
                         </div>
 
                         <div class="form-group max-lg:ml-0 lg:ml-24 mt-6">
                             <div class="flex items-start gap-3">
                                 <input type="checkbox" id="policy-check" class="mt-1 w-5 h-5 accent-[#ff751f] cursor-pointer border-2 border-[#001560] rounded checked:bg-[#ff751f]">
-                                <label for="policy-check" class="text-sm text-zinc-600 leading-tight cursor-pointer font-['Glacial_Indifference',sans-serif]">
-                                    I have read and agree to the <a href="#" id="privacy-policy-link" class="text-[#ff751f] underline font-bold">Privacy Policy</a> and consent to being contacted regarding the waiting list.
+                                <label for="policy-check" class="text-sm text-zinc-600 leading-tight cursor-pointer font-['Glacial_Indifference',sans-serif]" data-i18n="form_policy_agreement">
+                                    He leído y acepto la <a href="#" id="privacy-policy-link" class="text-[#ff751f] hover:text-[#ff6105] underline font-bold">Política de Privacidad</a> y autorizo ser contactado sobre la lista de espera.
                                 </label>
                             </div>
                             
-                            <p id="policy-error" class="text-red-500 text-xs font-bold mt-2 opacity-0 transition-opacity duration-300 pointer-events-none">
-                                The checkbox must be checked to continue
+                            <p id="policy-error" class="text-red-500 text-xs font-bold mt-2 opacity-0 transition-opacity duration-300 pointer-events-none" data-i18n="form_policy_error">
+                                Debes marcar la casilla para poder continuar
                             </p>
                         </div>
 
@@ -393,47 +472,44 @@
                 </div>
 
                 <div class="block w-full max-lg:h-[250px] max-lg:order-2 lg:w-2/5 bg-[#001560] relative overflow-hidden min-h-full">
-                    <img id="form-visual" src="images/animated_pov_diner_with_yummizi.webp" alt="Yummizi" class="absolute inset-y-0 right-0 left-auto h-full w-full lg:w-[140%] object-cover opacity-100 transition-opacity duration-500">
+                    <img id="form-visual" src="images/animated_pov_diner_with_yummizi.webp" alt="Yummizi Preview" loading="lazy" decoding="async" class="absolute inset-y-0 right-0 left-auto h-full w-full lg:w-[140%] object-cover opacity-100 transition-opacity duration-500">
                 </div>
             </div>
 
             <div id="privacy-policy-panel" class="privacy-policy-panel absolute inset-6 max-sm:inset-3 z-[80] flex flex-col bg-white rounded-[28px] max-sm:rounded-[22px] shadow-[0_24px_60px_rgba(0,0,0,0.24)] opacity-0 pointer-events-none max-lg:skew-x-0 -skew-x-5 translate-y-[18px] scale-[0.98] transition-[opacity,transform] duration-250 ease-out [&.is-visible]:opacity-100 [&.is-visible]:pointer-events-auto [&.is-visible]:translate-y-0 [&.is-visible]:scale-100" role="dialog" aria-labelledby="privacy-policy-title" aria-hidden="true">
-                <button id="privacy-policy-back" class="privacy-policy-back absolute top-4 right-4 max-sm:top-3 max-sm:right-3 z-[2] px-4 py-[0.7rem] max-sm:px-3 max-sm:py-[0.6rem] text-[#001560] bg-[#f4f4f5] border border-[#e4e4e7] rounded-[10px] font-['League_Spartan',sans-serif] text-base max-sm:text-[0.85rem] font-extrabold uppercase cursor-pointer transition-colors duration-200 hover:text-white hover:bg-[#ff751f] focus-visible:text-white focus-visible:bg-[#ff751f] focus-visible:outline-none" type="button">go back</button>
+                <button id="privacy-policy-back" class="privacy-policy-back absolute top-4 right-4 max-sm:top-3 max-sm:right-3 z-[2] px-4 py-[0.7rem] max-sm:px-3 max-sm:py-[0.6rem] text-[#001560] bg-[#f4f4f5] border border-[#e4e4e7] rounded-[10px] font-['League_Spartan',sans-serif] text-base max-sm:text-[0.85rem] font-extrabold uppercase cursor-pointer transition-colors duration-200 hover:text-white hover:bg-[#ff751f] focus-visible:text-white focus-visible:bg-[#ff751f] focus-visible:outline-none" type="button" data-i18n="privacy_back_btn">VOLVER</button>
 
                 <div class="privacy-policy-content pt-[4.5rem] pb-10 px-[clamp(1.5rem,4vw,3.5rem)] overflow-y-auto text-zinc-700 font-['Glacial_Indifference',sans-serif]">
-                    <h2 id="privacy-policy-title" class="mb-4 text-[#ff751f] text-[clamp(2.2rem,5vw,4rem)] leading-[0.95] font-['League_Spartan',sans-serif] font-bold">Yummizi Privacy Policy</h2>
+                    <h2 id="privacy-policy-title" class="mb-4 text-[#ff751f] text-[clamp(2.2rem,5vw,4rem)] leading-[0.95] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_title">Política de Privacidad de Yummizi</h2>
 
-                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold">Data Controller Identity</h3>
-                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]">
-                        The party responsible for processing your personal data is Piero Stephano Olivas Tuesta, acting on behalf of the Yummizi (under incorporation) project, with its current headquarters in Lima, Peru.
+                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_controller_title">Identidad del Responsable del Tratamiento</h3>
+                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]" data-i18n="privacy_controller_p">
+                        El responsable del tratamiento de tus datos personales es Piero Stephano Olivas Tuesta, en representación del proyecto Yummizi (en proceso de constitución), con sede en Lima, Perú.
                     </p>
 
-                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold">Purpose of Data Collection</h3>
-                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]">
-                        The personal data requested through our contact form (Name, Email Address, and Restaurant Name) will be processed for the following purposes:<br><br>
-                        - To register your interest in the official launch of the Yummizi platform.<br><br>
-                        - To send you technical updates and news commercial offers directly related to our services.<br><br>
-                        - To contact you for market research or early-access beta testing.
+                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_purpose_title">Finalidad de la Recopilación de Datos</h3>
+                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]" data-i18n="privacy_purpose_p">
+                        Los datos solicitados a través de nuestro formulario (Nombre, Correo y Nombre del Restaurante) se usarán para registrar tu interés en el lanzamiento oficial de Yummizi, enviarte actualizaciones técnicas y comerciales directas, y contactarte para fases beta y estudios de mercado.
                     </p>
 
-                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold">Data Storage and Retention Period</h3>
-                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]">
-                        Your data will be stored in a digital database named "Yummizi LP" owned by Yummizi. We will retain this information for a period of 2 years or until you formally revoke your consent, whichever occurs first.
+                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_retention_title">Almacenamiento y Periodo de Conservación</h3>
+                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]" data-i18n="privacy_retention_p">
+                        Tus datos se almacenarán en una base digital segura denominada 'Yummizi LP' por un plazo de 2 años o hasta que revoques formalmente tu consentimiento.
                     </p>
 
-                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold">International Data Transfers (Cross-Border Flow)</h3>
-                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]">
-                        To ensure the functionality of this website, we utilize third-party infrastructure (netlify and supabase). Your data may be transferred to and stored on servers located outside of Peru (primarily in the United States). By submitting your data, you acknowledge and consent to this international transfer under adequate security standards.
+                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_transfers_title">Transferencias Internacionales de Datos</h3>
+                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]" data-i18n="privacy_transfers_p">
+                        Utilizamos infraestructura tecnológica de terceros de clase mundial (Netlify y Supabase). Tus datos se almacenan en servidores con altos estándares de seguridad internacional.
                     </p>
 
-                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold">Your Rights (ARCO Rights)</h3>
-                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]">
-                        In accordance with international privacy standards and Peruvian Law No. 29733, you have the right to Access, Rectify, Cancel, or Oppose (ARCO) the processing of your data at any time. To exercise these rights, please contact us at: yummizi.mkt@gmail.com with the subject line "Privacy Rights Request."
+                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_rights_title">Derechos ARCO</h3>
+                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]" data-i18n="privacy_rights_p">
+                        Conforme a los estándares internacionales y la Ley N° 29733 de Perú, puedes ejercer tus derechos de Acceso, Rectificación, Cancelación u Oposición escribiendo a yummizi.mkt@gmail.com con el asunto 'Solicitud de Derechos de Privacidad'.
                     </p>
 
-                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold">Mandatory Nature of Information</h3>
-                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]">
-                        Providing the requested data is mandatory to join our waiting list. Failure to provide this information will prevent us from contacting you or providing updates regarding the launch.
+                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_mandatory_title">Naturaleza de la Información</h3>
+                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]" data-i18n="privacy_mandatory_p">
+                        Proporcionar los datos solicitados es necesario para incorporarte a nuestra lista de acceso anticipado.
                     </p>
                 </div>
             </div>
@@ -444,16 +520,19 @@
         <div class="absolute inset-0 w-full h-full">
             <img src="images/restaurant_with_nice_view.webp" 
                 class="w-full h-full object-cover opacity-60 blur-[4px]" 
-                alt="footer decor">
+                alt="footer decor"
+                loading="lazy"
+                decoding="async">
         </div>
 
         <div class="absolute right-10 top-1/2 -translate-y-1/2 rotate-90 origin-right">
-            <span class="text-[#001560]/20 text-7xl font-bold tracking-widest select-none font-['Glacial_Indifference',sans-serif] whitespace-nowrap">
+            <span class="text-[#001560]/20 text-7xl font-bold tracking-widest select-none font-['Glacial_Indifference',sans-serif] whitespace-nowrap" data-i18n="footer_text">
                 Yummi yummi
             </span>
         </div>
     </section>
 
+    <script src="js/i18n.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
