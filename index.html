@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+<html lang="en" class="[scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,25 +26,25 @@
         }
     </style>
 </head>
-<body class="bg-[#f9f9fb] scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"> 
-    <div id="scroll-progress" class="fixed top-0 left-0 h-0.75 bg-[#ff751f] z-110 w-0"></div>
+<body class="bg-[#f9f9fb] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"> 
+    <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] bg-[#ff751f] z-[110] w-0"></div>
 
     <img id="y-logo" 
         src="images/yummIzi_logo.webp" 
         alt="Yummizi Logo" 
-        class="fixed z-120 w-[min(30vw,128px)] sm:w-40 h-[min(30vw,128px)] sm:h-40 rounded-[40px] object-contain overflow-hidden opacity-0 pointer-events-none">
+        class="fixed z-[120] w-[min(30vw,128px)] sm:w-[160px] h-[min(30vw,128px)] sm:h-[160px] rounded-[40px] object-contain overflow-hidden opacity-0 pointer-events-none">
 
-    <div id="preloader" class="fixed inset-0 z-100 flex items-center justify-center bg-white overflow-hidden">
-        <div id="logo-center-target" class="w-[min(30vw,128px)] sm:w-40 h-[min(30vw,128px)] sm:h-40 relative">
+    <div id="preloader" class="fixed inset-0 z-[100] flex items-center justify-center bg-white overflow-hidden">
+        <div id="logo-center-target" class="w-[min(30vw,128px)] sm:w-[160px] h-[min(30vw,128px)] sm:h-[160px] relative">
             <div id="preloader-rect" class="absolute -z-1 left-1/2 top-1/2 -translate-y-1/2 h-full bg-[#ff751f] rounded-r-[18px] sm:rounded-r-3xl origin-[left_center] scale-x-0 flex items-center whitespace-nowrap max-sm:max-w-[calc(50vw-8px)] max-sm:overflow-hidden">
-                <span id="rect-text" class="text-white font-bold font-['Glacial_Indifference',sans-serif] text-[clamp(1.85rem,9vw,2.75rem)] sm:text-7xl ml-[clamp(52px,16vw,72px)] sm:ml-25 opacity-0 whitespace-nowrap tracking-[-2px] leading-none">ummizi</span>
+                <span id="rect-text" class="text-white font-bold font-['Glacial_Indifference',sans-serif] text-[clamp(1.85rem,9vw,2.75rem)] sm:text-7xl ml-[clamp(52px,16vw,72px)] sm:ml-[100px] opacity-0 whitespace-nowrap tracking-[-2px] leading-none">ummizi</span>
             </div>
         </div>
     </div>
 
     <nav id="navbar" class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-10 h-24 bg-white/60 backdrop-blur-md opacity-0 shadow-sm">
-        <div class="shrink-0 z-10">
-            <div id="nav-logo-anchor" class="w-15 h-15 relative">
+        <div class="flex-shrink-0 z-10">
+            <div id="nav-logo-anchor" class="w-[60px] h-[60px] relative">
                 <img src="images/yummIzi_logo.webp" alt="Yummizi" class="w-full h-full object-contain rounded-[15px]">
             </div>
         </div>
@@ -54,26 +54,26 @@
         </div> 
 -->
 
-        <div class="shrink-0 z-10">
+        <div class="flex-shrink-0 z-10">
             <button class="bg-[#ff751f] text-white px-8 py-3 rounded-xl font-bold text-xl hover:shadow-lg transition-all font-['League_Spartan',sans-serif]">A click away</button>
         </div>
     </nav>
 
     <main id="main-content" class="w-full min-h-[500vh] block relative opacity-0">
-        <section id="hero-section" class="relative w-[80%] h-[60vh] mx-auto rounded-[40px] overflow-hidden opacity-0 shadow-2xl bg-white origin-bottom will-change-[transform,width,height,border-radius] mt-0">
+        <section id="hero-section" class="relative w-[80%] h-[60vh] mx-auto rounded-[40px] overflow-hidden opacity-0 shadow-2xl bg-white origin-bottom [will-change:transform,width,height,border-radius] mt-0">
     
-            <div class="hero-corner-image absolute pointer-events-none flex items-center justify-center z-50 max-md:top-156 max-md:bottom-auto max-md:left-6 max-md:w-12.5 max-md:h-12.5 md:bottom-8 md:left-8 md:w-24 md:h-24">
+            <div class="hero-corner-image absolute pointer-events-none flex items-center justify-center z-50 max-md:top-[39rem] max-md:bottom-auto max-md:left-6 max-md:w-[50px] max-md:h-[50px] md:bottom-8 md:left-8 md:w-24 md:h-24">
                 <img src="images/icon_mouse_scroll.webp" alt="Scroll Desktop" class="hidden md:block w-full h-full object-contain">
                 <img src="images/icon_tactil_scroll.webp" alt="Scroll Mobile" class="block md:hidden w-full h-full object-contain">
             </div>
 
             <div id="hero-reel" class="absolute inset-0 z-0">
-                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-110 will-change-[filter,opacity]" style="background-image: url('images/coffeshop_with_yummizi.webp')"></div>
-                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-110 will-change-[filter,opacity]" style="background-image: url('images/friends_in_coffeshop_with_yummizi.webp')"></div>
-                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-110 will-change-[filter,opacity]" style="background-image: url('images/formal_rest_with_yummizi.webp')"></div>
-                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-110 will-change-[filter,opacity]" style="background-image: url('images/friends_in_formal_rest_with_yummizi.webp')"></div>
-                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-110 will-change-[filter,opacity]" style="background-image: url('images/informal_rest_with_yummizi.webp')"></div>
-                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-110 will-change-[filter,opacity]" style="background-image: url('images/friends_in_informal_rest_with_yummizi.webp')"></div>
+                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-110 [will-change:filter,opacity]" style="background-image: url('images/coffeshop_with_yummizi.webp')"></div>
+                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-110 [will-change:filter,opacity]" style="background-image: url('images/friends_in_coffeshop_with_yummizi.webp')"></div>
+                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-110 [will-change:filter,opacity]" style="background-image: url('images/formal_rest_with_yummizi.webp')"></div>
+                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-110 [will-change:filter,opacity]" style="background-image: url('images/friends_in_formal_rest_with_yummizi.webp')"></div>
+                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-110 [will-change:filter,opacity]" style="background-image: url('images/informal_rest_with_yummizi.webp')"></div>
+                <div class="reel-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 scale-110 [will-change:filter,opacity]" style="background-image: url('images/friends_in_informal_rest_with_yummizi.webp')"></div>
 
                 <div class="absolute inset-0 bg-black/70 z-10"></div> 
             </div>
@@ -114,7 +114,7 @@
 
 
         <section id="comparison-section" class="bg-white py-24 max-md:pt-8 relative overflow-hidden">
-            <div class="w-full h-px bg-[#ff751f] opacity-30"></div>
+            <div class="w-full h-[1px] bg-[#ff751f] opacity-30"></div>
 
             <div class="max-w-7xl mx-auto px-6 py-20 max-md:pt-8">
                 <h2 class="text-[#ff751f] text-5xl font-normal text-center mb-24 max-md:mb-12 tracking-tight font-['Glacial_Indifference',sans-serif]">
@@ -124,7 +124,7 @@
                 <div class="space-y-32 md:space-y-48">
                     
                     <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center max-md:-mt-6">
-                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-130 transition-shadow duration-500 will-change-[transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
+                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
                             <h3 class="text-zinc-400 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]">Before...</h3>
                             <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
                                 <img src="images/animated_friends_with_phones_in_street.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
@@ -133,7 +133,7 @@
                                 Diners used to hope that there would be available table at the restaurant they want
                             </p>
                         </div>
-                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-130 transition-shadow duration-500 will-change-[transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
+                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
                             <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
                             <h3 class="text-white/80 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]">With Yummizi...</h3>
                             <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
@@ -146,7 +146,7 @@
                     </div>
 
                     <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center max-md:-mt-6">
-                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-130 transition-shadow duration-500 will-change-[transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
+                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
                             <h3 class="text-zinc-400 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]">Before...</h3>
                             <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
                                 <img src="images/animated_chef_thinking_hard.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
@@ -155,7 +155,7 @@
                                 Restaurants used to wait until diners arrive to start cooking
                             </p>
                         </div>
-                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-130 transition-shadow duration-500 will-change-[transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
+                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
                             <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
                             <h3 class="text-white/80 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]">With Yummizi...</h3>
                             <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
@@ -169,7 +169,7 @@
                     </div>
 
                     <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center max-md:-mt-6">
-                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-130 transition-shadow duration-500 will-change-[transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
+                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
                             <h3 class="text-zinc-400 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]">Before...</h3>
                             <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
                                 <img src="images/animated_diners_looking_for_restaurant.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
@@ -178,7 +178,7 @@
                                 Queues were unpredictible for diners
                             </p>
                         </div>
-                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-130 transition-shadow duration-500 will-change-[transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
+                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
                             <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
                             <h3 class="text-white/80 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]">With Yummizi...</h3>
                             <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
@@ -191,7 +191,7 @@
                     </div>
 
                     <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center max-md:-mt-6">
-                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-130 transition-shadow duration-500 will-change-[transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
+                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
                             <h3 class="text-zinc-400 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]">Before...</h3>
                             <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
                                 <img src="images/animated_difficult_waiting_for_diners.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
@@ -201,7 +201,7 @@
                                 Normalized, wasn't it?
                             </p>
                         </div>
-                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-130 transition-shadow duration-500 will-change-[transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
+                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
                             <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
                             <h3 class="text-white/80 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]">With Yummizi...</h3>
                             <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
@@ -214,7 +214,7 @@
                     </div>
 
                     <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center max-md:-mt-6">
-                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-130 transition-shadow duration-500 will-change-[transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
+                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
                             <h3 class="text-zinc-400 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]">Before...</h3>
                             <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
                                 <img src="images/animated_outcomers_increasing_queue.webp" alt="" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
@@ -223,7 +223,7 @@
                                 Initial wasted time takes its toll on newcomers
                             </p>
                         </div>
-                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-130 transition-shadow duration-500 will-change-[transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
+                        <div class="comp-card after-card group bg-[#ff751f] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)]">
                             <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11">
                             <h3 class="text-white/80 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]">With Yummizi...</h3>
                             <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto">
@@ -237,7 +237,7 @@
                 </div>
             </div>
 
-            <div class="w-full h-px bg-[#ff751f] opacity-30 mt-20"></div>
+            <div class="w-full h-[1px] bg-[#ff751f] opacity-30 mt-20"></div>
         </section>
 
         <section id="benefits-section" class="py-32 px-8 bg-[#f9f9fb]">
@@ -251,72 +251,72 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     
-                    <div class="flip-card group relative h-112.5 w-full cursor-pointer pb-10 perspective-[1000px]">
-                        <div class="flip-card-inner relative w-full h-full transform-3d will-change-transform transition-[transform,margin-top] duration-800 ease-[cubic-bezier(0.4,0,0.2,1),ease-out] group-hover:[@media(hover:hover)]:transform-[rotateY(180deg)] group-hover:[@media(hover:hover)]:-mt-3.75 group-[.is-flipped]:transform-[rotateY(180deg)] group-[.is-flipped]:-mt-3.75">
-                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl backface-hidden">
+                    <div class="flip-card group relative h-[450px] w-full cursor-pointer pb-10 [perspective:1000px]">
+                        <div class="flip-card-inner relative w-full h-full [transform-style:preserve-3d] [will-change:transform] transition-[transform,margin-top] duration-800 [transition-timing-function:cubic-bezier(0.4,0,0.2,1),ease-out] group-hover:[@media(hover:hover)]:[transform:rotateY(180deg)] group-hover:[@media(hover:hover)]:-mt-[15px] group-[.is-flipped]:[transform:rotateY(180deg)] group-[.is-flipped]:-mt-[15px]">
+                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden]">
                                 <img src="images/icon_higher_diner_flow.webp" alt="Resto" class="w-20 h-20 mb-8 object-contain">
                                 <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">A more predictable flow of users</h3>
                                 <p class="text-[#ff751f] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Restaurant Benefit</p>
                             </div>
-                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl backface-hidden transform-[rotateY(180deg)]">
+                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
                                 <img src="images/icon_simultaneous_queues.webp" alt="Diner" class="w-20 h-20 mb-8 object-contain">
                                 <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">Diners can make more than one virtual queue simultaneously</h3>
                                 <p class="text-[#001560] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Diner Experience</p>
                             </div>
                         </div>
 
-                        <div class="floor-shadow absolute bottom-2.5 left-[10%] right-[10%] h-3.75 bg-black/80 rounded-[50%] blur-md -z-1 animate-[shadowPulseOut_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:animate-[shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:bg-black/70 group-[.is-flipped]:animate-[shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-[.is-flipped]:bg-black/70"></div>
+                        <div class="floor-shadow absolute bottom-[10px] left-[10%] right-[10%] h-[15px] bg-black/80 rounded-[50%] blur-[12px] -z-1 [animation:shadowPulseOut_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:[animation:shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:bg-black/70 group-[.is-flipped]:[animation:shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-[.is-flipped]:bg-black/70"></div>
                     </div>
 
-                    <div class="flip-card flip-start-back group relative h-112.5 w-full cursor-pointer pb-10 perspective-[1000px]">
-                        <div class="flip-card-inner relative w-full h-full transform-3d will-change-transform transform-[rotateY(180deg)] transition-[transform,margin-top] duration-800 ease-[cubic-bezier(0.4,0,0.2,1),ease-out] group-hover:[@media(hover:hover)]:transform-[rotateY(0deg)] group-hover:[@media(hover:hover)]:-mt-3.75 group-[.is-flipped]:transform-[rotateY(0deg)] group-[.is-flipped]:-mt-3.75">
-                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl backface-hidden">
+                    <div class="flip-card flip-start-back group relative h-[450px] w-full cursor-pointer pb-10 [perspective:1000px]">
+                        <div class="flip-card-inner relative w-full h-full [transform-style:preserve-3d] [will-change:transform] [transform:rotateY(180deg)] transition-[transform,margin-top] duration-800 [transition-timing-function:cubic-bezier(0.4,0,0.2,1),ease-out] group-hover:[@media(hover:hover)]:[transform:rotateY(0deg)] group-hover:[@media(hover:hover)]:-mt-[15px] group-[.is-flipped]:[transform:rotateY(0deg)] group-[.is-flipped]:-mt-[15px]">
+                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden]">
                                 <img src="images/icon_higher_table_turnover.webp" alt="Resto" class="w-20 h-20 mb-8 object-contain">
                                 <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">The table turnover increases daily</h3>
                                 <p class="text-[#ff751f] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Restaurant Benefit</p>
                             </div>
-                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl backface-hidden transform-[rotateY(180deg)]">
+                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
                                 <img src="images/icon_happier_customers.webp" alt="Diner" class="w-20 h-20 mb-8 object-contain">
                                 <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">Diners wait much less time for their food when arrive at the restaurant</h3>
                                 <p class="text-[#001560] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Diner Experience</p>
                             </div>
                         </div>
 
-                        <div class="floor-shadow absolute bottom-2.5 left-[10%] right-[10%] h-3.75 bg-black/80 rounded-[50%] blur-md -z-1 animate-[shadowPulseOut_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:animate-[shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:bg-black/70 group-[.is-flipped]:animate-[shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-[.is-flipped]:bg-black/70"></div>
+                        <div class="floor-shadow absolute bottom-[10px] left-[10%] right-[10%] h-[15px] bg-black/80 rounded-[50%] blur-[12px] -z-1 [animation:shadowPulseOut_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:[animation:shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:bg-black/70 group-[.is-flipped]:[animation:shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-[.is-flipped]:bg-black/70"></div>
                     </div>
 
-                    <div class="flip-card group relative h-112.5 w-full cursor-pointer pb-10 perspective-[1000px]">
-                        <div class="flip-card-inner relative w-full h-full transform-3d will-change-transform transition-[transform,margin-top] duration-800 ease-[cubic-bezier(0.4,0,0.2,1),ease-out] group-hover:[@media(hover:hover)]:transform-[rotateY(180deg)] group-hover:[@media(hover:hover)]:-mt-3.75 group-[.is-flipped]:transform-[rotateY(180deg)] group-[.is-flipped]:-mt-3.75">
-                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl backface-hidden">
+                    <div class="flip-card group relative h-[450px] w-full cursor-pointer pb-10 [perspective:1000px]">
+                        <div class="flip-card-inner relative w-full h-full [transform-style:preserve-3d] [will-change:transform] transition-[transform,margin-top] duration-800 [transition-timing-function:cubic-bezier(0.4,0,0.2,1),ease-out] group-hover:[@media(hover:hover)]:[transform:rotateY(180deg)] group-hover:[@media(hover:hover)]:-mt-[15px] group-[.is-flipped]:[transform:rotateY(180deg)] group-[.is-flipped]:-mt-[15px]">
+                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden]">
                                 <img src="images/icon_chef_analytics.webp" alt="Resto" class="w-20 h-20 mb-8 object-contain">
                                 <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">An organized record of the service and visual data analysis</h3>
                                 <p class="text-[#ff751f] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Restaurant Benefit</p>
                             </div>
-                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl backface-hidden transform-[rotateY(180deg)]">
+                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
                                 <img src="images/icon_menu_live.webp" alt="Diner" class="w-20 h-20 mb-8 object-contain">
                                 <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">Diners can know dishes availability in real time</h3>
                                 <p class="text-[#001560] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Diner Experience</p>
                             </div>
                         </div>
 
-                        <div class="floor-shadow absolute bottom-2.5 left-[10%] right-[10%] h-3.75 bg-black/80 rounded-[50%] blur-md -z-1 animate-[shadowPulseOut_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:animate-[shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:bg-black/70 group-[.is-flipped]:animate-[shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-[.is-flipped]:bg-black/70"></div>
+                        <div class="floor-shadow absolute bottom-[10px] left-[10%] right-[10%] h-[15px] bg-black/80 rounded-[50%] blur-[12px] -z-1 [animation:shadowPulseOut_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:[animation:shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:bg-black/70 group-[.is-flipped]:[animation:shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-[.is-flipped]:bg-black/70"></div>
                     </div>
 
-                    <div class="flip-card flip-start-back group relative h-112.5 w-full cursor-pointer pb-10 perspective-[1000px]">
-                        <div class="flip-card-inner relative w-full h-full transform-3d will-change-transform transform-[rotateY(180deg)] transition-[transform,margin-top] duration-800 ease-[cubic-bezier(0.4,0,0.2,1),ease-out] group-hover:[@media(hover:hover)]:transform-[rotateY(0deg)] group-hover:[@media(hover:hover)]:-mt-3.75 group-[.is-flipped]:transform-[rotateY(0deg)] group-[.is-flipped]:-mt-3.75">
-                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl backface-hidden">
+                    <div class="flip-card flip-start-back group relative h-[450px] w-full cursor-pointer pb-10 [perspective:1000px]">
+                        <div class="flip-card-inner relative w-full h-full [transform-style:preserve-3d] [will-change:transform] [transform:rotateY(180deg)] transition-[transform,margin-top] duration-800 [transition-timing-function:cubic-bezier(0.4,0,0.2,1),ease-out] group-hover:[@media(hover:hover)]:[transform:rotateY(0deg)] group-hover:[@media(hover:hover)]:-mt-[15px] group-[.is-flipped]:[transform:rotateY(0deg)] group-[.is-flipped]:-mt-[15px]">
+                            <div class="flip-card-front absolute inset-0 bg-[#001560] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden]">
                                 <img src="images/icon_diners_love_it.webp" alt="Resto" class="w-20 h-20 mb-8 object-contain">
                                 <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">The likelhood that customers will return later increases</h3>
                                 <p class="text-[#ff751f] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Restaurant Benefit</p>
                             </div>
-                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl backface-hidden transform-[rotateY(180deg)]">
+                            <div class="flip-card-back absolute inset-0 bg-[#ff751f] rounded-[30px] p-10 flex flex-col justify-center items-center text-center shadow-xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
                                 <img src="images/icon_advanced_preferences.webp" alt="Diner" class="w-20 h-20 mb-8 object-contain">
                                 <h3 class="text-2xl text-white mb-4 font-['League_Spartan',sans-serif] font-extrabold leading-[1.1]">Diner can inform the restaurant about their specifications in advance</h3>
                                 <p class="text-[#001560] text-xs uppercase tracking-widest font-['Comfortaa',sans-serif]">Diner Experience</p>
                             </div>
                         </div>
 
-                        <div class="floor-shadow absolute bottom-2.5 left-[10%] right-[10%] h-3.75 bg-black/80 rounded-[50%] blur-md -z-1 animate-[shadowPulseOut_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:animate-[shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:bg-black/70 group-[.is-flipped]:animate-[shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-[.is-flipped]:bg-black/70"></div>
+                        <div class="floor-shadow absolute bottom-[10px] left-[10%] right-[10%] h-[15px] bg-black/80 rounded-[50%] blur-[12px] -z-1 [animation:shadowPulseOut_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:[animation:shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-hover:[@media(hover:hover)]:bg-black/70 group-[.is-flipped]:[animation:shadowPulseIn_0.7s_cubic-bezier(0.4,0,0.2,1)_forwards] group-[.is-flipped]:bg-black/70"></div>
                     </div>
 
                 </div>
@@ -325,7 +325,7 @@
 
     </main>
 
-    <div id="form-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-200 opacity-0 pointer-events-none transition-opacity duration-500 flex items-center justify-center"> 
+    <div id="form-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] opacity-0 pointer-events-none transition-opacity duration-500 flex items-center justify-center"> 
         <div id="form-modal" class="relative w-[90%] max-w-5xl bg-white shadow-2xl flex flex-col lg:flex-row overflow-hidden origin-bottom max-h-[90vh] overflow-y-auto rounded-[40px] max-lg:skew-x-0 skew-x-5">   
             
             <div class="flex flex-col lg:flex-row w-full h-full max-lg:skew-x-0 -skew-x-5">
@@ -351,7 +351,7 @@
                         </div>
 
                         <div class="form-group max-lg:ml-0 lg:ml-24 mt-2">
-                            <select id="user-type" name="type" required class="w-full px-4 py-[0.8rem] pr-10 bg-zinc-100 rounded-xl outline-none cursor-pointer border border-transparent font-['Glacial_Indifference',sans-serif] transition-all duration-300 appearance-none bg-[url('data:image/svg+xml,%3Csvg_xmlns=\'http://www.w3.org/2000/svg\'_fill=\'none\'_viewBox=\'0_0_24_24\'_stroke=\'%23ff751f\'%3E%3Cpath_stroke-linecap=\'round\'_stroke-linejoin=\'round\'_stroke-width=\'2\'_d=\'M19_9l-7_7-7-7\'%3E%3C/path%3E%3C/svg%3E')] bg-no-repeat bg-position-[right_1.2rem_center] bg-size-[1.2rem] hover:bg-zinc-100 hover:border-[#ff751f] focus:bg-white focus:ring-4 focus:ring-[#ff751f]/10">
+                            <select id="user-type" name="type" required class="w-full px-4 py-[0.8rem] pr-10 bg-zinc-100 rounded-xl outline-none cursor-pointer border border-transparent font-['Glacial_Indifference',sans-serif] transition-all duration-300 appearance-none bg-[url('data:image/svg+xml,%3Csvg_xmlns=\'http://www.w3.org/2000/svg\'_fill=\'none\'_viewBox=\'0_0_24_24\'_stroke=\'%23ff751f\'%3E%3Cpath_stroke-linecap=\'round\'_stroke-linejoin=\'round\'_stroke-width=\'2\'_d=\'M19_9l-7_7-7-7\'%3E%3C/path%3E%3C/svg%3E')] bg-no-repeat bg-[right_1.2rem_center] bg-[length:1.2rem] hover:bg-zinc-100 hover:border-[#ff751f] focus:bg-white focus:ring-4 focus:ring-[#ff751f]/10">
                                 <option value="" disabled selected class="text-[#001560] bg-white p-2.5">Who is this for? *</option>
                                 <option value="customer" class="text-[#001560] bg-white p-2.5">I'm a Diner</option>
                                 <option value="restaurant" class="text-[#001560] bg-white p-2.5">I'm a Restaurant</option>
@@ -392,15 +392,15 @@
                     </form>
                 </div>
 
-                <div class="block w-full max-lg:h-62.5 max-lg:order-2 lg:w-2/5 bg-[#001560] relative overflow-hidden min-h-full">
+                <div class="block w-full max-lg:h-[250px] max-lg:order-2 lg:w-2/5 bg-[#001560] relative overflow-hidden min-h-full">
                     <img id="form-visual" src="images/animated_pov_diner_with_yummizi.webp" alt="Yummizi" class="absolute inset-y-0 right-0 left-auto h-full w-full lg:w-[140%] object-cover opacity-100 transition-opacity duration-500">
                 </div>
             </div>
 
-            <div id="privacy-policy-panel" class="privacy-policy-panel absolute inset-6 max-sm:inset-3 z-80 flex flex-col bg-white rounded-[28px] max-sm:rounded-[22px] shadow-[0_24px_60px_rgba(0,0,0,0.24)] opacity-0 pointer-events-none max-lg:skew-x-0 -skew-x-5 translate-y-4.5 scale-[0.98] transition-[opacity,transform] duration-250 ease-out [&.is-visible]:opacity-100 [&.is-visible]:pointer-events-auto [&.is-visible]:translate-y-0 [&.is-visible]:scale-100" role="dialog" aria-labelledby="privacy-policy-title" aria-hidden="true">
-                <button id="privacy-policy-back" class="privacy-policy-back absolute top-4 right-4 max-sm:top-3 max-sm:right-3 z-2 px-4 py-[0.7rem] max-sm:px-3 max-sm:py-[0.6rem] text-[#001560] bg-[#f4f4f5] border border-[#e4e4e7] rounded-[10px] font-['League_Spartan',sans-serif] text-base max-sm:text-[0.85rem] font-extrabold uppercase cursor-pointer transition-colors duration-200 hover:text-white hover:bg-[#ff751f] focus-visible:text-white focus-visible:bg-[#ff751f] focus-visible:outline-none" type="button">go back</button>
+            <div id="privacy-policy-panel" class="privacy-policy-panel absolute inset-6 max-sm:inset-3 z-[80] flex flex-col bg-white rounded-[28px] max-sm:rounded-[22px] shadow-[0_24px_60px_rgba(0,0,0,0.24)] opacity-0 pointer-events-none max-lg:skew-x-0 -skew-x-5 translate-y-[18px] scale-[0.98] transition-[opacity,transform] duration-250 ease-out [&.is-visible]:opacity-100 [&.is-visible]:pointer-events-auto [&.is-visible]:translate-y-0 [&.is-visible]:scale-100" role="dialog" aria-labelledby="privacy-policy-title" aria-hidden="true">
+                <button id="privacy-policy-back" class="privacy-policy-back absolute top-4 right-4 max-sm:top-3 max-sm:right-3 z-[2] px-4 py-[0.7rem] max-sm:px-3 max-sm:py-[0.6rem] text-[#001560] bg-[#f4f4f5] border border-[#e4e4e7] rounded-[10px] font-['League_Spartan',sans-serif] text-base max-sm:text-[0.85rem] font-extrabold uppercase cursor-pointer transition-colors duration-200 hover:text-white hover:bg-[#ff751f] focus-visible:text-white focus-visible:bg-[#ff751f] focus-visible:outline-none" type="button">go back</button>
 
-                <div class="privacy-policy-content pt-18 pb-10 px-[clamp(1.5rem,4vw,3.5rem)] overflow-y-auto text-zinc-700 font-['Glacial_Indifference',sans-serif]">
+                <div class="privacy-policy-content pt-[4.5rem] pb-10 px-[clamp(1.5rem,4vw,3.5rem)] overflow-y-auto text-zinc-700 font-['Glacial_Indifference',sans-serif]">
                     <h2 id="privacy-policy-title" class="mb-4 text-[#ff751f] text-[clamp(2.2rem,5vw,4rem)] leading-[0.95] font-['League_Spartan',sans-serif] font-bold">Yummizi Privacy Policy</h2>
 
                     <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold">Data Controller Identity</h3>
@@ -443,7 +443,7 @@
     <section class="relative w-full h-[60vh] bg-white overflow-hidden flex items-center justify-center">
         <div class="absolute inset-0 w-full h-full">
             <img src="images/restaurant_with_nice_view.webp" 
-                class="w-full h-full object-cover opacity-60 blur-xs" 
+                class="w-full h-full object-cover opacity-60 blur-[4px]" 
                 alt="footer decor">
         </div>
 
