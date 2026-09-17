@@ -16,9 +16,9 @@ const YUMMIZI_TRANSLATIONS = {
     nav_lang_toggle_aria: "Cambiar idioma (Español / Inglés)",
 
     // SEO Meta (Index)
-    seo_title: "Yummizi | Zero Time Dining - Reserva de mesa y pedidos sin espera",
+    seo_title: "Yummizi | Optimize timing in restaurants - Reserva de mesa y pedidos sin espera",
     seo_description: "Yummizi transforma la experiencia gastronómica: colas virtuales, confirmación de platos antes de llegar y cero esperas para comensales y restaurantes.",
-    seo_h1: "Yummizi: Zero Time Dining - La revolución en reservas y pedidos anticipados",
+    seo_h1: "Yummizi: Optimize timing in restaurants - La revolución en reservas y pedidos anticipados",
 
     // Hero Section (Index)
     hero_title: "Yummizi es",
@@ -102,7 +102,7 @@ const YUMMIZI_TRANSLATIONS = {
 
     // Restaurants Page (restaurants.html)
     resto_page_title: "Yummizi | Una experiencia ágil, fácil y deliciosa",
-    resto_page_desc: "Optimiza los tiempos de preparación, gestiona colas virtuales en tiempo real y aumenta tus ingresos con la tecnología Zero Time Dining de Yummizi.",
+    resto_page_desc: "Optimiza los tiempos de preparación, gestiona colas virtuales en tiempo real y aumenta tus ingresos con la tecnología que optimiza los tiempos de tu restaurante.",
     resto_hero_badge: "Tecnología para restaurantes",
     resto_hero_phrase: "Optimiza los tiempos dentro de tu restaurante, mejora la experiencia de tus clientes",
     resto_hero_sub: "Sabrás en todo momento quién está llegando, a quien aceptas y quién realizó su pago. ¡Todo antes de que el cliente entre al restaurante!",
@@ -176,9 +176,9 @@ const YUMMIZI_TRANSLATIONS = {
     nav_lang_toggle_aria: "Switch language (Spanish / English)",
 
     // SEO Meta (Index)
-    seo_title: "Yummizi | Zero Time Dining - Smart Table & Advance Food Ordering",
-    seo_description: "Yummizi redefines dining: virtual queues, dish confirmation before arrival, and zero wait time for diners and restaurants.",
-    seo_h1: "Yummizi: Zero Time Dining - The Advance Food & Table Revolution",
+    seo_title: "Yummizi | Optimize timing in restaurants - Smart Table & Advance Food Ordering",
+    seo_description: "Yummizi redefines dining: virtual queues, dish confirmation before arrival, and reduce drastically wait time for diners and restaurants.",
+    seo_h1: "Yummizi: Optimize timing in restaurants - The Advance Food & Table Revolution",
 
     // Hero Section (Index)
     hero_title: "Yummizi is",
@@ -262,7 +262,7 @@ const YUMMIZI_TRANSLATIONS = {
 
     // Restaurants Page (restaurants.html)
     resto_page_title: "Yummizi for Restaurants | Maximize your kitchen's turnover and efficiency",
-    resto_page_desc: "Optimize prep times, manage virtual queues in real time, and boost your revenue with Yummizi's Zero Time Dining technology.",
+    resto_page_desc: "Optimize prep times, manage virtual queues in real time, and boost your revenue by using our technology to synchronize your kitchen with the customer's arrival.",
     resto_hero_badge: "Technology for restaurants",
     resto_hero_phrase: "Optimize times within your restaurant and improve your customers' experience",
     resto_hero_sub: "You will know at all times who is arriving, who you accept, and who paid. All before the customer even steps inside!",
