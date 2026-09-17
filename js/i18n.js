@@ -443,7 +443,6 @@ class I18nManager {
     if (toggleBtn) {
       toggleBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        this.toggle();
       });
     }
 
