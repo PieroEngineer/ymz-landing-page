@@ -67,19 +67,23 @@ const YUMMIZI_TRANSLATIONS = {
     card_4_diner_badge: "Experiencia Comensal",
     card_4_diner_title: "Notificación anticipada de preferencias o especificaciones de cocina",
 
+    // Final button in main
+    invitation_definition_question: "¿Listo para romper el paradigma?",
+    invitation_definition_text: "Descubre cómo la Yummizi puede optimizar tu tiempo dentro de los restaurantes.",
+
     // Waitlist Modal
-    modal_title: "Mantente listo para el <span class=\"font-bold\">lanzamiento</span>",
-    modal_subtitle: "Asegura tu lugar",
-    form_name_placeholder: "Tu Nombre *",
-    form_type_default: "¿Para quién es esto? *",
-    form_type_diner: "Soy un Comensal",
-    form_type_resto: "Soy un Restaurante",
-    form_resto_placeholder: "Nombre Oficial del Restaurante *",
-    form_email_placeholder: "Correo Electrónico *",
-    form_question_placeholder: "¿Alguna duda o pregunta para nosotros?",
-    form_submit_btn: "¡MANTÉNGANME AL TANTO!",
-    form_policy_agreement: "He leído y acepto la <a href=\"#\" id=\"privacy-policy-link\" class=\"text-[#ff751f] hover:text-[#ff6105] underline font-bold\">Política de Privacidad</a> y autorizo ser contactado sobre la lista de espera.",
-    form_policy_error: "Debes marcar la casilla para poder continuar",
+    // modal_title: "Mantente listo para el <span class=\"font-bold\">lanzamiento</span>",
+    // modal_subtitle: "Asegura tu lugar",
+    // form_name_placeholder: "Tu Nombre *",
+    // form_type_default: "¿Para quién es esto? *",
+    // form_type_diner: "Soy un Comensal",
+    // form_type_resto: "Soy un Restaurante",
+    // form_resto_placeholder: "Nombre Oficial del Restaurante *",
+    // form_email_placeholder: "Correo Electrónico *",
+    // form_question_placeholder: "¿Alguna duda o pregunta para nosotros?",
+    // form_submit_btn: "¡MANTÉNGANME AL TANTO!",
+    // form_policy_agreement: "He leído y acepto la <a href=\"#\" id=\"privacy-policy-link\" class=\"text-[#ff751f] hover:text-[#ff6105] underline font-bold\">Política de Privacidad</a> y autorizo ser contactado sobre la lista de espera.",
+    // form_policy_error: "Debes marcar la casilla para poder continuar",
 
     // Privacy Policy
     privacy_title: "Política de Privacidad de Yummizi",
@@ -162,7 +166,7 @@ const YUMMIZI_TRANSLATIONS = {
     diner_video_title: "Aprende a usar Yummizi en menos de 4 minutos",
     diner_video_sub: "Así es como Yummizi optimiza tus tiempos. ⚡.",
     diner_definition_question: "Comer rico nunca fue tan rápido",
-    diner_definition_text: "Si no quieres combinar el hambre y la espera en el mismo plato, escoge Yummizi",
+    diner_definition_text: "Si no quieres combinar el hambre y la espera en el mismo plato, escoge Yummizi 😉",
   },
 
   en: {
@@ -226,6 +230,8 @@ const YUMMIZI_TRANSLATIONS = {
     card_4_resto_title: "The likelihood that customers will return later increases",
     card_4_diner_badge: "Diner Experience",
     card_4_diner_title: "Diners can inform the restaurant about their specifications in advance",
+
+
 
     // Waitlist Modal
     modal_title: "Stay <span class=\"font-bold\">launch</span>-ready",

@@ -304,53 +304,53 @@ function initLeadForm() {
     const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdpeWplaHNtY25yZmt6YXh6cG16Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3NjU3MzIsImV4cCI6MjA5MzM0MTczMn0.kKLcrRlaIq95a7XGmguSln-DaEkPxKLf9n6WEABD-MI";
     const CONTACT_LEADS_TABLE = "contact_leads";
 
-    const overlay = document.querySelector("#form-overlay");
-    const modal = document.querySelector("#form-modal");
-    const closeBtn = document.querySelector("#close-modal");
+    // const overlay = document.querySelector("#form-overlay");
+    // const modal = document.querySelector("#form-modal");
+    // const closeBtn = document.querySelector("#close-modal");
     const userTypeSelect = document.querySelector("#user-type");
     const restoField = document.querySelector("#resto-field");
     const formVisual = document.querySelector("#form-visual");
-    const waitlistBtns = document.querySelectorAll(".waitlist-trigger-btn, [data-open-waitlist]");
-    const privacyPolicyLink = document.querySelector("#privacy-policy-link");
-    const privacyPolicyPanel = document.querySelector("#privacy-policy-panel");
-    const privacyPolicyBack = document.querySelector("#privacy-policy-back");
+    // const waitlistBtns = document.querySelectorAll(".waitlist-trigger-btn, [data-open-waitlist]");
+    // const privacyPolicyLink = document.querySelector("#privacy-policy-link");
+    // const privacyPolicyPanel = document.querySelector("#privacy-policy-panel");
+    // const privacyPolicyBack = document.querySelector("#privacy-policy-back");
 
     // Inside function initLeadForm() -> const openModal = () => {
-    const openModal = () => {
-        document.body.style.overflow = 'hidden';
-        overlay.classList.remove('pointer-events-none');
+    // const openModal = () => {
+    //     document.body.style.overflow = 'hidden';
+    //     overlay.classList.remove('pointer-events-none');
         
-        const tl = gsap.timeline();
-        tl.to(overlay, { opacity: 1, duration: 0.4 })
-        .fromTo(modal, 
-            { y: "100%", opacity: 0, scale: 0.9 }, // Changed 1000 to "100%"
-            { y: "0%", opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.2)" }, 
-            "-=0.2"
-        );
-    };
+    //     const tl = gsap.timeline();
+    //     tl.to(overlay, { opacity: 1, duration: 0.4 })
+    //     .fromTo(modal, 
+    //         { y: "100%", opacity: 0, scale: 0.9 }, // Changed 1000 to "100%"
+    //         { y: "0%", opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.2)" }, 
+    //         "-=0.2"
+    //     );
+    // };
 
-    const openPrivacyPolicy = () => {
-        privacyPolicyPanel.classList.add("is-visible");
-        privacyPolicyPanel.setAttribute("aria-hidden", "false");
-        privacyPolicyBack.focus();
-    };
+    // const openPrivacyPolicy = () => {
+    //     privacyPolicyPanel.classList.add("is-visible");
+    //     privacyPolicyPanel.setAttribute("aria-hidden", "false");
+    //     privacyPolicyBack.focus();
+    // };
 
-    const closePrivacyPolicy = () => {
-        privacyPolicyPanel.classList.remove("is-visible");
-        privacyPolicyPanel.setAttribute("aria-hidden", "true");
-        privacyPolicyLink.focus();
-    };
+    // const closePrivacyPolicy = () => {
+    //     privacyPolicyPanel.classList.remove("is-visible");
+    //     privacyPolicyPanel.setAttribute("aria-hidden", "true");
+    //     privacyPolicyLink.focus();
+    // };
 
-    const closeModal = () => {
-        privacyPolicyPanel.classList.remove("is-visible");
-        privacyPolicyPanel.setAttribute("aria-hidden", "true");
+    // const closeModal = () => {
+    //     privacyPolicyPanel.classList.remove("is-visible");
+    //     privacyPolicyPanel.setAttribute("aria-hidden", "true");
 
-        gsap.to(modal, { y: 1000, opacity: 0, duration: 0.5, ease: "power2.in", onComplete: () => {
-            overlay.classList.add('pointer-events-none');
-            overlay.style.opacity = "0";
-            document.body.style.overflow = 'auto'; // Restore scroll
-        }});
-    };
+    //     gsap.to(modal, { y: 1000, opacity: 0, duration: 0.5, ease: "power2.in", onComplete: () => {
+    //         overlay.classList.add('pointer-events-none');
+    //         overlay.style.opacity = "0";
+    //         document.body.style.overflow = 'auto'; // Restore scroll
+    //     }});
+    // };
 
     // --- Dynamic Image Logic & Transition ---
     userTypeSelect.addEventListener('change', (e) => {
@@ -381,31 +381,31 @@ function initLeadForm() {
         });
     });
 
-    waitlistBtns.forEach(btn => btn.addEventListener('click', openModal));
-    closeBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
-    privacyPolicyLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        openPrivacyPolicy();
-    });
-    privacyPolicyBack.addEventListener('click', closePrivacyPolicy);
-    document.addEventListener('keydown', (e) => {
-        if (e.key !== "Escape" || !privacyPolicyPanel.classList.contains("is-visible")) return;
-        closePrivacyPolicy();
-    });
+    // waitlistBtns.forEach(btn => btn.addEventListener('click', openModal));
+    // closeBtn.addEventListener('click', closeModal);
+    // overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+    // privacyPolicyLink.addEventListener('click', (e) => {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     openPrivacyPolicy();
+    // });
+    // privacyPolicyBack.addEventListener('click', closePrivacyPolicy);
+    // document.addEventListener('keydown', (e) => {
+    //     if (e.key !== "Escape" || !privacyPolicyPanel.classList.contains("is-visible")) return;
+    //     closePrivacyPolicy();
+    // });
 
     // Scroll to bottom trigger
-    window.addEventListener('scroll', () => {
-        // We add +1 to account for browser sub-pixel rendering (e.g. 4000.5px)
-        const scrollPosition = Math.ceil(window.innerHeight + window.pageYOffset);
-        const scrollTarget = document.documentElement.scrollHeight;
+    // window.addEventListener('scroll', () => {
+    //     // We add +1 to account for browser sub-pixel rendering (e.g. 4000.5px)
+    //     const scrollPosition = Math.ceil(window.innerHeight + window.pageYOffset);
+    //     const scrollTarget = document.documentElement.scrollHeight;
 
-        // Trigger ONLY when the absolute bottom is reached
-        if (scrollPosition >= scrollTarget && overlay.style.opacity !== "1") { 
-            openModal();
-        }
-    });
+    //     // Trigger ONLY when the absolute bottom is reached
+    //     if (scrollPosition >= scrollTarget && overlay.style.opacity !== "1") { 
+    //         openModal();
+    //     }
+    // });
 
     const waitlistForm = document.querySelector("#waitlist-form");
     const policyCheck = document.querySelector("#policy-check");

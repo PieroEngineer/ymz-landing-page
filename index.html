@@ -128,7 +128,7 @@
         <!-- Right Buttons: For Restaurants & For Diners -->
         <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0 z-10">
             <a href="restaurants.html" 
-               class="inline-flex items-center justify-center px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold font-['League_Spartan',sans-serif] text-xs sm:text-sm md:text-base text-[#001560] bg-white border border-[#001560]/20 hover:border-[#ff751f] hover:text-[#ff751f] hover:shadow-md transition-all duration-200 shadow-xs"
+               class="inline-flex items-center justify-center px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold font-['League_Spartan',sans-serif] text-xs sm:text-sm md:text-base text-white bg-gradient-to-r from-[#ff751f] to-[#ff6105] hover:from-[#ff6105] hover:to-[#ff751f] shadow-md shadow-[#ff751f]/25 hover:shadow-lg transition-all duration-200"
                data-i18n="nav_for_restaurants">
                 Para Restaurantes
             </a>
@@ -402,9 +402,32 @@
             </div>
         </section>
 
+        <section class="max-w-5xl mx-auto px-6 py-12 text-center">
+            <div class="bg-white rounded-[32px] p-8 sm:p-12 shadow-xl border border-[#001560]/10 flex flex-col items-center">
+                <h3 class="text-2xl sm:text-4xl font-black text-[#001560] font-['League_Spartan',sans-serif] mb-4" data-i18n="invitation_definition_question">
+                    ¿Listo para revolucionar tu servicio?
+                </h3>
+                <p class="text-zinc-600 text-base sm:text-lg mb-8 max-w-xl" data-i18n = "invitation_definition_text">
+                    Súmate a la red de restaurantes que ya están eliminando las esperas innecesarias.
+                </p>
+                <div class="flex items-center gap-2 sm:gap-3 shrink-0 z-10">
+                    <a href="restaurants.html" 
+                    class="inline-flex items-center justify-center px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold font-['League_Spartan',sans-serif] text-xs sm:text-sm md:text-base text-white bg-gradient-to-r from-[#ff751f] to-[#ff6105] hover:from-[#ff6105] hover:to-[#ff751f] shadow-md shadow-[#ff751f]/25 hover:shadow-lg transition-all duration-200"
+                    data-i18n="nav_for_restaurants">
+                        Para Restaurantes
+                    </a>
+                    <a href="diners.html" 
+                    class="inline-flex items-center justify-center px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold font-['League_Spartan',sans-serif] text-xs sm:text-sm md:text-base text-white bg-gradient-to-r from-[#ff751f] to-[#ff6105] hover:from-[#ff6105] hover:to-[#ff751f] shadow-md shadow-[#ff751f]/25 hover:shadow-lg transition-all duration-200"
+                    data-i18n="nav_for_diners">
+                        Para Comensales
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <div id="form-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] opacity-0 pointer-events-none transition-opacity duration-500 flex items-center justify-center"> 
+    <!-- <div id="form-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] opacity-0 pointer-events-none transition-opacity duration-500 flex items-center justify-center"> 
         <div id="form-modal" class="relative w-[90%] max-w-5xl bg-white shadow-2xl flex flex-col lg:flex-row overflow-hidden origin-bottom max-h-[90vh] overflow-y-auto rounded-[40px] max-lg:skew-x-0 skew-x-5">   
             
             <div class="flex flex-col lg:flex-row w-full h-full max-lg:skew-x-0 -skew-x-5">
@@ -514,7 +537,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <section class="relative w-full h-[60vh] bg-white overflow-hidden flex items-center justify-center">
         <div class="absolute inset-0 w-full h-full">
