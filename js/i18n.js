@@ -69,7 +69,7 @@ const YUMMIZI_TRANSLATIONS = {
 
     // Final button in main
     invitation_definition_question: "¿Listo para romper el paradigma?",
-    invitation_definition_text: "Descubre cómo la Yummizi puede optimizar tu tiempo dentro de los restaurantes.",
+    invitation_definition_text: "Descubre cómo Yummizi puede optimizar tu tiempo dentro de los restaurantes.",
 
     // Waitlist Modal
     // modal_title: "Mantente listo para el <span class=\"font-bold\">lanzamiento</span>",
