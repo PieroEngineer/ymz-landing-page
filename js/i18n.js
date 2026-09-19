@@ -145,7 +145,7 @@ const YUMMIZI_TRANSLATIONS = {
     diner_hero_badge: "Nueva experiencia para usuarios",
     diner_hero_phrase: "Antes esperabas por la cola, toma de pedido, ticket y cocina, pero hoy eso cambia",
     diner_hero_sub: "Si el hambre y la espera son polos opuestos ¿Por qué esta combinación es la primera experiencia que millones de usaurios reciben cuando llegan a un restaurante?.",
-    diner_cta_button: "Unirser a la nueva experiencia",
+    diner_cta_button: "Unirse a la nueva experiencia",
     diner_cta_note: "Acceso anticipado completamente gratis 🎁",
     diner_main_img_badge: "Experiencia sin esperas",
     diner_main_img_title: "La libertad de comer sin pausas ni esperas",
