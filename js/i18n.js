@@ -72,20 +72,20 @@ const YUMMIZI_TRANSLATIONS = {
     invitation_definition_text: "Descubre cómo Yummizi puede optimizar tu tiempo dentro de los restaurantes.",
 
     // Waitlist Modal
-    // modal_title: "Mantente listo para el <span class=\"font-bold\">lanzamiento</span>",
-    // modal_subtitle: "Asegura tu lugar",
-    // form_name_placeholder: "Tu Nombre *",
-    // form_type_default: "¿Para quién es esto? *",
-    // form_type_diner: "Soy un Comensal",
-    // form_type_resto: "Soy un Restaurante",
-    // form_resto_placeholder: "Nombre Oficial del Restaurante *",
-    // form_email_placeholder: "Correo Electrónico *",
-    // form_question_placeholder: "¿Alguna duda o pregunta para nosotros?",
-    // form_submit_btn: "¡MANTÉNGANME AL TANTO!",
-    // form_policy_agreement: "He leído y acepto la <a href=\"#\" id=\"privacy-policy-link\" class=\"text-[#ff751f] hover:text-[#ff6105] underline font-bold\">Política de Privacidad</a> y autorizo ser contactado sobre la lista de espera.",
-    // form_policy_error: "Debes marcar la casilla para poder continuar",
+    modal_title: "Mantente listo para el <span class=\"font-bold\">lanzamiento</span>",
+    modal_subtitle: "Asegura tu lugar",
+    form_name_placeholder: "Tu Nombre *",
+    form_type_default: "¿Para quién es esto? *",
+    form_type_diner: "Soy un Comensal",
+    form_type_resto: "Soy un Restaurante",
+    form_resto_placeholder: "Nombre Oficial del Restaurante *",
+    form_email_placeholder: "Correo Electrónico *",
+    form_question_placeholder: "¿Alguna duda o pregunta para nosotros?",
+    form_submit_btn: "¡MANTÉNGANME AL TANTO!",
+    form_policy_agreement: "He leído y acepto la <a href=\"privacy-policy.html\" id=\"privacy-policy-link\" class=\"text-[#ff751f] hover:text-[#ff6105] underline font-bold\">Política de Privacidad</a> y autorizo ser contactado sobre la lista de espera.",
+    form_policy_error: "Debes marcar la casilla para poder continuar",
 
-    // Privacy Policy
+    // Privacy Modal/Panel
     privacy_title: "Política de Privacidad de Yummizi",
     privacy_back_btn: "VOLVER",
     privacy_controller_title: "Identidad del Responsable del Tratamiento",
@@ -100,6 +100,72 @@ const YUMMIZI_TRANSLATIONS = {
     privacy_rights_p: "Conforme a los estándares internacionales y la Ley N° 29733 de Perú, puedes ejercer tus derechos de Acceso, Rectificación, Cancelación u Oposición escribiendo a yummizi.mkt@gmail.com con el asunto 'Solicitud de Derechos de Privacidad'.",
     privacy_mandatory_title: "Naturaleza de la Información",
     privacy_mandatory_p: "Proporcionar los datos solicitados es necesario para incorporarte a nuestra lista de acceso anticipado.",
+
+    // Privacy Policy Page
+    privacy_page_title: "Política de Privacidad | Yummizi",
+    privacy_page_desc: "Política de Privacidad de Yummizi para comensales y restaurantes aliados conforme a la Ley N° 29733 de Perú y Google Play Console.",
+    privacy_badge: "Transparencia & Privacidad",
+    privacy_main_heading: "POLÍTICA DE PRIVACIDAD – YUMMIZI",
+    privacy_subheading: "(Para Comensales y Restaurantes Aliados)",
+    privacy_last_updated: "Última actualización: Septiembre 2026",
+    privacy_intro: "En cumplimiento de la Ley N° 29733 (Ley de Protección de Datos Personales del Perú), su Reglamento (D.S. N° 003-2013-JUS) y las políticas de desarrollo de Google Play Console, se presenta la Política de Privacidad que regula el tratamiento de los datos personales recopilados a través de la aplicación móvil, sitio web y formularios virtuales de Yummizi.",
+    
+    privacy_s1_title: "1. IDENTIDAD Y DOMICILIO DEL RESPONSABLE",
+    privacy_s1_p: "El responsable del tratamiento de sus datos personales es Piero Stephano Olivas Tuesta, en representación del proyecto Yummizi (en formación), con domicilio en la ciudad de Lima, Perú, y punto de contacto para asuntos de privacidad:",
+    privacy_s1_email_label: "Correo electrónico:",
+    
+    privacy_s2_title: "2. DATOS PERSONALES RECOPILADOS Y FINALIDADES",
+    privacy_s2_intro: "Yummizi recopila y trata datos personales diferenciados según el perfil del usuario:",
+    privacy_s2_a_title: "A. Frente Comensal (Usuario Consumidor)",
+    privacy_s2_a_data: "Datos recopilados: Nombre completo, correo electrónico, número de teléfono, contraseña cifrada, tiempo estimado de llegada, selecciones del menú e imágenes/capturas de comprobantes de pago (vouchers de Yape, Plin o transferencia).",
+    privacy_s2_a_purposes_title: "Finalidades:",
+    privacy_s2_a_p1: "Crear y gestionar su cuenta de usuario en la aplicación.",
+    privacy_s2_a_p2: "Facilitar la intermediación de solicitudes de mesa y pedidos con el Restaurante seleccionado.",
+    privacy_s2_a_p3: "Transmitir la imagen del comprobante de pago al Restaurante seleccionado para su verificación directa.",
+    privacy_s2_a_p4: "Enviar notificaciones push/push alerts sobre el estado del pedido y alertas de tiempo.",
+    privacy_s2_a_p5: "Contactarle para encuestas de satisfacción y pruebas durante la fase piloto (MVP).",
+    privacy_s2_b_title: "B. Frente Restaurante (Socio Comercial / Representante)",
+    privacy_s2_b_data: "Datos recopilados: Nombre del representante, correo electrónico, teléfono de contacto, nombre comercial del restaurante, dirección física del local, datos de identificación tributaria (RUC / Razón Social) y datos para recepción de pagos (cuentas bancarias o números Yape/Plin).",
+    privacy_s2_b_purposes_title: "Finalidades:",
+    privacy_s2_b_p1: "Crear y verificar el perfil del Restaurante en la plataforma.",
+    privacy_s2_b_p2: "Notificar la recepción de solicitudes e imágenes de comprobantes de pago.",
+    privacy_s2_b_p3: "Gestionar la relación operativa, soporte técnico y enviar avisos de servicio.",
+    
+    privacy_s3_title: "3. BANCO DE DATOS Y TIEMPO DE CONSERVACIÓN",
+    privacy_s3_p1: "Los datos personales serán almacenados en el banco de datos denominado \"Yummizi App\".",
+    privacy_s3_p2: "Plazo de conservación: Los datos se conservarán mientras la cuenta permanezca activa o durante un periodo máximo de dos (2) años tras la finalización del servicio, salvo que el usuario solicite la eliminación anticipada de su cuenta y datos.",
+    
+    privacy_s4_title: "4. FLUJO TRANSFRONTERIZO Y PROCESADORES (TERCEROS)",
+    privacy_s4_intro: "Para la prestación del servicio, Yummizi utiliza infraestructura cloud de proveedores internacionales con servidores fuera del Perú (principalmente en EE. UU.):",
+    privacy_s4_supabase: "Supabase Inc.: Almacenamiento de base de datos relacional y autenticación de usuarios.",
+    privacy_s4_aws: "Amazon Web Services (AWS): Almacenamiento seguro en la nube de imágenes (capturas de comprobantes de pago y recursos multimedia).",
+    privacy_s4_netlify: "Netlify: Procesamiento de tráfico web / frontend (sin almacenamiento de datos personales).",
+    
+    privacy_s5_title: "5. SEGURIDAD Y CIFRADO DE DATOS",
+    privacy_s5_intro: "Yummizi implementa medidas de seguridad técnicas y organizativas para proteger la información personal:",
+    privacy_s5_transit: "Cifrado en tránsito: Toda la transferencia de datos entre la aplicación móvil, los servidores y los servicios de terceros se realiza mediante conexiones cifradas HTTPS utilizando protocolos de seguridad TLS (Transport Layer Security).",
+    privacy_s5_rest: "Cifrado en reposo: Las contraseñas y credenciales se almacenan mediante algoritmos de cifrado hash no reversibles.",
+    privacy_s5_vouchers: "Confidencialidad de comprobantes: Las imágenes de comprobantes de pago son accesibles únicamente por el usuario emisor y el Restaurante receptor para fines operativos. Yummizi no comercializa ni comparte estos datos con terceros ajenos a la transacción.",
+    
+    privacy_s6_title: "6. ELIMINACIÓN DE CUENTA Y DATOS (ACCOUNT DELETION)",
+    privacy_s6_intro: "Conforme a las políticas de Google Play, los usuarios tienen derecho a solicitar la eliminación completa de su cuenta y de todos los datos asociados en cualquier momento, sin necesidad de tener la aplicación instalada.",
+    privacy_s6_how_title: "Cómo solicitar la eliminación:",
+    privacy_s6_how_1: "Envíe un correo electrónico a yummizi.mkt@gmail.com con el asunto \"Solicitud de Eliminación de Cuenta\".",
+    privacy_s6_how_2: "Indique el correo electrónico y/o número de teléfono registrado en la aplicación.",
+    privacy_s6_del_immediate: "Datos que se eliminan inmediatamente: Perfil de usuario, historial de pedidos, nombres, teléfonos y credenciales de acceso.",
+    privacy_s6_del_retained: "Datos retenidos temporalmente: Aquellos registros que deban conservarse por obligaciones legales o tributarias aplicables se mantendrán bloqueados y se eliminarán al finalizar el plazo legal correspondiente.",
+    
+    privacy_s7_title: "7. DERECHOS ARCO",
+    privacy_s7_p: "Como titular de los datos personales, puede ejercer sus derechos de Acceso, Rectificación, Cancelación u Oposición (ARCO) conforme a la Ley N° 29733 enviando un correo a yummizi.mkt@gmail.com con el asunto \"Derechos ARCO - [Su Nombre]\", adjuntando copia de su documento de identidad (DNI o CE).",
+    
+    privacy_s8_title: "8. PRIVACIDAD DE MENORES DE EDAD",
+    privacy_s8_p: "La aplicación Yummizi no está dirigida a menores de 13 años. No recopilamos a sabiendas información personal de menores de edad. Si detectamos que un menor de 13 años ha proporcionado datos personales sin el consentimiento de sus padres o tutores, procederemos a eliminar dicha información de nuestros servidores de inmediato.",
+    
+    privacy_s9_title: "9. MODIFICACIONES A LA POLÍTICA",
+    privacy_s9_p: "Yummizi se reserva el derecho de actualizar esta Política de Privacidad. Cualquier modificación sustancial será notificada a través de la aplicación o al correo electrónico registrado.",
+
+    privacy_back_home: "Volver al Inicio",
+    footer_privacy_btn: "Política de Privacidad",
 
     // Footer
     footer_text: "Yummi yummi",
@@ -233,6 +299,10 @@ const YUMMIZI_TRANSLATIONS = {
 
 
 
+    // Final button in main
+    invitation_definition_question: "Ready to break the paradigm?",
+    invitation_definition_text: "Discover how Yummizi can optimize your time inside restaurants.",
+
     // Waitlist Modal
     modal_title: "Stay <span class=\"font-bold\">launch</span>-ready",
     modal_subtitle: "Secure your spot",
@@ -244,10 +314,10 @@ const YUMMIZI_TRANSLATIONS = {
     form_email_placeholder: "Email Address *",
     form_question_placeholder: "Any questions for us?",
     form_submit_btn: "KEEP ME UP TO DATE!",
-    form_policy_agreement: "I have read and agree to the <a href=\"#\" id=\"privacy-policy-link\" class=\"text-[#ff751f] hover:text-[#ff6105] underline font-bold\">Privacy Policy</a> and consent to being contacted regarding the waiting list.",
+    form_policy_agreement: "I have read and agree to the <a href=\"privacy-policy.html\" id=\"privacy-policy-link\" class=\"text-[#ff751f] hover:text-[#ff6105] underline font-bold\">Privacy Policy</a> and consent to being contacted regarding the waiting list.",
     form_policy_error: "The checkbox must be checked to continue",
 
-    // Privacy Policy
+    // Privacy Modal/Panel
     privacy_title: "Yummizi Privacy Policy",
     privacy_back_btn: "GO BACK",
     privacy_controller_title: "Data Controller Identity",
@@ -262,6 +332,72 @@ const YUMMIZI_TRANSLATIONS = {
     privacy_rights_p: "In accordance with international privacy standards and Peruvian Law No. 29733, you have the right to Access, Rectify, Cancel, or Oppose (ARCO) processing at yummizi.mkt@gmail.com with the subject line 'Privacy Rights Request'.",
     privacy_mandatory_title: "Mandatory Nature of Information",
     privacy_mandatory_p: "Providing the requested data is mandatory to join our early-access waitlist.",
+
+    // Privacy Policy Page
+    privacy_page_title: "Privacy Policy | Yummizi",
+    privacy_page_desc: "Yummizi Privacy Policy for diners and partner restaurants in compliance with Peruvian Law No. 29733 and Google Play Console.",
+    privacy_badge: "Transparency & Privacy",
+    privacy_main_heading: "PRIVACY POLICY – YUMMIZI",
+    privacy_subheading: "(For Diners and Partner Restaurants)",
+    privacy_last_updated: "Last updated: September 2026",
+    privacy_intro: "In compliance with Law No. 29733 (Peruvian Personal Data Protection Law), its Regulations (Supreme Decree No. 003-2013-JUS), and Google Play Console developer policies, this Privacy Policy governs the processing of personal data collected through the mobile application, website, and digital forms of Yummizi.",
+    
+    privacy_s1_title: "1. IDENTITY AND DOMICILE OF THE DATA CONTROLLER",
+    privacy_s1_p: "The party responsible for processing your personal data is Piero Stephano Olivas Tuesta, representing the Yummizi project (under formation), domiciled in the city of Lima, Peru, and point of contact for privacy matters:",
+    privacy_s1_email_label: "Email:",
+    
+    privacy_s2_title: "2. PERSONAL DATA COLLECTED AND PURPOSES",
+    privacy_s2_intro: "Yummizi collects and processes differentiated personal data according to user profile:",
+    privacy_s2_a_title: "A. Diners (Consumer Users)",
+    privacy_s2_a_data: "Data collected: Full name, email address, phone number, encrypted password, estimated arrival time, menu selections, and payment voucher images/screenshots (Yape, Plin, or bank transfer slips).",
+    privacy_s2_a_purposes_title: "Purposes:",
+    privacy_s2_a_p1: "Create and manage your user account in the app.",
+    privacy_s2_a_p2: "Facilitate the intermediation of table requests and orders with the selected Restaurant.",
+    privacy_s2_a_p3: "Transmit the payment voucher image to the selected Restaurant for direct verification.",
+    privacy_s2_a_p4: "Send push notifications/push alerts regarding order status and timing alerts.",
+    privacy_s2_a_p5: "Contact you for satisfaction surveys and testing during the pilot phase (MVP).",
+    privacy_s2_b_title: "B. Restaurants (Business Partners / Representatives)",
+    privacy_s2_b_data: "Data collected: Representative's name, email address, contact phone number, restaurant trade name, physical address of the establishment, tax identification details (RUC / Legal Name), and payout receipt details (bank accounts or Yape/Plin numbers).",
+    privacy_s2_b_purposes_title: "Purposes:",
+    privacy_s2_b_p1: "Create and verify the Restaurant's profile on the platform.",
+    privacy_s2_b_p2: "Notify the receipt of requests and payment voucher images.",
+    privacy_s2_b_p3: "Manage the operational relationship, technical support, and service notices.",
+    
+    privacy_s3_title: "3. DATA BANK AND RETENTION PERIOD",
+    privacy_s3_p1: "Personal data will be stored in the data bank named \"Yummizi App\".",
+    privacy_s3_p2: "Retention period: Data will be retained as long as the account remains active or for a maximum period of two (2) years following the termination of the service, unless the user requests early deletion of their account and data.",
+    
+    privacy_s4_title: "4. CROSS-BORDER DATA FLOW AND THIRD-PARTY PROCESSORS",
+    privacy_s4_intro: "To provide the service, Yummizi uses cloud infrastructure from international providers with servers located outside Peru (primarily in the USA):",
+    privacy_s4_supabase: "Supabase Inc.: Relational database storage and user authentication.",
+    privacy_s4_aws: "Amazon Web Services (AWS): Secure cloud storage for images (payment voucher screenshots and multimedia assets).",
+    privacy_s4_netlify: "Netlify: Web traffic and frontend hosting (without storing personal data).",
+    
+    privacy_s5_title: "5. DATA SECURITY AND ENCRYPTION",
+    privacy_s5_intro: "Yummizi implements technical and organizational security measures to protect personal information:",
+    privacy_s5_transit: "Encryption in transit: All data transfer between the mobile app, servers, and third-party services is conducted via HTTPS encrypted connections using TLS (Transport Layer Security) protocols.",
+    privacy_s5_rest: "Encryption at rest: Passwords and credentials are stored using non-reversible cryptographic hash algorithms.",
+    privacy_s5_vouchers: "Confidentiality of vouchers: Payment voucher images are accessible solely by the sending user and the receiving Restaurant for operational purposes. Yummizi does not commercialize or share this data with third parties uninvolved in the transaction.",
+    
+    privacy_s6_title: "6. ACCOUNT AND DATA DELETION",
+    privacy_s6_intro: "In accordance with Google Play policies, users have the right to request complete deletion of their account and all associated data at any time, without needing to have the application installed.",
+    privacy_s6_how_title: "How to request deletion:",
+    privacy_s6_how_1: "Send an email to yummizi.mkt@gmail.com with the subject line \"Account Deletion Request\".",
+    privacy_s6_how_2: "Specify the email address and/or phone number registered in the application.",
+    privacy_s6_del_immediate: "Data deleted immediately: User profile, order history, names, phone numbers, and access credentials.",
+    privacy_s6_del_retained: "Data temporarily retained: Records that must be retained due to applicable legal or tax obligations will remain blocked and will be deleted once the statutory retention period expires.",
+    
+    privacy_s7_title: "7. ARCO RIGHTS",
+    privacy_s7_p: "As the owner of personal data, you may exercise your rights of Access, Rectification, Cancellation, or Opposition (ARCO) under Law No. 29733 by sending an email to yummizi.mkt@gmail.com with the subject \"ARCO Rights - [Your Name]\", attaching a copy of your identity document (DNI or Foreigner ID).",
+    
+    privacy_s8_title: "8. CHILDREN'S PRIVACY",
+    privacy_s8_p: "The Yummizi application is not directed to children under 13 years of age. We do not knowingly collect personal information from minors. If we detect that a minor under 13 has provided personal data without parental or guardian consent, we will proceed to delete such information from our servers immediately.",
+    
+    privacy_s9_title: "9. MODIFICATIONS TO THE POLICY",
+    privacy_s9_p: "Yummizi reserves the right to update this Privacy Policy. Any material modification will be notified through the application or to the registered email address.",
+
+    privacy_back_home: "Back to Home",
+    footer_privacy_btn: "Privacy Policy",
 
     // Footer
     footer_text: "Yummi yummi",
@@ -446,24 +582,34 @@ class I18nManager {
 
   setupEventListeners() {
     const toggleBtn = document.getElementById('lang-toggle-btn');
+    const labelEs = document.getElementById('lang-label-es');
+    const labelEn = document.getElementById('lang-label-en');
+
     if (toggleBtn) {
       toggleBtn.addEventListener('click', (e) => {
         e.preventDefault();
+        if (e.target === labelEs) {
+          if (this.currentLang !== 'es') this.applyLanguage('es');
+        } else if (e.target === labelEn) {
+          if (this.currentLang !== 'en') this.applyLanguage('en');
+        } else {
+          this.toggle();
+        }
       });
     }
 
-    const labelEs = document.getElementById('lang-label-es');
     if (labelEs) {
       labelEs.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         if (this.currentLang !== 'es') this.applyLanguage('es');
       });
     }
 
-    const labelEn = document.getElementById('lang-label-en');
     if (labelEn) {
       labelEn.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         if (this.currentLang !== 'en') this.applyLanguage('en');
       });
     }
