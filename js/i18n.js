@@ -34,7 +34,7 @@ const YUMMIZI_TRANSLATIONS = {
 
     // Comparison Section
     comparison_title: "Descubre el camino Yummizi",
-    comparison_before_badge: "Antes...",
+    comparison_before_badge: "Sin Yummizi...",
     comparison_after_badge: "Con Yummizi...",
     comp_row_1_before: "Los comensales solían esperar tener mesa disponible en el restaurante deseado",
     comp_row_1_after: "Los comensales confirman su mesa y platillos incluso antes de llegar",
@@ -266,7 +266,7 @@ const YUMMIZI_TRANSLATIONS = {
 
     // Comparison Section
     comparison_title: "Discover the Yummizi way",
-    comparison_before_badge: "Before...",
+    comparison_before_badge: "Without Yummizi...",
     comparison_after_badge: "With Yummizi...",
     comp_row_1_before: "Diners used to hope that there would be an available table at the restaurant they want",
     comp_row_1_after: "Diners can confirm their table and dishes even before arriving",
