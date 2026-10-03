@@ -22,13 +22,15 @@ const YUMMIZI_TRANSLATIONS = {
 
     // Hero Section (Index)
     hero_title: "Yummizi es",
-    hero_scene_1_top: "3<br />Rompiendo la clásica combinación de hambre y espera",
+    hero_scene_1_top: "Rompiendo la clásica combinación de hambre y espera",
     hero_scene_1_bottom: "Dentro de los restaurantes",
-    hero_scene_2_top: "2<br />Una oportunidad para un restaurante",
+    hero_scene_2_top: "Una oportunidad para restaurantes",
     hero_scene_2_bottom: "Una oportunidad tecnológica",
-    hero_scene_3_top: "1<br />Un alivio para los comensales",
+    hero_scene_3_top: "Un alivio para los comensales",
     hero_scene_3_bottom: "Incluso antes de llegar al restaurante",
     hero_scene_4: "Una experiencia rápida, fácil y deliciosa 😌",
+    hero_submessage_desktop: "Continúa bajando",
+    hero_submessage_mobile: "Continúa deslizando",
 
     // Comparison Section
     comparison_title: "Descubre el camino Yummizi",
@@ -69,7 +71,7 @@ const YUMMIZI_TRANSLATIONS = {
 
     // Final button in main
     invitation_definition_question: "¿Listo para romper el paradigma?",
-    invitation_definition_text: "Descubre cómo Yummizi puede optimizar tu tiempo dentro de los restaurantes.",
+    invitation_definition_text: "Descubre cómo Yummizi puede optimizar tu tiempo dentro de los restaurantes completamente gratis 🎁",
 
     // Waitlist Modal
     modal_title: "Mantente listo para el <span class=\"font-bold\">lanzamiento</span>",
@@ -252,13 +254,15 @@ const YUMMIZI_TRANSLATIONS = {
 
     // Hero Section (Index)
     hero_title: "Yummizi is",
-    hero_scene_1_top: "3<br />Breaking the classic combination of hunger and waiting",
+    hero_scene_1_top: "Breaking the classic combination of hunger and waiting",
     hero_scene_1_bottom: "Inside restaurants",
-    hero_scene_2_top: "2<br />An opportunity for a restaurant",
+    hero_scene_2_top: "An opportunity for restaurants",
     hero_scene_2_bottom: "A tech opportunity",
-    hero_scene_3_top: "1<br />A relief for diners",
+    hero_scene_3_top: "A relief for diners",
     hero_scene_3_bottom: "Even before arriving the restaurant",
     hero_scene_4: "A quick, easy and delicious experience 😌",
+    hero_submessage_desktop: "Keep scrolling down",
+    hero_submessage_mobile: "Keep swiping down",
 
     // Comparison Section
     comparison_title: "Discover the Yummizi way",
@@ -301,7 +305,7 @@ const YUMMIZI_TRANSLATIONS = {
 
     // Final button in main
     invitation_definition_question: "Ready to break the paradigm?",
-    invitation_definition_text: "Discover how Yummizi can optimize your time inside restaurants.",
+    invitation_definition_text: "Discover how Yummizi can optimize your time inside restaurants completly free 🎁.",
 
     // Waitlist Modal
     modal_title: "Stay <span class=\"font-bold\">launch</span>-ready",

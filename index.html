@@ -84,6 +84,13 @@
             50% { transform: scaleX(0.2) scaleY(0.4); opacity: 0.4; filter: blur(20px); }
             100% { transform: scaleX(1); opacity: 1; filter: blur(12px); }
         }
+        @keyframes gentlePulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.35; }
+        }
+        .animate-gentle-pulse {
+            animation: gentlePulse 2.2s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="bg-[#f9f9fb] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden" data-page-title-key="seo_title" data-page-desc-key="seo_description"> 
@@ -143,9 +150,12 @@
     <main id="main-content" class="w-full min-h-[500vh] block relative opacity-0">
         <section id="hero-section" class="relative w-[80%] h-[60vh] mx-auto rounded-[40px] overflow-hidden opacity-0 shadow-2xl bg-white origin-bottom [will-change:transform,width,height,border-radius] mt-0">
     
+            <!-- Scrollin icon -->
             <div class="hero-corner-image absolute pointer-events-none flex items-center justify-center z-50 max-md:top-[39rem] max-md:bottom-auto max-md:left-6 max-md:w-[50px] max-md:h-[50px] md:bottom-8 md:left-8 md:w-24 md:h-24">
-                <img src="images/icon_mouse_scroll.webp" alt="Scroll Desktop" class="hidden md:block w-full h-full object-contain">
-                <img src="images/icon_tactil_scroll.webp" alt="Scroll Mobile" class="block md:hidden w-full h-full object-contain">
+                <div class="animate-gentle-pulse w-full h-full flex items-center justify-center">
+                    <img src="images/icon_mouse_scroll.webp" alt="Scroll Desktop" class="hidden md:block w-full h-full object-contain">
+                    <img src="images/icon_tactil_scroll.webp" alt="Scroll Mobile" class="block md:hidden w-full h-full object-contain">
+                </div>
             </div>
 
             <div id="hero-reel" class="absolute inset-0 z-0">
@@ -165,34 +175,81 @@
                     <h2 class="text-white text-3xl font-black headline-font font-['League_Spartan',sans-serif] tracking-tighter" data-i18n="hero_title">Yummizi es</h2>
                 </div>
 
+                <!-- Epic Introduction -->
                 <div class="relative w-full flex-1">
                     <div class="scene opacity-0 absolute inset-0 w-full h-full flex flex-col items-center max-md:justify-start max-md:pt-4 md:justify-center text-center" id="scene-1">
-                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_1_top">3<br />Rompiendo la clásica combinación de hambre y espera</p></div>
+                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_1_top">Rompiendo la clásica combinación de hambre y espera</p></div>
                         <img src="images/icon_food_time.webp" alt="Hunger" class="scene-img max-h-[20vh] my-5" loading="lazy" decoding="async">
                         <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_1_bottom">Dentro de los restaurantes</p></div>
+                        <div class="hero-submessage mt-4 sm:mt-5 md:mt-6 text-center select-none pointer-events-none w-full flex justify-center">
+                            <p class="animate-gentle-pulse text-white text-xs sm:text-sm md:text-base font-semibold tracking-wider font-['Glacial_Indifference',sans-serif]">
+                                <span class="hidden md:inline" data-i18n="hero_submessage_desktop">Continúa bajando</span>
+                                <span class="inline md:hidden" data-i18n="hero_submessage_mobile">Continúa deslizando</span>
+                            </p>
+                        </div>
                     </div>
 
                     <div class="scene opacity-0 absolute inset-0 w-full h-full flex flex-col items-center max-md:justify-start max-md:pt-4 md:justify-center text-center" id="scene-2">
-                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_2_top">2<br />Una oportunidad para un restaurante</p></div>
+                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_2_top">Una oportunidad para un restaurante</p></div>
                         <img src="images/icon_food_in_phone.webp" alt="Opportunity" class="scene-img max-h-[20vh] my-5" loading="lazy" decoding="async">
                         <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_2_bottom">Una oportunidad tecnológica</p></div>
+                        <div class="hero-submessage mt-4 sm:mt-5 md:mt-6 text-center select-none pointer-events-none w-full flex justify-center">
+                            <p class="animate-gentle-pulse text-white text-xs sm:text-sm md:text-base font-semibold tracking-wider font-['Glacial_Indifference',sans-serif]">
+                                <span class="hidden md:inline" data-i18n="hero_submessage_desktop">Continúa bajando</span>
+                                <span class="inline md:hidden" data-i18n="hero_submessage_mobile">Continúa deslizando</span>
+                            </p>
+                        </div>
                     </div>
 
                     <div class="scene opacity-0 absolute inset-0 w-full h-full flex flex-col items-center max-md:justify-start max-md:pt-4 md:justify-center text-center" id="scene-3">
-                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_3_top">1<br />Un alivio para los comensales</p></div>
+                        <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_3_top">Un alivio para los comensales</p></div>
                         <img src="images/icon_diners_relief.webp" alt="Relief" class="scene-img max-h-[20vh] my-5" loading="lazy" decoding="async">
                         <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_3_bottom">Incluso antes de llegar al restaurante</p></div>
+                        <div class="hero-submessage mt-4 sm:mt-5 md:mt-6 text-center select-none pointer-events-none w-full flex justify-center">
+                            <p class="animate-gentle-pulse text-white text-xs sm:text-sm md:text-base font-semibold tracking-wider font-['Glacial_Indifference',sans-serif]">
+                                <span class="hidden md:inline" data-i18n="hero_submessage_desktop">Continúa bajando</span>
+                                <span class="inline md:hidden" data-i18n="hero_submessage_mobile">Continúa deslizando</span>
+                            </p>
+                        </div>
                     </div>
 
                     <div class="scene opacity-0 absolute inset-0 w-full h-full flex flex-col items-center max-md:justify-start max-md:pt-4 md:justify-center" id="scene-4">
                         <div class="blue-box bg-[#001560]/40 backdrop-blur-md rounded-[40px] px-10 py-6 text-center scale-90 opacity-0 border border-white/20">
                             <div class="curtain overflow-hidden py-[0.5em] block"><p class="desc-text text-[1.5rem] md:text-[2.5rem] font-bold font-['Glacial_Indifference',sans-serif] text-center w-full mx-auto block leading-[1.2] px-[10%] md:px-0" data-i18n="hero_scene_4">Una experiencia rápida, fácil y deliciosa 😌</p></div>
                         </div>
+                        <div class="hero-submessage mt-4 sm:mt-5 md:mt-6 text-center select-none pointer-events-none w-full flex justify-center">
+                            <p class="animate-gentle-pulse text-white text-xs sm:text-sm md:text-base font-semibold tracking-wider font-['Glacial_Indifference',sans-serif]">
+                                <span class="hidden md:inline" data-i18n="hero_submessage_desktop">Continúa bajando</span>
+                                <span class="inline md:hidden" data-i18n="hero_submessage_mobile">Continúa deslizando</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="max-w-5xl mx-auto px-6 py-12 text-center">
+            <div class="bg-white rounded-[32px] p-8 sm:p-12 shadow-xl border border-[#001560]/10 flex flex-col items-center">
+                <h3 class="text-2xl sm:text-4xl font-black text-[#001560] font-['League_Spartan',sans-serif] mb-4" data-i18n="invitation_definition_question">
+                    ¿Listo para revolucionar tu servicio?
+                </h3>
+                <p class="text-zinc-600 text-base sm:text-lg mb-8 max-w-xl" data-i18n = "invitation_definition_text">
+                    Súmate a la red de restaurantes que ya están eliminando las esperas innecesarias.
+                </p>
+                <div class="flex items-center gap-2 sm:gap-3 shrink-0 z-10">
+                    <a href="restaurants.html" 
+                    class="inline-flex items-center gap-3 px-8 sm:px-10 py-2 sm:py-3 rounded-2xl bg-gradient-to-r from-[#ff751f] via-[#ff6105] to-[#ff751f] bg-[length:200%_auto] hover:bg-[right_center] text-white font-bold text-md sm:text-lg font-['League_Spartan',sans-serif] shadow-xl shadow-[#ff751f]/30 hover:shadow-2xl hover:shadow-[#ff751f]/40 hover:-translate-y-1 transition-all duration-300"
+                    data-i18n="nav_for_restaurants">
+                        Para Restaurantes
+                    </a>
+                    <a href="diners.html" 
+                    class="inline-flex items-center gap-3 px-8 sm:px-10 py-2 sm:py-3 rounded-2xl bg-gradient-to-r from-[#ff751f] via-[#ff6105] to-[#ff751f] bg-[length:200%_auto] hover:bg-[right_center] text-white font-bold text-md sm:text-lg font-['League_Spartan',sans-serif] shadow-xl shadow-[#ff751f]/30 hover:shadow-2xl hover:shadow-[#ff751f]/40 hover:-translate-y-1 transition-all duration-300"
+                    data-i18n="nav_for_diners">
+                        Para Comensales
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <section id="comparison-section" class="bg-white py-24 max-md:pt-8 relative overflow-hidden">
             <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff751f]/50 to-transparent"></div>
@@ -426,118 +483,6 @@
         </section>
 
     </main>
-
-    <!-- <div id="form-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200] opacity-0 pointer-events-none transition-opacity duration-500 flex items-center justify-center"> 
-        <div id="form-modal" class="relative w-[90%] max-w-5xl bg-white shadow-2xl flex flex-col lg:flex-row overflow-hidden origin-bottom max-h-[90vh] overflow-y-auto rounded-[40px] max-lg:skew-x-0 skew-x-5">   
-            
-            <div class="flex flex-col lg:flex-row w-full h-full max-lg:skew-x-0 -skew-x-5">
-                
-                <button id="close-modal" class="absolute top-6 right-6 w-12 h-12 bg-white shadow-md flex items-center justify-center hover:bg-zinc-100 transition-all z-50 border border-zinc-200 rounded-[10px] max-lg:skew-x-0 skew-x-5 cursor-pointer" aria-label="Close modal">
-                    <span class="text-2xl text-black font-bold max-lg:skew-x-0 -skew-x-5">×</span>
-                </button>
-
-                <div class="w-full lg:w-3/5 p-6 lg:p-10 bg-white z-10 order-1">
-                    
-                    <div class="mb-2">
-                        <h2 class="text-5xl text-[#ff751f] leading-tight font-['Glacial_Indifference',sans-serif]" data-i18n="modal_title">
-                            Mantente listo para el <span class="font-bold">lanzamiento</span>
-                        </h2>
-                        <p class="text-[#001560] text-lg font-medium font-['Glacial_Indifference',sans-serif] mb-10" data-i18n="modal_subtitle">
-                            Asegura tu lugar
-                        </p>
-                    </div>
-                    
-                    <form id="waitlist-form" name="yummizi-waitlist" data-netlify="true" class="space-y-4">
-                        <div class="form-group max-lg:ml-0 lg:ml-0">
-                            <input type="text" name="name" placeholder="Tu Nombre *" data-i18n-placeholder="form_name_placeholder" required class="w-full px-4 py-[0.8rem] bg-zinc-100 rounded-xl outline-none border border-transparent font-['Glacial_Indifference',sans-serif] placeholder:font-['Glacial_Indifference',sans-serif] placeholder:text-slate-400 focus:ring-2 focus:ring-[#ff751f]">
-                        </div>
-
-                        <div class="form-group max-lg:ml-0 lg:ml-24 mt-2">
-                            <select id="user-type" name="type" required class="w-full px-4 py-[0.8rem] pr-10 bg-zinc-100 rounded-xl outline-none cursor-pointer border border-transparent font-['Glacial_Indifference',sans-serif] transition-all duration-300 appearance-none bg-[url('data:image/svg+xml,%3Csvg_xmlns=\'http://www.w3.org/2000/svg\'_fill=\'none\'_viewBox=\'0_0_24_24\'_stroke=\'%23ff751f\'%3E%3Cpath_stroke-linecap=\'round\'_stroke-linejoin=\'round\'_stroke-width=\'2\'_d=\'M19_9l-7_7-7-7\'%3E%3C/path%3E%3C/svg%3E')] bg-no-repeat bg-[right_1.2rem_center] bg-[length:1.2rem] hover:bg-zinc-100 hover:border-[#ff751f] focus:bg-white focus:ring-4 focus:ring-[#ff751f]/10">
-                                <option value="" disabled selected class="text-[#001560] bg-white p-2.5" data-i18n="form_type_default">¿Para quién es esto? *</option>
-                                <option value="customer" class="text-[#001560] bg-white p-2.5" data-i18n="form_type_diner">Soy un Comensal</option>
-                                <option value="restaurant" class="text-[#001560] bg-white p-2.5" data-i18n="form_type_resto">Soy un Restaurante</option>
-                            </select>
-                        </div>
-
-                        <div id="resto-field" class="form-group max-lg:ml-0 lg:ml-8 hidden">
-                            <input type="text" name="restaurant_name" placeholder="Nombre Oficial del Restaurante *" data-i18n-placeholder="form_resto_placeholder" class="w-full px-4 py-[0.8rem] bg-white border-2 border-[#ff751f] rounded-xl outline-none font-['Glacial_Indifference',sans-serif] placeholder:font-['Glacial_Indifference',sans-serif] placeholder:text-slate-400">
-                        </div>
-
-                        <div class="form-group max-lg:ml-0 lg:ml-12">
-                            <input type="email" name="email" placeholder="Correo Electrónico *" data-i18n-placeholder="form_email_placeholder" required class="w-full px-4 py-[0.8rem] bg-zinc-100 rounded-xl outline-none border border-transparent font-['Glacial_Indifference',sans-serif] placeholder:font-['Glacial_Indifference',sans-serif] placeholder:text-slate-400 focus:ring-2 focus:ring-[#ff751f]">
-                        </div>
-
-                        <div class="form-group max-lg:ml-0 lg:ml-20">
-                            <textarea name="question" placeholder="¿Alguna duda o pregunta para nosotros?" data-i18n-placeholder="form_question_placeholder" rows="2" class="w-full px-4 py-[0.8rem] bg-zinc-100 rounded-xl outline-none border border-transparent font-['Glacial_Indifference',sans-serif] placeholder:font-['Glacial_Indifference',sans-serif] placeholder:text-slate-400 focus:ring-2 focus:ring-[#ff751f]"></textarea>
-                        </div>
-
-                        <div class="form-group max-lg:ml-0 lg:ml-24 pt-4">
-                            <button type="submit" class="w-full py-5 bg-gradient-to-r from-[#ff751f] to-[#ff6105] text-white font-bold text-xl rounded-xl hover:from-[#ff6105] hover:to-[#ff751f] transition-all shadow-lg font-['League_Spartan',sans-serif] cursor-pointer" data-i18n="form_submit_btn">
-                                ¡MANTÉNGANME AL TANTO!
-                            </button>
-                        </div>
-
-                        <div class="form-group max-lg:ml-0 lg:ml-24 mt-6">
-                            <div class="flex items-start gap-3">
-                                <input type="checkbox" id="policy-check" class="mt-1 w-5 h-5 accent-[#ff751f] cursor-pointer border-2 border-[#001560] rounded checked:bg-[#ff751f]">
-                                <label for="policy-check" class="text-sm text-zinc-600 leading-tight cursor-pointer font-['Glacial_Indifference',sans-serif]" data-i18n="form_policy_agreement">
-                                    He leído y acepto la <a href="#" id="privacy-policy-link" class="text-[#ff751f] hover:text-[#ff6105] underline font-bold">Política de Privacidad</a> y autorizo ser contactado sobre la lista de espera.
-                                </label>
-                            </div>
-                            
-                            <p id="policy-error" class="text-red-500 text-xs font-bold mt-2 opacity-0 transition-opacity duration-300 pointer-events-none" data-i18n="form_policy_error">
-                                Debes marcar la casilla para poder continuar
-                            </p>
-                        </div>
-
-                    </form>
-                </div>
-
-                <div class="block w-full max-lg:h-[250px] max-lg:order-2 lg:w-2/5 bg-[#001560] relative overflow-hidden min-h-full">
-                    <img id="form-visual" src="images/animated_pov_diner_with_yummizi.webp" alt="Yummizi Preview" loading="lazy" decoding="async" class="absolute inset-y-0 right-0 left-auto h-full w-full lg:w-[140%] object-cover opacity-100 transition-opacity duration-500">
-                </div>
-            </div>
-
-            <div id="privacy-policy-panel" class="privacy-policy-panel absolute inset-6 max-sm:inset-3 z-[80] flex flex-col bg-white rounded-[28px] max-sm:rounded-[22px] shadow-[0_24px_60px_rgba(0,0,0,0.24)] opacity-0 pointer-events-none max-lg:skew-x-0 -skew-x-5 translate-y-[18px] scale-[0.98] transition-[opacity,transform] duration-250 ease-out [&.is-visible]:opacity-100 [&.is-visible]:pointer-events-auto [&.is-visible]:translate-y-0 [&.is-visible]:scale-100" role="dialog" aria-labelledby="privacy-policy-title" aria-hidden="true">
-                <button id="privacy-policy-back" class="privacy-policy-back absolute top-4 right-4 max-sm:top-3 max-sm:right-3 z-[2] px-4 py-[0.7rem] max-sm:px-3 max-sm:py-[0.6rem] text-[#001560] bg-[#f4f4f5] border border-[#e4e4e7] rounded-[10px] font-['League_Spartan',sans-serif] text-base max-sm:text-[0.85rem] font-extrabold uppercase cursor-pointer transition-colors duration-200 hover:text-white hover:bg-[#ff751f] focus-visible:text-white focus-visible:bg-[#ff751f] focus-visible:outline-none" type="button" data-i18n="privacy_back_btn">VOLVER</button>
-
-                <div class="privacy-policy-content pt-[4.5rem] pb-10 px-[clamp(1.5rem,4vw,3.5rem)] overflow-y-auto text-zinc-700 font-['Glacial_Indifference',sans-serif]">
-                    <h2 id="privacy-policy-title" class="mb-4 text-[#ff751f] text-[clamp(2.2rem,5vw,4rem)] leading-[0.95] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_title">Política de Privacidad de Yummizi</h2>
-
-                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_controller_title">Identidad del Responsable del Tratamiento</h3>
-                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]" data-i18n="privacy_controller_p">
-                        El responsable del tratamiento de tus datos personales es Piero Stephano Olivas Tuesta, en representación del proyecto Yummizi (en proceso de constitución), con sede en Lima, Perú.
-                    </p>
-
-                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_purpose_title">Finalidad de la Recopilación de Datos</h3>
-                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]" data-i18n="privacy_purpose_p">
-                        Los datos solicitados a través de nuestro formulario (Nombre, Correo y Nombre del Restaurante) se usarán para registrar tu interés en el lanzamiento oficial de Yummizi, enviarte actualizaciones técnicas y comerciales directas, y contactarte para fases beta y estudios de mercado.
-                    </p>
-
-                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_retention_title">Almacenamiento y Periodo de Conservación</h3>
-                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]" data-i18n="privacy_retention_p">
-                        Tus datos se almacenarán en una base digital segura denominada 'Yummizi LP' por un plazo de 2 años o hasta que revoques formalmente tu consentimiento.
-                    </p>
-
-                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_transfers_title">Transferencias Internacionales de Datos</h3>
-                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]" data-i18n="privacy_transfers_p">
-                        Utilizamos infraestructura tecnológica de terceros de clase mundial (Netlify y Supabase). Tus datos se almacenan en servidores con altos estándares de seguridad internacional.
-                    </p>
-
-                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_rights_title">Derechos ARCO</h3>
-                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]" data-i18n="privacy_rights_p">
-                        Conforme a los estándares internacionales y la Ley N° 29733 de Perú, puedes ejercer tus derechos de Acceso, Rectificación, Cancelación u Oposición escribiendo a yummizi.mkt@gmail.com con el asunto 'Solicitud de Derechos de Privacidad'.
-                    </p>
-
-                    <h3 class="mt-7 mb-2 text-[#001560] text-[1.35rem] font-['League_Spartan',sans-serif] font-bold" data-i18n="privacy_mandatory_title">Naturaleza de la Información</h3>
-                    <p class="max-w-[68ch] mb-4 text-base leading-[1.7]" data-i18n="privacy_mandatory_p">
-                        Proporcionar los datos solicitados es necesario para incorporarte a nuestra lista de acceso anticipado.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
     <section class="relative w-full h-[60vh] bg-white overflow-hidden flex items-center justify-center">
         <div class="absolute inset-0 w-full h-full">

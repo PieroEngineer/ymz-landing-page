@@ -11,3 +11,12 @@
   --font-glacial: 'Glacial Indifference', sans-serif;
   --font-comfortaa: 'Comfortaa', sans-serif;
 }
+
+@keyframes gentlePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.animate-gentle-pulse {
+  animation: gentlePulse 2.2s ease-in-out infinite;
+}
