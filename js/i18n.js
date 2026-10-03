@@ -8,8 +8,8 @@ const YUMMIZI_TRANSLATIONS = {
   es: {
     // Header & Navigation
     nav_logo_alt: "Logotipo de Yummizi",
-    nav_for_restaurants: "Para Restaurantes",
-    nav_for_diners: "Para usuarios",
+    nav_for_restaurants: "Somos un Restaurante",
+    nav_for_diners: "Soy Comensal",
     nav_home: "Inicio",
     nav_lang_es: "ES",
     nav_lang_en: "EN",
@@ -50,7 +50,7 @@ const YUMMIZI_TRANSLATIONS = {
     // Benefits Section
     benefits_title: "He aquí nuestros Beneficios para ti",
     card_1_resto_badge: "Beneficio Restaurante",
-    card_1_resto_title: "Un flujo de usuarios mucho más predecible",
+    card_1_resto_title: "Un flujo de comensales mucho más predecible",
     card_1_diner_badge: "Experiencia Comensal",
     card_1_diner_title: "Los comensales pueden hacer más de una fila virtual simultáneamente",
     
@@ -139,8 +139,8 @@ const YUMMIZI_TRANSLATIONS = {
     
     privacy_s4_title: "4. FLUJO TRANSFRONTERIZO Y PROCESADORES (TERCEROS)",
     privacy_s4_intro: "Para la prestación del servicio, Yummizi utiliza infraestructura cloud de proveedores internacionales con servidores fuera del Perú (principalmente en EE. UU.):",
-    privacy_s4_supabase: "Supabase Inc.: Almacenamiento de base de datos relacional y autenticación de usuarios.",
-    privacy_s4_aws: "Amazon Web Services (AWS): Almacenamiento seguro en la nube de imágenes (capturas de comprobantes de pago y recursos multimedia).",
+    privacy_s4_supabase: "Supabase Inc.: Almacenamiento de base de datos relacional.",
+    privacy_s4_aws: "Amazon Web Services (AWS): Almacenamiento seguro en la nube de imágenes (capturas de comprobantes de pago y recursos multimedia) y autenticación de usuarios.",
     privacy_s4_netlify: "Netlify: Procesamiento de tráfico web / frontend (sin almacenamiento de datos personales).",
     
     privacy_s5_title: "5. SEGURIDAD Y CIFRADO DE DATOS",
@@ -240,8 +240,8 @@ const YUMMIZI_TRANSLATIONS = {
   en: {
     // Header & Navigation
     nav_logo_alt: "Yummizi Logo",
-    nav_for_restaurants: "For Restaurants",
-    nav_for_diners: "For Diners",
+    nav_for_restaurants: "We are a Restaurant",
+    nav_for_diners: "I'm a Diner",
     nav_home: "Home",
     nav_lang_es: "ES",
     nav_lang_en: "EN",
@@ -373,8 +373,8 @@ const YUMMIZI_TRANSLATIONS = {
     
     privacy_s4_title: "4. CROSS-BORDER DATA FLOW AND THIRD-PARTY PROCESSORS",
     privacy_s4_intro: "To provide the service, Yummizi uses cloud infrastructure from international providers with servers located outside Peru (primarily in the USA):",
-    privacy_s4_supabase: "Supabase Inc.: Relational database storage and user authentication.",
-    privacy_s4_aws: "Amazon Web Services (AWS): Secure cloud storage for images (payment voucher screenshots and multimedia assets).",
+    privacy_s4_supabase: "Supabase Inc.: Relational database storage.",
+    privacy_s4_aws: "Amazon Web Services (AWS): Secure cloud storage for images (payment voucher screenshots and multimedia assets) and user authentication.",
     privacy_s4_netlify: "Netlify: Web traffic and frontend hosting (without storing personal data).",
     
     privacy_s5_title: "5. DATA SECURITY AND ENCRYPTION",
@@ -426,11 +426,11 @@ const YUMMIZI_TRANSLATIONS = {
     resto_img_2_desc: "You decide which requests come in, their detailed times, and payments. Ready to prep",
     resto_img_3_badge: "Make your restaurant visible",
     resto_img_3_title: "3. Reach beyond the neighborhood 🔭",
-    resto_img_3_desc: "Growing together 🫂 Every time Yummizi grows, more users see your restaurant.",
+    resto_img_3_desc: "Growing together 🫂 Every time Yummizi grows, more diners see your restaurant.",
     resto_list_badge: "Good news!",
     resto_list_title: "What you gain by integrating Yummizi into your restaurant",
     resto_bullet_1: "Advance preparation ➡️ Time optimization.",
-    resto_bullet_2: "Time optimization ➡️ Better user experience.",
+    resto_bullet_2: "Time optimization ➡️ Better diner experience.",
     resto_bullet_3: "Time optimization ➡️ Higher daily table turnover.",
     resto_bullet_4: "Higher daily table turnover ➡️ Greater daily revenue.",
     resto_bullet_5: "An edge over nearby restaurants. ⬆️",
@@ -444,9 +444,9 @@ const YUMMIZI_TRANSLATIONS = {
     // Diners Page (diners.html)
     diner_page_title: "Yummizi | A fast, easy, and delicious experience",
     diner_page_desc: "Order your dishes and secure your table before arriving at the restaurant. Say goodbye to lines with Yummizi.",
-    diner_hero_badge: "A new user experience",
+    diner_hero_badge: "A new diner experience",
     diner_hero_phrase: "You used to wait in line, wait to order, wait for the check, and wait for the kitchen—but today, that changes",
-    diner_hero_sub: "If hunger and waiting are polar opposites, why is this combination the very first experience millions of users face when arriving at a restaurant?",
+    diner_hero_sub: "If hunger and waiting are polar opposites, why is this combination the very first experience millions of diners face when arriving at a restaurant?",
     diner_cta_button: "Join the new experience",
     diner_cta_note: "Completely free early access with no commissions 🎁",
     diner_main_img_badge: "A wait-free experience",
