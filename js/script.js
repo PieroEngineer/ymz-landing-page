@@ -147,7 +147,17 @@ function initHeroSection() {
 
 function initHeroNarrative() {
     gsap.registerPlugin(ScrollTrigger);
-    
+
+    const heroProgressContainer = document.querySelector(".hero-progress-container");
+    const heroProgressBar = document.getElementById("hero-progress-bar");
+    const updateHeroProgress = (self) => {
+        if (heroProgressContainer && heroProgressBar) {
+            const percent = Math.round(self.progress * 100);
+            heroProgressBar.style.width = `${percent}%`;
+            heroProgressContainer.setAttribute("aria-valuenow", percent);
+        }
+    };
+
     const mainTl = gsap.timeline({
         scrollTrigger: {
             trigger: "#hero-section",
@@ -158,7 +168,11 @@ function initHeroNarrative() {
             // REDUCED: From 1 to 0.05 for snappier response
             scrub: .05, 
             anticipatePin: 1,
+            onUpdate: self => {
+                updateHeroProgress(self);
+            },
             onRefresh: self => {
+                updateHeroProgress(self);
                 if(self.progress === 0) {
                     gsap.set("#scene-1", { opacity: 1 });
                     gsap.set("#scene-1 .desc-text", { y: "0%" });
@@ -256,18 +270,27 @@ function initBenefitFlipCards() {
     const mobileFlipQuery = window.matchMedia("(hover: none), (pointer: coarse)");
     const cards = document.querySelectorAll("#benefits-section .flip-card");
 
+    const isPhoneOrTouch = () => {
+        return mobileFlipQuery.matches || window.matchMedia("(max-width: 768px)").matches || ('ontouchstart' in window);
+    };
+
     cards.forEach((card) => {
         card.setAttribute("role", "button");
         card.setAttribute("tabindex", "0");
         card.setAttribute("aria-pressed", "false");
         let hasUsedTouchHover = false;
         let ignoreNextClick = false;
+        let lastFlipTime = 0;
 
         const toggleCard = () => {
+            const now = Date.now();
+            if (now - lastFlipTime < 250) return;
+            lastFlipTime = now;
             card.classList.toggle("is-flipped");
             card.setAttribute("aria-pressed", card.classList.contains("is-flipped") ? "true" : "false");
         };
 
+        // Existing pointerenter logic
         card.addEventListener("pointerenter", (event) => {
             if (!mobileFlipQuery.matches || event.pointerType === "mouse") return;
             if (hasUsedTouchHover) return;
@@ -280,8 +303,9 @@ function initBenefitFlipCards() {
             toggleCard();
         });
 
+        // Existing click logic
         card.addEventListener("click", () => {
-            if (!mobileFlipQuery.matches) return;
+            if (!isPhoneOrTouch()) return;
 
             if (ignoreNextClick) {
                 ignoreNextClick = false;
@@ -291,11 +315,113 @@ function initBenefitFlipCards() {
             toggleCard();
         });
 
+        // Existing keyboard logic
         card.addEventListener("keydown", (event) => {
             if (event.key !== "Enter" && event.key !== " ") return;
             event.preventDefault();
             toggleCard();
         });
+
+        // --- Touch Horizontal Slide (Swipe) Logic for Phone Screens ---
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchCurrentX = 0;
+        let touchCurrentY = 0;
+        let swipeTriggered = false;
+
+        card.addEventListener("touchstart", (e) => {
+            if (!isPhoneOrTouch() || e.touches.length !== 1) return;
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            touchCurrentX = touchStartX;
+            touchCurrentY = touchStartY;
+            swipeTriggered = false;
+        }, { passive: true });
+
+        card.addEventListener("touchmove", (e) => {
+            if (!isPhoneOrTouch() || swipeTriggered || e.touches.length !== 1) return;
+            touchCurrentX = e.touches[0].clientX;
+            touchCurrentY = e.touches[0].clientY;
+
+            const diffX = touchCurrentX - touchStartX;
+            const diffY = touchCurrentY - touchStartY;
+            const absX = Math.abs(diffX);
+            const absY = Math.abs(diffY);
+
+            // Detect horizontal slide across card (more horizontal than vertical, past threshold)
+            if (absX > absY && absX >= 35) {
+                swipeTriggered = true;
+                ignoreNextClick = true;
+                window.setTimeout(() => {
+                    ignoreNextClick = false;
+                }, 400);
+                toggleCard();
+            }
+        }, { passive: true });
+
+        card.addEventListener("touchend", (e) => {
+            if (!isPhoneOrTouch()) return;
+            if (!swipeTriggered) {
+                const diffX = touchCurrentX - touchStartX;
+                const diffY = touchCurrentY - touchStartY;
+                const absX = Math.abs(diffX);
+                const absY = Math.abs(diffY);
+
+                if (absX > absY && absX >= 35) {
+                    swipeTriggered = true;
+                    ignoreNextClick = true;
+                    window.setTimeout(() => {
+                        ignoreNextClick = false;
+                    }, 400);
+                    toggleCard();
+                }
+            }
+            swipeTriggered = false;
+        }, { passive: true });
+
+        card.addEventListener("touchcancel", () => {
+            swipeTriggered = false;
+        });
+
+        // Pointer event fallback for swipe gesture (supports pointer/mouse drag on phone viewports)
+        let pointerStartX = 0;
+        let pointerStartY = 0;
+        let isPointerDown = false;
+        let pointerSwipeTriggered = false;
+
+        card.addEventListener("pointerdown", (e) => {
+            if (!isPhoneOrTouch()) return;
+            if (e.pointerType === "mouse" && !window.matchMedia("(max-width: 768px)").matches) return;
+            isPointerDown = true;
+            pointerStartX = e.clientX;
+            pointerStartY = e.clientY;
+            pointerSwipeTriggered = false;
+        });
+
+        card.addEventListener("pointermove", (e) => {
+            if (!isPointerDown || pointerSwipeTriggered) return;
+            const diffX = e.clientX - pointerStartX;
+            const diffY = e.clientY - pointerStartY;
+            const absX = Math.abs(diffX);
+            const absY = Math.abs(diffY);
+
+            if (absX > absY && absX >= 35) {
+                pointerSwipeTriggered = true;
+                ignoreNextClick = true;
+                window.setTimeout(() => {
+                    ignoreNextClick = false;
+                }, 400);
+                toggleCard();
+            }
+        });
+
+        const endPointerSwipe = () => {
+            isPointerDown = false;
+            pointerSwipeTriggered = false;
+        };
+
+        card.addEventListener("pointerup", endPointerSwipe);
+        card.addEventListener("pointercancel", endPointerSwipe);
     });
 }
 
