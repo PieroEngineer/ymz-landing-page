@@ -100,6 +100,7 @@ function initHeroSection() {
     
     // Set initial state: Hidden and slightly lower
     gsap.set(cornerImg, { opacity: 0, y: 20 });
+    gsap.set(["#scene-2-img", "#scene-3-img"], { opacity: 0 });
 
     const tl = gsap.timeline();
 
@@ -176,14 +177,19 @@ function initHeroNarrative() {
                 if(self.progress === 0) {
                     gsap.set("#scene-1", { opacity: 1 });
                     gsap.set("#scene-1 .desc-text", { y: "0%" });
+                    gsap.set("#scene-2-img", { opacity: 0, rotation: -14, scale: 0.85, yPercent: -50 });
+                    gsap.set("#scene-3-img", { opacity: 0, rotation: 14, scale: 0.85, yPercent: -50 });
                 }
             }
         }
     });
 
-    // Reset Scene 1 to be visible initially
+    // Reset Scene 1 and side images initially
     gsap.set("#scene-1", { opacity: 1 });
     gsap.set("#scene-1 .desc-text", { y: "0%" });
+    // Images start hidden; GSAP owns transforms (yPercent centres vertically like the inline translateY(-50%))
+    gsap.set("#scene-2-img", { opacity: 0, rotation: -14, scale: 0.85, yPercent: -50 });
+    gsap.set("#scene-3-img", { opacity: 0, rotation: 14, scale: 0.85, yPercent: -50 });
 
     // SCENE REVEAL SEQUENCE
     // Scene 1 to Scene 2
@@ -192,13 +198,35 @@ function initHeroNarrative() {
           
           .to("#scene-2", { opacity: 1, duration: 0.5 })
           .to("#scene-2 .desc-text", { y: "0%", duration: 1, stagger: 0.2 })
+          // Scene 2 image entrance: clockwise rotation (-14deg -> -3deg)
+          .fromTo("#scene-2-img", 
+              { opacity: 0, rotation: -14, scale: 0.85, yPercent: -50 }, 
+              { opacity: 1, rotation: -3, scale: 1, yPercent: -50, duration: 1, ease: "power2.out" }, 
+              "<"
+          )
           .to("#scene-2 .desc-text", { y: "-105%", duration: 1, stagger: 0.1, delay: 1 })
+          // Scene 2 image exit: counter-clockwise rotation (-3deg -> -16deg)
+          .to("#scene-2-img", 
+              { opacity: 0, rotation: -16, scale: 0.85, yPercent: -50, duration: 0.8, ease: "power2.in" }, 
+              "<"
+          )
           .to("#scene-2", { opacity: 0, duration: 0.5 }, "-=0.5")
 
     // SCENE 3: Standard Reveal -> Stay -> Exit
     mainTl.to("#scene-3", { opacity: 1, duration: 0.5 })
           .to("#scene-3 .desc-text", { y: "0%", duration: .5, stagger: 0.2 })
+          // Scene 3 image entrance: counter-clockwise rotation (+14deg -> +3deg)
+          .fromTo("#scene-3-img", 
+              { opacity: 0, rotation: 14, scale: 0.85, yPercent: -50 }, 
+              { opacity: 1, rotation: 3, scale: 1, yPercent: -50, duration: 0.8, ease: "power2.out" }, 
+              "<"
+          )
           .to("#scene-3 .desc-text", { y: "-110%", duration: .5, delay: .5 })
+          // Scene 3 image exit: clockwise rotation (+3deg -> +16deg)
+          .to("#scene-3-img", 
+              { opacity: 0, rotation: 16, scale: 0.85, yPercent: -50, duration: 0.5, ease: "power2.in" }, 
+              "<"
+          )
           .to("#scene-3", { opacity: 0, duration: 0.2 });
 
     // SCENE 4: Blue Box (Transparency handled in CSS)

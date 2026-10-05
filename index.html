@@ -187,6 +187,26 @@
                          style="width: 0%; height: 100%; background-color: #9d0000; border-radius: 9999px; transition: width 0.1s ease-out; will-change: width;"></div>
                 </div>
 
+                <!--
+                    Side images: positioned absolutely inside hero-content (which is relative).
+                    Desktop: pinned to right/left edge and vertically centred in the viewport.
+                    Mobile: hidden via GSAP (opacity 0 always) — the mobile experience uses no side images.
+                -->
+                <img id="scene-3-img"
+                     src="images/mobile_virtual_queues.webp"
+                     alt="Mobile Virtual Queues"
+                     loading="lazy"
+                     decoding="async"
+                     style="position:absolute; right:clamp(12px,3vw,56px); top:50vh; transform:rotate(14deg); width:clamp(110px,13vw,240px); max-height:44vh; object-fit:contain; border-radius:18px; box-shadow:0 16px 48px rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.15); opacity:0; pointer-events:none; will-change:transform,opacity; z-index:30;"
+                    class="shadow-[10px_10px_0px_0px_#fff]">
+
+                <img id="scene-2-img"
+                     src="images/web_request_dashboard.webp"
+                     alt="Web Request Dashboard"
+                     loading="lazy"
+                     decoding="async"
+                     style="position:absolute; left:clamp(12px,3vw,56px); top:50vh; transform:rotate(-14deg); width:clamp(140px,16vw,320px); max-height:40vh; object-fit:contain; border-radius:18px; box-shadow:0 16px 48px rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.15); opacity:0; pointer-events:none; will-change:transform,opacity; z-index:30;">
+
                 <!-- Epic Introduction -->
                 <div class="relative w-full flex-1">
                     <div class="scene opacity-0 absolute inset-0 w-full h-full flex flex-col items-center max-md:justify-start max-md:pt-4 md:justify-center text-center" id="scene-1">
