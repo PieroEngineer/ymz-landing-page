@@ -50,24 +50,25 @@ const YUMMIZI_TRANSLATIONS = {
     // Benefits Section
     benefits_title: "He aquí nuestros Beneficios para ti",
     card_1_resto_badge: "Beneficio Restaurante",
-    card_1_resto_title: "Un flujo de comensales mucho más predecible",
+    card_1_resto_title: "Un flujo de comensales mucho menos impredecible",
     card_1_diner_badge: "Experiencia Comensal",
-    card_1_diner_title: "Los comensales pueden hacer más de una fila virtual simultáneamente",
+    card_1_diner_title: "Puedes hacer solicitar mesa en más de un restaurante a la vez",
     
     card_2_resto_badge: "Beneficio Restaurante",
     card_2_resto_title: "La rotación de mesas se incrementa a diario",
     card_2_diner_badge: "Experiencia Comensal",
-    card_2_diner_title: "Los comensales esperan mucho menos por sus platos al llegar al restaurante",
+    card_2_diner_title: "Esperas mucho menos tiempo por tu plato",
 
     card_3_resto_badge: "Beneficio Restaurante",
-    card_3_resto_title: "Registro ordenado del servicio y análisis visual de datos",
+    // card_3_resto_title: "Registro ordenado del servicio y análisis visual de datos",
+    card_3_resto_title: "Interfaz super sencilla y de gran alcance",
     card_3_diner_badge: "Experiencia Comensal",
-    card_3_diner_title: "Disponibilidad de platillos consultable en tiempo real",
+    card_3_diner_title: "Selección sencilla de platos en Menú digital",
 
     card_4_resto_badge: "Beneficio Restaurante",
-    card_4_resto_title: "Mayor probabilidad de que los clientes regresen con frecuencia",
+    card_4_resto_title: "Mayor visibilidad ante comensales",
     card_4_diner_badge: "Experiencia Comensal",
-    card_4_diner_title: "Notificación anticipada de preferencias o especificaciones de cocina",
+    card_4_diner_title: "Asegura tu pedido y mesa antes de llegar al local",
 
     // Final button in main
     invitation_definition_question: "¿Listo para romper el paradigma?",
@@ -210,7 +211,7 @@ const YUMMIZI_TRANSLATIONS = {
     // Diners Page (diners.html)
     diner_page_title: "Yummizi | Una experiencia ágil, fácil y deliciosa",
     diner_page_desc: "Pide tus platillos y confirma tu mesa antes de llegar al restaurante. Dile adiós a las filas con Yummizi.",
-    diner_hero_badge: "Nueva experiencia para usuarios",
+    diner_hero_badge: "Nueva experiencia para comensales",
     diner_hero_phrase: "Antes esperabas por la cola, toma de pedido, ticket y cocina, pero hoy eso cambia",
     diner_hero_sub: "Si el hambre y la espera son polos opuestos ¿Por qué esta combinación es la primera experiencia que millones de usaurios reciben cuando llegan a un restaurante?.",
     diner_cta_button: "Unirse a la nueva experiencia",
