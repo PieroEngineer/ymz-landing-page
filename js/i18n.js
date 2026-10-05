@@ -213,7 +213,7 @@ const YUMMIZI_TRANSLATIONS = {
     diner_page_desc: "Pide tus platillos y confirma tu mesa antes de llegar al restaurante. Dile adiós a las filas con Yummizi.",
     diner_hero_badge: "Nueva experiencia para comensales",
     diner_hero_phrase: "Antes esperabas por la cola, toma de pedido, ticket y cocina, pero hoy eso cambia",
-    diner_hero_sub: "Si el hambre y la espera son polos opuestos ¿Por qué esta combinación es la primera experiencia que millones de usaurios reciben cuando llegan a un restaurante?.",
+    diner_hero_sub: "Si el hambre y la espera son polos opuestos ¿Por qué esta combinación es la primera experiencia que millones de usuarios reciben cuando llegan a un restaurante?.",
     diner_cta_button: "Unirse a la nueva experiencia",
     diner_cta_note: "Acceso anticipado completamente gratis y sin comisiones 🎁",
     diner_main_img_badge: "Experiencia sin esperas",
