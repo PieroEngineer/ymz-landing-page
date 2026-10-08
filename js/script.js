@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
     tl.to(logo, { 
         scale: 1, 
         opacity: 1, 
-        duration: 1.2, 
+        duration: 0.7, 
         ease: "expo.out" 
     })
     
@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
     .to(preloaderRect, {
         scaleX: 1,
         paddingRight: rectExpandedPadding,
-        duration: 1,
+        duration: 0.8,
         ease: "expo.inOut"
     }, "-=0.2")
     .to(rectText, {
@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', () => {
     .to(preloaderRect, {
         scaleX: 0,
         paddingRight: "0px",
-        duration: 0.8,
+        duration: 0.5,
         ease: "expo.inOut"
     }, "-=0.1")
 
@@ -67,24 +67,24 @@ window.addEventListener('DOMContentLoaded', () => {
         xPercent: -50,
         yPercent: -50,
         scale: navLogoScale,
-        duration: 1.2,
+        duration: 1.0,
         ease: "expo.inOut"
     })
     
     // 5. REVEAL WEBSITE
     .to("#navbar, #main-content", { 
         opacity: 1, 
-        duration: 0.8,
+        duration: 0.5,
         onStart: () => {
             // Only hide the preloader logo once the navbar is actually visible
-            gsap.to(logo, { opacity: 0, duration: 0.3, delay: 0.5 });
+            gsap.to(logo, { opacity: 0, duration: 0.3, delay: 0.4 });
         }
     }, "-=0.4")
     .call(initHeroSection)
     .to("#preloader", { 
         opacity: 0, 
         display: "none", 
-        duration: 0.5 
+        duration: 0.4 
     }, "-=0.2");
 
     // Scroll Progress

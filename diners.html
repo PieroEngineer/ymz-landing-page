@@ -57,15 +57,15 @@
 
         <!-- Right Buttons: For Restaurants & For Diners (Active) -->
         <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 flex-shrink-0 z-10">
-            <a href="restaurants.html" 
-               class="inline-flex items-center gap-3 px-3 sm:px-10 py-1.5 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#ff751f] via-[#ff6105] to-[#ff751f] bg-[length:200%_auto] hover:bg-[right_center] text-white font-bold text-xs sm:text-lg leading-none whitespace-nowrap font-['League_Spartan',sans-serif] shadow-xl shadow-[#ff751f]/30 hover:shadow-2xl hover:shadow-[#ff751f]/40 hover:-translate-y-1 transition-all duration-300"
-               data-i18n="nav_for_restaurants">
-                Para Restaurantes
-            </a>
             <a href="diners.html" 
                class="inline-flex items-center gap-3 px-3 sm:px-10 py-1.5 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#ff751f] via-[#ff6105] to-[#ff751f] bg-[length:200%_auto] hover:bg-[right_center] text-white font-bold text-xs sm:text-lg leading-none whitespace-nowrap font-['League_Spartan',sans-serif] shadow-xl shadow-[#ff751f]/30 hover:shadow-2xl hover:shadow-[#ff751f]/40 hover:-translate-y-1 transition-all duration-300"
                data-i18n="nav_for_diners">
                 Para Comensales
+            </a>
+            <a href="restaurants.html" 
+               class="inline-flex items-center gap-3 px-3 sm:px-10 py-1.5 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-[#ff751f] via-[#ff6105] to-[#ff751f] bg-[length:200%_auto] hover:bg-[right_center] text-white font-bold text-xs sm:text-lg leading-none whitespace-nowrap font-['League_Spartan',sans-serif] shadow-xl shadow-[#ff751f]/30 hover:shadow-2xl hover:shadow-[#ff751f]/40 hover:-translate-y-1 transition-all duration-300"
+               data-i18n="nav_for_restaurants">
+                Para Restaurantes
             </a>
         </div>
     </nav>
@@ -111,30 +111,112 @@
             </div>
         </section>
 
-        <!-- Section: 1 Main Image -->
-        <!-- <section class="max-w-6xl mx-auto px-6 py-12 lg:py-16">
-            <div class="relative rounded-[36px] overflow-hidden shadow-2xl border-4 border-white group">
-                <div class="aspect-[16/9] sm:aspect-[21/9] w-full bg-zinc-200 overflow-hidden relative">
-                    <img src="images/mock_diner_hero.webp" 
-                         alt="Experiencia Gastronómica sin esperas" 
-                         loading="lazy" 
-                         decoding="async" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <!-- Section: Lazy-loaded Video Embed (youtube-nocookie.com) -->
+        <section class="max-w-7xl mx-auto px-6 py-16 lg:py-24 text-center">
+            <div class="mb-12">
+                <span class="text-[#ff751f] text-sm font-extrabold uppercase tracking-widest font-['Comfortaa',sans-serif]" data-i18n="diner_video_badge">Cómo funciona</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#001560] font-['League_Spartan',sans-serif] mt-2 mb-4" data-i18n="diner_video_title">
+                    ¿Cómo funciona para ti?
+                </h2>
+                <p class="text-zinc-600 text-lg max-w-2xl mx-auto" data-i18n="diner_video_sub">
+                    Una demostración rápida de cómo tu próxima salida a comer será la más rápida, fresca y placentera.
+                </p>
+            </div>
+
+            <!-- Video Player Mock Container with youtube-nocookie.com lazy loading -->
+            <div class="relative max-w-4xl mx-auto aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#001560] group">
+                <iframe 
+                    class="w-full h-full object-cover" 
+                    src="https://www.youtube-nocookie.com/embed/7b_l_gql7mM?rel=0&modestbranding=1" 
+                    title="Yummizi for Diners demo" 
+                    loading="lazy" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Comparison section -->
+        <section id="comparison-section" class="bg-white py-24 max-md:pt-8 relative overflow-hidden">
+            <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff751f]/50 to-transparent"></div>
+
+            <div class="max-w-7xl mx-auto px-6 py-20 max-md:pt-8">
+                <h2 class="text-[#ff751f] text-5xl font-normal text-center mb-24 max-md:mb-12 tracking-tight font-['Glacial_Indifference',sans-serif]" data-i18n="comparison_title">
+                    Descubre el camino Yummizi
+                </h2>
+
+                <div class="space-y-32 md:space-y-48">
                     
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#001560]/85 via-black/20 to-transparent flex flex-col justify-end p-6 sm:p-12">
-                        <span class="text-[#ff751f] text-xs sm:text-sm font-bold uppercase tracking-widest font-['Comfortaa',sans-serif] mb-2" data-i18n="diner_main_img_badge">
-                            Experiencia sin esperas
-                        </span>
-                        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black text-white font-['League_Spartan',sans-serif] mb-2" data-i18n="diner_main_img_title">
-                            La libertad de comer sin pausas ni esperas
-                        </h2>
-                        <p class="text-white/80 text-sm sm:text-lg max-w-2xl font-medium" data-i18n="diner_main_img_desc">
-                            Vive la experiencia gastronómica que siempre mereciste en tus restaurantes predilectos.
-                        </p>
+                    <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center max-md:-mt-6">
+                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)] border border-[#001560]/5">
+                            <h3 class="text-[#001560]/60 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]" data-i18n="comparison_before_badge">Before...</h3>
+                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_friends_with_phones_in_street.webp" alt="Before Yummizi" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                            </div>
+                            <p class="text-zinc-700 text-lg leading-relaxed text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_1_before">
+                                Diners used to hope that there would be available table at the restaurant they want
+                            </p>
+                        </div>
+                        <div class="comp-card after-card group bg-gradient-to-br from-[#ff751f] to-[#ff6105] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.35)]">
+                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11" loading="lazy" decoding="async">
+                            <h3 class="text-white/90 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]" data-i18n="comparison_after_badge">With Yummizi...</h3>
+                            <div class="img-placeholder bg-white/20 backdrop-blur-xs rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_friends_with_phones_in_street_happy_with_food.webp" alt="With Yummizi" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                            </div>
+                            <p class="text-white text-lg leading-relaxed font-medium text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_1_after">
+                                Diners can confirm their table and dishes even before arrive
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center max-md:-mt-6">
+                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)] border border-[#001560]/5">
+                            <h3 class="text-[#001560]/60 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]" data-i18n="comparison_before_badge">Before...</h3>
+                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_diners_looking_for_restaurant.webp" alt="Diners Looking" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                            </div>
+                            <p class="text-zinc-700 text-lg leading-relaxed text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_3_before">
+                                Queues were unpredictable for diners
+                            </p>
+                        </div>
+                        <div class="comp-card after-card group bg-gradient-to-br from-[#ff751f] to-[#ff6105] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.35)]">
+                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11" loading="lazy" decoding="async">
+                            <h3 class="text-white/90 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]" data-i18n="comparison_after_badge">With Yummizi...</h3>
+                            <div class="img-placeholder bg-white/20 backdrop-blur-xs rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_friends_using_yummizi.webp" alt="Friends Using Yummizi" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                            </div>
+                            <p class="text-white text-lg leading-relaxed font-medium text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_3_after">
+                                Diners can join virtual queues and restaurants can control them with ease
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="comparison-row flex flex-col md:flex-row gap-8 items-center justify-center max-md:-mt-6">
+                        <div class="comp-card before-card group bg-[#f2f2f2] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.25)] border border-[#001560]/5">
+                            <h3 class="text-[#001560]/60 text-xl font-bold mb-6 font-['League_Spartan',sans-serif]" data-i18n="comparison_before_badge">Before...</h3>
+                            <div class="img-placeholder bg-zinc-200 rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_difficult_waiting_for_diners.webp" alt="Diners Waiting" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                            </div>
+                            <p class="text-zinc-700 text-lg leading-relaxed text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_4_before">
+                                Diners used to wait while they were hungry. Normalized, wasn't it?
+                            </p>
+                        </div>
+                        <div class="comp-card after-card group bg-gradient-to-br from-[#ff751f] to-[#ff6105] rounded-[30px] p-10 max-md:p-6 shadow-lg w-full md:w-1/2 relative flex flex-col md:min-h-[520px] transition-shadow duration-500 [will-change:transform,box-shadow] [&.card-focus]:shadow-[0_25px_50px_-12px_rgba(255,117,31,0.35)]">
+                            <img src="images/yummIzi_logo.webp" alt="Logo" class="absolute top-6 left-6 w-11" loading="lazy" decoding="async">
+                            <h3 class="text-white/90 text-xl font-bold mb-6 text-right font-['League_Spartan',sans-serif]" data-i18n="comparison_after_badge">With Yummizi...</h3>
+                            <div class="img-placeholder bg-white/20 backdrop-blur-xs rounded-2xl aspect-video mb-6 overflow-hidden max-md:h-auto shadow-inner">
+                                <img src="images/animated_friends_eat_fastly_thanks_to_yummizi.webp" alt="Fast Dining" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-800 group-hover:scale-105">
+                            </div>
+                            <p class="text-white text-lg leading-relaxed font-medium text-center w-full mt-auto font-['Glacial_Indifference',sans-serif]" data-i18n="comp_row_4_after">
+                                Diners wait much less time or simply don't wait for their food
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section> -->
+
+            <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff751f]/50 to-transparent mt-20"></div>
+        </section>
 
         <!-- Section: 3 Vertical Images Grouped -->
         <section class="max-w-7xl mx-auto px-6 py-16 lg:py-24">
@@ -223,31 +305,6 @@
                     </p>
                 </div>
 
-            </div>
-        </section>
-
-        <!-- Section: Lazy-loaded Video Embed (youtube-nocookie.com) -->
-        <section class="max-w-7xl mx-auto px-6 py-16 lg:py-24 text-center">
-            <div class="mb-12">
-                <span class="text-[#ff751f] text-sm font-extrabold uppercase tracking-widest font-['Comfortaa',sans-serif]" data-i18n="diner_video_badge">Cómo funciona</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#001560] font-['League_Spartan',sans-serif] mt-2 mb-4" data-i18n="diner_video_title">
-                    ¿Cómo funciona para ti?
-                </h2>
-                <p class="text-zinc-600 text-lg max-w-2xl mx-auto" data-i18n="diner_video_sub">
-                    Una demostración rápida de cómo tu próxima salida a comer será la más rápida, fresca y placentera.
-                </p>
-            </div>
-
-            <!-- Video Player Mock Container with youtube-nocookie.com lazy loading -->
-            <div class="relative max-w-4xl mx-auto aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#001560] group">
-                <iframe 
-                    class="w-full h-full object-cover" 
-                    src="https://www.youtube-nocookie.com/embed/7b_l_gql7mM?rel=0&modestbranding=1" 
-                    title="Yummizi for Diners demo" 
-                    loading="lazy" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
             </div>
         </section>
 
