@@ -14,6 +14,10 @@ const YUMMIZI_TRANSLATIONS = {
     nav_lang_es: "ES",
     nav_lang_en: "EN",
     nav_lang_toggle_aria: "Cambiar idioma (Español / Inglés)",
+    quick_links_aria: "Enlaces de acceso rápido",
+    quick_links_title: "Acceso rápido",
+    quick_links_diners: "Comensales",
+    quick_links_restaurants: "Restaurantes",
 
     // SEO Meta (Index)
     seo_title: "Yummizi | Optimize timing in restaurants - Reserva de mesa y pedidos sin espera",
@@ -247,6 +251,10 @@ const YUMMIZI_TRANSLATIONS = {
     nav_lang_es: "ES",
     nav_lang_en: "EN",
     nav_lang_toggle_aria: "Switch language (Spanish / English)",
+    quick_links_aria: "Quick links",
+    quick_links_title: "Quick access",
+    quick_links_diners: "Diners",
+    quick_links_restaurants: "Restaurants",
 
     // SEO Meta (Index)
     seo_title: "Yummizi | Optimize timing in restaurants - Smart Table & Advance Food Ordering",

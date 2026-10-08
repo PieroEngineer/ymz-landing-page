@@ -91,6 +91,93 @@
         .animate-gentle-pulse {
             animation: gentlePulse 2.2s ease-in-out infinite;
         }
+        #quick-links {
+            position: fixed;
+            right: clamp(12px, 2vw, 28px);
+            bottom: max(16px, env(safe-area-inset-bottom));
+            z-index: 70;
+            width: min(288px, calc(100vw - 24px));
+            padding: 12px;
+            color: #001560;
+            font-family: 'Glacial_Indifference', sans-serif;
+            background: rgba(255, 255, 255, 0.96);
+            border: 1px solid rgba(0, 21, 96, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 12px 34px rgba(0, 21, 96, 0.2);
+            backdrop-filter: blur(12px);
+        }
+        .quick-links-heading {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0 0 10px 2px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+        }
+        .quick-links-mark {
+            display: grid;
+            width: 24px;
+            height: 24px;
+            flex: 0 0 24px;
+            place-items: center;
+            color: #fff;
+            background: linear-gradient(135deg, #ff751f, #ff6105);
+            border-radius: 9px;
+            box-shadow: 0 3px 8px rgba(255, 117, 31, 0.3);
+        }
+        .quick-links-options {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+        }
+        .quick-links-options a {
+            display: flex;
+            min-width: 0;
+            min-height: 40px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5px;
+            padding: 0 10px;
+            color: #001560;
+            background: #f4f6fb;
+            border: 1px solid rgba(0, 21, 96, 0.08);
+            border-radius: 12px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            line-height: 1.1;
+            text-decoration: none;
+            transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+        }
+        .quick-links-options a:last-child {
+            color: #fff;
+            background: linear-gradient(135deg, #ff751f, #ff6105);
+            border-color: transparent;
+        }
+        .quick-links-options a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0, 21, 96, 0.12);
+        }
+        .quick-links-options a:focus-visible {
+            outline: 3px solid rgba(255, 117, 31, 0.55);
+            outline-offset: 2px;
+        }
+        @media (max-width: 767px) {
+            #quick-links {
+                right: 10px;
+                width: fit-content;
+                max-width: calc(100vw - 96px);
+                padding: 12px;
+            }
+            .quick-links-options {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .quick-links-options a {
+                transition: none;
+            }
+        }
     </style>
 </head>
 <body class="bg-[#f9f9fb] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden" data-page-title-key="seo_title" data-page-desc-key="seo_description"> 
@@ -144,6 +231,24 @@
                data-i18n="nav_for_restaurants">
                 Para Restaurantes
             </a>
+        </div>
+    </nav>
+
+    <nav id="quick-links" aria-label="Quick links" data-i18n-aria="quick_links_aria">
+        <h2 class="quick-links-heading">
+            <span class="quick-links-mark" aria-hidden="true">⚡</span>
+            <span data-i18n="quick_links_title">Acceso rápido</span>
+        </h2>
+        <div class="quick-links-options">
+            <!-- Replace each # with its destination URL. -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfm9P3bCRkWAq3ZyAzJI68oJOcidYwyvkmsrYbLlpIeDbRVsg/viewform?usp=dialog">
+                <span data-i18n="quick_links_diners">Unirse hoy</span>
+                <span aria-hidden="true">↗</span>
+            </a>
+            <!-- <a href="#">
+                <span data-i18n="quick_links_restaurants">Restaurantes</span>
+                <span aria-hidden="true">↗</span>
+            </a> -->
         </div>
     </nav>
 
