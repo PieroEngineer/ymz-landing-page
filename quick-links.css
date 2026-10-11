@@ -1,3 +1,9 @@
+@keyframes quick-links-attention {
+    0%, 8%, 18%, 100% { transform: translateY(0); }
+    4% { transform: translateY(-7px); }
+    13% { transform: translateY(-4px); }
+}
+
 #quick-links {
     position: fixed;
     right: clamp(12px, 2vw, 28px);
@@ -12,6 +18,7 @@
     border-radius: 20px;
     box-shadow: 0 12px 34px rgba(0, 21, 96, 0.2);
     backdrop-filter: blur(12px);
+    animation: quick-links-attention 4s ease-in-out infinite;
 }
 
 .quick-links-heading {
@@ -81,6 +88,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    #quick-links {
+        animation: none;
+    }
+
     .quick-links-options a {
         transition: none;
     }
