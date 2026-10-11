@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
     tl.to(logo, { 
         scale: 1, 
         opacity: 1, 
-        duration: 0.7, 
+        duration: 0.6,
         ease: "expo.out" 
     })
     
@@ -39,23 +39,23 @@ window.addEventListener('DOMContentLoaded', () => {
     .to(preloaderRect, {
         scaleX: 1,
         paddingRight: rectExpandedPadding,
-        duration: 0.8,
+        duration: 0.7,
         ease: "expo.inOut"
     }, "-=0.2")
     .to(rectText, {
         opacity: 1,
-        duration: 0.5
-    }, "-=0.6")
+        duration: 0.4
+    }, "-=0.5")
 
     // 3. COLLAPSE RECTANGLE BACK
     .to(rectText, {
         opacity: 0,
-        duration: 0.3
-    }, "+=1.0") 
+        duration: 0.25
+    }, "+=0.8")
     .to(preloaderRect, {
         scaleX: 0,
         paddingRight: "0px",
-        duration: 0.5,
+        duration: 0.4,
         ease: "expo.inOut"
     }, "-=0.1")
 
@@ -67,24 +67,24 @@ window.addEventListener('DOMContentLoaded', () => {
         xPercent: -50,
         yPercent: -50,
         scale: navLogoScale,
-        duration: 1.0,
+        duration: 0.9,
         ease: "expo.inOut"
     })
     
     // 5. REVEAL WEBSITE
     .to("#navbar, #main-content", { 
         opacity: 1, 
-        duration: 0.5,
+        duration: 0.4,
         onStart: () => {
             // Only hide the preloader logo once the navbar is actually visible
-            gsap.to(logo, { opacity: 0, duration: 0.3, delay: 0.4 });
+            gsap.to(logo, { opacity: 0, duration: 0.25, delay: 0.3 });
         }
     }, "-=0.4")
     .call(initHeroSection)
     .to("#preloader", { 
         opacity: 0, 
         display: "none", 
-        duration: 0.4 
+        duration: 0.3
     }, "-=0.2");
 
     // Scroll Progress
