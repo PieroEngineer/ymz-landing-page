@@ -13,6 +13,12 @@ I think that the best way to be grateful for what I have is to share it. Here, I
 
 # Yummizi — Landing Page
 
+## 🌐 Live Site
+
+**[Enter here](https://yummizi.netlify.app/)**
+
+---
+
 ## 📋 Overview
 
 This is a **vanilla HTML/CSS/JS** single-origin landing page deployed on **Netlify**. It serves as the primary entry point for both restaurant owners and diners, communicating Yummizi's value proposition through a rich, animated, scroll-driven experience.
