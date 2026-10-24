@@ -13,17 +13,6 @@ I think that the best way to be grateful for what I have is to share it. Here, I
 
 # Yummizi — Landing Page
 
-> **Optimize timing in your restaurant.**  
-> The public-facing landing page for Yummizi — a FoodTech platform that eliminates unnecessary waiting times for diners and restaurants through virtual queues, anticipated dish confirmation, and live menu interaction.
-
----
-
-## 🌐 Live Site
-
-**[yummizi.com](https://yummizi.com)**
-
----
-
 ## 📋 Overview
 
 This is a **vanilla HTML/CSS/JS** single-origin landing page deployed on **Netlify**. It serves as the primary entry point for both restaurant owners and diners, communicating Yummizi's value proposition through a rich, animated, scroll-driven experience.
